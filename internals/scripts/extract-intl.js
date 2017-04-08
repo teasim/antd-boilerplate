@@ -1,7 +1,7 @@
 /* eslint-disable */
 /**
  * This script will extract the internationalization messages from all components
-   and package them in the translations json files in the translations file.
+   and package them in the translation json files in the translations file.
  */
 const fs = require('fs');
 const nodeGlob = require('glob');
@@ -14,14 +14,14 @@ const pkg = require('../../package.json');
 const presets = pkg.babel.presets;
 const plugins = pkg.babel.plugins || [];
 
-const i18n = require('../../client/application/helpers/i18n');
-import { DEFAULT_LOCALE } from '../../client/application/containers/App/constants';
+const internationalization = require('../../client/app/helpers/internationalization');
+import { DEFAULT_LOCALE } from '../../client/app/actions/common/lang/types';
 
 require('shelljs/global');
 
 // Glob to match all js files except test files
-const FILES_TO_PARSE = 'client/**/!(*.test).js';
-const locales = i18n.appLocales;
+const FILES_TO_PARSE = 'client/app/**/!(*.test).js';
+const locales = internationalization.appLocales;
 
 const newLine = () => process.stdout.write('\n');
 
@@ -53,15 +53,15 @@ const writeFile = (fileName, data) => new Promise((resolve, reject) => {
   fs.writeFile(fileName, data, (error, value) => (error ? reject(error) : resolve(value)));
 });
 
-// Store existing translations into memory
+// Store existing languages into memory
 const oldLocaleMappings = [];
 const localeMappings = [];
 // Loop to run once per locale
 for (const locale of locales) {
   oldLocaleMappings[locale] = {};
   localeMappings[locale] = {};
-  // File to store translations messages into
-  const translationFileName = `client/application/translations/${locale}.json`;
+  // File to store languages messages into
+  const translationFileName = `client/app/languages/${locale}.json`;
   try {
     // Parse the old translation message JSON files
     const messages = JSON.parse(fs.readFileSync(translationFileName));
@@ -72,7 +72,7 @@ for (const locale of locales) {
   } catch (error) {
     if (error.code !== 'ENOENT') {
       process.stderr.write(
-        `There was an error loading this translations file: ${translationFileName}
+        `There was an error loading this languages file: ${translationFileName}
         \n${error}`
       );
     }
@@ -103,7 +103,7 @@ const extractFromFile = async (fileName) => {
     for (const message of result['react-intl'].messages) {
       for (const locale of locales) {
         const oldLocaleMapping = oldLocaleMappings[locale][message.id];
-        // Merge old translations into the babel extracted instances where react-intl is used
+        // Merge old languages into the babel extracted instances where react-intl is used
         const newMsg = ( locale === DEFAULT_LOCALE) ? message.defaultMessage : '';
         localeMappings[locale][message.id] = (oldLocaleMapping)
           ? oldLocaleMapping
@@ -126,23 +126,23 @@ const extractFromFile = async (fileName) => {
   extractTaskDone()
 
   // Make the directory if it doesn't exist, especially for first run
-  mkdir('-p', 'client/application/translations');
+  mkdir('-p', 'client/app/languages');
   for (const locale of locales) {
-    const translationFileName = `client/application/translations/${locale}.json`;
+    const translationFileName = `client/app/languages/${locale}.json`;
 
     try {
       const localeTaskDone = task(
-        `Writing translations messages for ${locale} to: ${translationFileName}`
+        `Writing languages messages for ${locale} to: ${translationFileName}`
       );
 
-      // Sort the translations JSON file so that git diffing is easier
-      // Otherwise the translations messages will jump around every time we extract
+      // Sort the languages JSON file so that git diffing is easier
+      // Otherwise the languages messages will jump around every time we extract
       let messages = {};
       Object.keys(localeMappings[locale]).sort().forEach(function(key) {
         messages[key] = localeMappings[locale][key];
       });
 
-      // Write to file the JSON representation of the translations messages
+      // Write to file the JSON representation of the languages messages
       const prettified = `${JSON.stringify(messages, null, 2)}\n`;
 
       await writeFile(translationFileName, prettified);
@@ -150,7 +150,7 @@ const extractFromFile = async (fileName) => {
       localeTaskDone();
     } catch (error) {
       localeTaskDone(
-        `There was an error saving this translations file: ${translationFileName}
+        `There was an error saving this languages file: ${translationFileName}
         \n${error}`
       );
     }

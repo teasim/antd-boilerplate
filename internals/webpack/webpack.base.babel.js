@@ -4,8 +4,9 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
 
-module.exports = (options) => ({
+module.exports = options => ({
   entry: options.entry,
   output: Object.assign({ // Compile into js/build.js
     path: path.resolve(process.cwd(), 'build'),
@@ -27,7 +28,22 @@ module.exports = (options) => ({
         // for a list of loaders, see https://webpack.js.org/loaders/#styling
         test: /\.less$/,
         exclude: /node_modules/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader'],
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+          },
+          {
+            loader: 'postcss-loader', options: {
+              plugins: [autoprefixer],
+            },
+          },
+          {
+            loader: "less-loader",
+          },
+        ],
       },
       {
         // Preprocess 3rd party .css files located in node_modules
@@ -93,8 +109,8 @@ module.exports = (options) => ({
     new webpack.NamedModulesPlugin(),
   ]),
   resolve: {
-    modules: ['client', 'node_modules'],
-    extensions: ['.js', '.jsx', '.react.js', '.less', '.scss', '.css'],
+    modules: ['interalias', 'client', 'node_modules'],
+    extensions: ['.js', '.jsx', '.react.js'],
     mainFields: ['browser', 'jsnext:main', 'main'],
   },
   devtool: options.devtool,

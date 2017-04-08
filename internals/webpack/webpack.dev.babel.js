@@ -33,7 +33,7 @@ module.exports = require('./webpack.base.babel')({
   entry: [
     'eventsource-polyfill', // Necessary for hot reloading with IE
     'webpack-hot-middleware/client?reload=true',
-    path.join(process.cwd(), 'client/application/entries/app.js'),
+    path.join(process.cwd(), 'client/app/index.js'),
   ],
 
   // Don't use hashes in dev mode for better performance
@@ -74,7 +74,9 @@ module.exports = require('./webpack.base.babel')({
  */
 function dependencyHandlers() {
   // Don't do anything during the DLL Build step
-  if (process.env.BUILDING_DLL) { return []; }
+  if (process.env.BUILDING_DLL) { 
+    return []; 
+  }
 
   // If the package.json does not have a dllPlugin property, use the CommonsChunkPlugin
   if (!dllPlugin) {
@@ -111,9 +113,9 @@ function dependencyHandlers() {
   }
 
   // If DLLs are explicitly defined, we automatically create a DLLReferencePlugin for each of them.
-  const dllManifests = Object.keys(dllPlugin.dlls).map((name) => path.join(dllPath, `/${name}.json`));
+  const dllManifests = Object.keys(dllPlugin.dlls).map(name => path.join(dllPath, `/${name}.json`));
 
-  return dllManifests.map((manifestPath) => {
+  return dllManifests.map(manifestPath => {
     if (!fs.existsSync(path)) {
       if (!fs.existsSync(manifestPath)) {
         logger.error(`The following Webpack DLL manifest is missing: ${path.basename(manifestPath)}`);
@@ -140,13 +142,15 @@ function templateContent() {
     path.resolve(process.cwd(), 'client/template/index.html')
   ).toString();
 
-  if (!dllPlugin) { return html; }
+  if (!dllPlugin) { 
+    return html; 
+  }
 
   const doc = cheerio(html);
   const body = doc.find('body');
   const dllNames = !dllPlugin.dlls ? ['reactBoilerplateDeps'] : Object.keys(dllPlugin.dlls);
 
-  dllNames.forEach((dllName) => body.append(`<script data-dll='true' src='/${dllName}.dll.js'></script>`));
+  dllNames.forEach(dllName => body.append(`<script data-dll='true' src='/${dllName}.dll.js'></script>`));
 
   return doc.toString();
 }

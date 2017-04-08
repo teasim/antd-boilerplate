@@ -10,7 +10,7 @@ process.noDeprecation = true;
 module.exports = require('./webpack.base.babel')({
   // In production, we skip all hot-reloading stuff
   entry: [
-    path.join(process.cwd(), 'client/application/entries/app.js'),
+    path.join(process.cwd(), 'client/app/index.js'),
   ],
 
   // Utilize long-term caching by adding content hashes (not compilation hashes) to compiled assets
@@ -72,6 +72,6 @@ module.exports = require('./webpack.base.babel')({
   ],
 
   performance: {
-    assetFilter: (assetFilename) => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename)),
+    assetFilter: assetFilename => !(/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename)),
   },
 });

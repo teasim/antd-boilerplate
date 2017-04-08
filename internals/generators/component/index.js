@@ -32,7 +32,7 @@ module.exports = {
     type: 'confirm',
     name: 'wantMessages',
     default: true,
-    message: 'Do you want i18n messages (i.e. will this component use text)?',
+    message: 'Do you want internationalization messages (i.e. will this component use text)?',
   }],
   actions: (data) => {
     // Generate index.js and index.test.js
@@ -58,21 +58,21 @@ module.exports = {
 
     const actions = [{
       type: 'add',
-      path: '../../client/application/components/{{properCase name}}/index.js',
+      path: '../../client/app/components/{{properCase name}}/index.js',
       templateFile: componentTemplate,
       abortOnFail: true,
     }, {
       type: 'add',
-      path: '../../client/application/components/{{properCase name}}/tests/index.test.js',
+      path: '../../client/app/components/{{properCase name}}/tests/index.test.js',
       templateFile: './component/test.js.hbs',
       abortOnFail: true,
     }];
 
-    // If they want a i18n messages file
+    // If they want a internationalization messages file
     if (data.wantMessages) {
       actions.push({
         type: 'add',
-        path: '../../client/application/components/{{properCase name}}/messages.js',
+        path: '../../client/app/components/{{properCase name}}/messages.js',
         templateFile: './component/messages.js.hbs',
         abortOnFail: true,
       });

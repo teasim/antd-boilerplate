@@ -7,7 +7,7 @@ const setup = require('./middlewares/frontendMiddleware');
 const isDev = process.env.NODE_ENV !== 'production';
 const ngrok = (isDev && process.env.ENABLE_TUNNEL) || argv.tunnel ? require('ngrok') : false;
 const resolve = require('path').resolve;
-const port = parseInt(argv.port || process.env.PORT || '3000', 10);
+const port = parseInt(argv.port || process.env.PORT || '9090', 10);
 const app = express();
 
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
@@ -19,7 +19,7 @@ setup(app, {
   publicPath: '/',
 });
 
-// get the intended host and port number, use localhost and port 3000 if not provided
+// get the intended host and port number, use localhost and port 9090 if not provided
 const customHost = argv.host || process.env.HOST;
 const host = customHost || null; // Let http.Server use its default IPv6/4 host
 const prettyHost = customHost || 'localhost';
