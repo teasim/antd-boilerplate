@@ -290,7 +290,14 @@
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
     "reselect": "^3.0.0",
-    "styled-components": "^1.4.4",
+    "teasim": "^1.0.2",
+    "teasim-animations": "^1.0.2",
+    "teasim-helpers": "^1.0.2",
+    "teasim-icon": "^1.0.2",
+    "teasim-middlewares": "^1.0.2",
+    "teasim-plugins": "^1.0.2",
+    "teasim-samples": "^1.0.2",
+    "teasim-tools": "^1.0.2",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
