@@ -16,9 +16,9 @@ class LocaleProvider extends React.PureComponent {
 }
 
 LocaleProvider.propTypes = {
-  locale: React.PropTypes.string,
-  messages: React.PropTypes.object,
-  children: React.PropTypes.element.isRequired,
+  locale: PropTypes.string,
+  messages: PropTypes.object,
+  children: PropTypes.element.isRequired,
 };
 
 const mapStateToProps = createSelector(

@@ -31,7 +31,7 @@ class LanguageToggle extends React.PureComponent {
 }
 
 LanguageToggle.propTypes = {
-  locale: React.PropTypes.string,
+  locale: PropTypes.string,
   actions: PropTypes.object.isRequired,
 };
 
