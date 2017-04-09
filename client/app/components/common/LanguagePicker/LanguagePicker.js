@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Section, Row, Column } from 'teasim';
 import { LanguageToggle } from 'app/containers/common/lang/index'
 

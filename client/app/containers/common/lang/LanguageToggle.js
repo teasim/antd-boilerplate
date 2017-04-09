@@ -1,4 +1,5 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { createSelector } from 'reselect';
 import { connect } from 'react-redux';
@@ -7,7 +8,7 @@ import { LanguageSelect } from 'app/components/common/LanguageSelect/index';
 import { changeLocaleLanguage, selectLocaleLanguage } from 'app/actions/common/lang/index';
 import messages from './messages';
 
-class LanguageToggle extends PureComponent {
+class LanguageToggle extends React.PureComponent {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
