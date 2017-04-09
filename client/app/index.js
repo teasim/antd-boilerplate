@@ -25,8 +25,7 @@ import '!file-loader?name=[name].[ext]!assets/icons/icon-512x512.png';
 import '!file-loader?name=[name].[ext]!assets/icons/manifest.json';
 import 'file-loader?name=[name].[ext]!.htaccess'; // eslint-disable-line import/extensions
 /* eslint-enable import/no-webpack-loader-syntax */
-import 'teasim/library/teasim.css';
-import 'teasim-samples/library/teasim-samples.css';
+import 'app/styles/application.less';
 
 const mountNode = document.getElementById('application');
 const browserHistory = createHistory()

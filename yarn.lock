@@ -2147,6 +2147,12 @@ create-hmac@^1.1.0, create-hmac@^1.1.2:
     create-hash "^1.1.0"
     inherits "^2.0.1"
 
+create-react-class@^15.5.1:
+  version "15.5.1"
+  resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.5.1.tgz#25a138a42d1c9df6d5c70fea29ec6ccf5ae165b8"
+  dependencies:
+    fbjs "^0.8.9"
+
 cross-env@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-4.0.0.tgz#16083862d08275a4628b0b243b121bedaa55dd80"
@@ -2728,13 +2734,13 @@ encoding@^0.1.11:
   dependencies:
     iconv-lite "~0.4.13"
 
-end-of-stream@1.0.0:
+end-of-stream@1.0.0, end-of-stream@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/end-of-stream/-/end-of-stream-1.0.0.tgz#d4596e702734a93e40e9af864319eabd99ff2f0e"
   dependencies:
     once "~1.3.0"
 
-end-of-stream@^1.0.0, end-of-stream@^1.1.0:
+end-of-stream@^1.1.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/end-of-stream/-/end-of-stream-1.4.0.tgz#7a90d833efda6cfa6eac0f4949dbb0fad3a63206"
   dependencies:
@@ -3561,8 +3567,8 @@ forever-agent@~0.6.1:
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
 
 form-data@~2.1.1:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/form-data/-/form-data-2.1.2.tgz#89c3534008b97eada4cbb157d58f6f5df025eae4"
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-2.1.4.tgz#33c183acf193276ecaa98143a69e94bfee1750d1"
   dependencies:
     asynckit "^0.4.0"
     combined-stream "^1.0.5"
@@ -6256,8 +6262,8 @@ object-assign@^4.0.0, object-assign@^4.0.1, object-assign@^4.1.0, object-assign@
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
 object-hash@^1.1.4:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-1.1.7.tgz#a8d83fdf5d4583a4e2e7ffc18e8915e08482ef52"
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-1.1.8.tgz#28a659cf987d96a4dabe7860289f3b5326c4a03c"
 
 object-inspect@^1.1.0:
   version "1.2.2"
@@ -7018,9 +7024,9 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.2, prop-types@^15.5.4, prop-types@~15.5.0:
-  version "15.5.4"
-  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.4.tgz#2ed3692716a5060f8cc020946d8238e7419d92c0"
+prop-types@^15.0.0, prop-types@^15.5.2, prop-types@^15.5.4, prop-types@~15.5.0:
+  version "15.5.5"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.5.tgz#6f9f99347da15e5dc5260632f28a84f7537ca02d"
   dependencies:
     fbjs "^0.8.9"
 
@@ -7178,14 +7184,16 @@ react-proxy@^1.1.7:
     react-deep-force-update "^1.0.0"
 
 react-redux@^5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.3.tgz#86c3b68d56e74294a42e2a740ab66117ef6c019f"
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.4.tgz#1563babadcfb2672f57f9ceaa439fb16bf85d55b"
   dependencies:
+    create-react-class "^15.5.1"
     hoist-non-react-statics "^1.0.3"
     invariant "^2.0.0"
     lodash "^4.2.0"
     lodash-es "^4.2.0"
     loose-envify "^1.1.0"
+    prop-types "^15.0.0"
 
 react-router-dom@^4.0.0:
   version "4.0.0"
@@ -7345,11 +7353,12 @@ rechoir@^0.6.2:
     resolve "^1.1.6"
 
 redbox-react@^1.2.2:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/redbox-react/-/redbox-react-1.3.5.tgz#801d1d22f784d80fcab109b2174cbc169830435f"
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/redbox-react/-/redbox-react-1.3.6.tgz#70314c57c066257eb70b0a24dc794b5cef4f1c4e"
   dependencies:
     error-stack-parser "^1.3.6"
     object-assign "^4.0.1"
+    prop-types "^15.5.4"
 
 redent@^1.0.0:
   version "1.0.0"
@@ -8203,122 +8212,130 @@ tar@^2.2.1:
     fstream "^1.0.2"
     inherits "2"
 
-teasim-animations@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/teasim-animations/-/teasim-animations-1.1.1.tgz#3e814e80726f394c649f3f6eac196a1591f9c1c6"
+teasim-animations@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/teasim-animations/-/teasim-animations-1.1.5.tgz#f22b3ce275b4c9f40951ab19a12943fd3cd3e8d5"
 
-teasim-chart@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/teasim-chart/-/teasim-chart-1.1.1.tgz#f8abc1ca66d78a1ae3363201422653b0d3577797"
+teasim-chart@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/teasim-chart/-/teasim-chart-1.1.5.tgz#8b7dd6ad22de1fc7efcfa7bb9191b49218e81409"
   dependencies:
     prop-types "^15.5.4"
     react "^15.5.3"
     react-dom "^15.5.3"
     react-transition-group "^1.1.1"
-    teasim-animations "^1.1.1"
-    teasim-core "^1.1.1"
-    teasim-helpers "^1.1.1"
-    teasim-icon "^1.1.1"
-    teasim-less "^1.1.1"
-    teasim-presets "^1.1.1"
-    teasim-tools "^1.1.1"
+    teasim-animations "^1.1.5"
+    teasim-core "^1.1.5"
+    teasim-helpers "^1.1.5"
+    teasim-icon "^1.1.5"
+    teasim-less "^1.1.5"
+    teasim-presets "^1.1.5"
+    teasim-tools "^1.1.5"
 
-teasim-core@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/teasim-core/-/teasim-core-1.1.1.tgz#d42ab7c8b2a87247aac3347acdb348617f14ab99"
+teasim-core@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/teasim-core/-/teasim-core-1.1.5.tgz#345f502c7481bcf986d099a46889f169b14c2af6"
   dependencies:
     prop-types "^15.5.4"
     react "^15.5.3"
     react-dom "^15.5.3"
     react-motion "^0.4.7"
     react-transition-group "^1.1.1"
-    teasim-animations "^1.1.1"
-    teasim-helpers "^1.1.1"
-    teasim-icon "^1.1.1"
-    teasim-less "^1.1.1"
-    teasim-presets "^1.1.1"
-    teasim-tools "^1.1.1"
+    teasim-animations "^1.1.5"
+    teasim-helpers "^1.1.5"
+    teasim-icon "^1.1.5"
+    teasim-less "^1.1.5"
+    teasim-presets "^1.1.5"
+    teasim-tools "^1.1.5"
 
-teasim-form@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/teasim-form/-/teasim-form-1.1.1.tgz#12a845e6c30e6fa7d1b3b81bb338c5c373b305e1"
+teasim-form@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/teasim-form/-/teasim-form-1.1.5.tgz#12fb3b6cc89acd8f835d2a495f2d346bfca49455"
   dependencies:
     prop-types "^15.5.4"
     react "^15.5.3"
     react-dom "^15.5.3"
     react-transition-group "^1.1.1"
-    teasim-animations "^1.1.1"
-    teasim-core "^1.1.1"
-    teasim-helpers "^1.1.1"
-    teasim-icon "^1.1.1"
-    teasim-less "^1.1.1"
-    teasim-presets "^1.1.1"
-    teasim-tools "^1.1.1"
+    teasim-animations "^1.1.5"
+    teasim-core "^1.1.5"
+    teasim-helpers "^1.1.5"
+    teasim-icon "^1.1.5"
+    teasim-less "^1.1.5"
+    teasim-presets "^1.1.5"
+    teasim-tools "^1.1.5"
 
-teasim-helpers@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/teasim-helpers/-/teasim-helpers-1.1.1.tgz#aad5bf23fd99af920483e88061422fb6ce39df52"
+teasim-helpers@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/teasim-helpers/-/teasim-helpers-1.1.5.tgz#75774e8be9c3ea27906454d5ba71f484c5280a44"
   dependencies:
     immutable "^3.8.1"
 
-teasim-icon@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/teasim-icon/-/teasim-icon-1.1.1.tgz#8bf98d9f8e5f16786807719965e0c3d661f89502"
+teasim-icon@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/teasim-icon/-/teasim-icon-1.1.5.tgz#36c29a339ce4b079d5dc53b056c5523402719abe"
   dependencies:
     prop-types "^15.5.4"
     react "^15.5.3"
-    teasim-helpers "^1.1.1"
-    teasim-presets "^1.1.1"
+    teasim-helpers "^1.1.5"
+    teasim-presets "^1.1.5"
 
 teasim-less@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/teasim-less/-/teasim-less-1.1.1.tgz#380d1bc2c70f7aab08dbb8b9bf24bad3f2656b8a"
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/teasim-less/-/teasim-less-1.1.4.tgz#f7f65127946f8e6b77157d23aad2ed24a58b2a6e"
 
-teasim-middlewares@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/teasim-middlewares/-/teasim-middlewares-1.1.1.tgz#b3b4b54a1b0f18cedf5ec7eb2f6f30e699bad5f8"
+teasim-less@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/teasim-less/-/teasim-less-1.1.5.tgz#43aa4d88eb14342d0b1dbe88860c6c919ff5dfb9"
+
+teasim-middlewares@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/teasim-middlewares/-/teasim-middlewares-1.1.5.tgz#d72a2b95f6d8a43385ac1e357a9a2f0b497defd7"
   dependencies:
     isomorphic-fetch "^2.2.1"
-    teasim-helpers "^1.1.1"
-    teasim-tools "^1.1.1"
+    teasim-helpers "^1.1.5"
+    teasim-tools "^1.1.5"
 
-teasim-player@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/teasim-player/-/teasim-player-1.1.1.tgz#945329a361d09e8f2bc106e982c07fe80eb8759a"
+teasim-player@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/teasim-player/-/teasim-player-1.1.5.tgz#2a5a082aab3acd91ac9b47fa31941460e9a124dc"
   dependencies:
     prop-types "^15.5.4"
     react "^15.5.3"
     react-dom "^15.5.3"
     react-motion "^0.4.7"
     react-transition-group "^1.1.1"
-    teasim-animations "^1.1.1"
-    teasim-core "^1.1.1"
-    teasim-helpers "^1.1.1"
-    teasim-icon "^1.1.1"
-    teasim-less "^1.1.1"
-    teasim-presets "^1.1.1"
-    teasim-tools "^1.1.1"
+    teasim-animations "^1.1.5"
+    teasim-core "^1.1.5"
+    teasim-helpers "^1.1.5"
+    teasim-icon "^1.1.5"
+    teasim-less "^1.1.5"
+    teasim-presets "^1.1.5"
+    teasim-tools "^1.1.5"
 
-teasim-plugins@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/teasim-plugins/-/teasim-plugins-1.1.1.tgz#b049dcd24025353b440b97ecb0087400c9b186db"
+teasim-plugins@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/teasim-plugins/-/teasim-plugins-1.1.5.tgz#4b903eaea89ef14a25c04798e1d19273b3fe322d"
   dependencies:
     expect "^1.20.2"
+    immutable "^3.8.1"
     prop-types "^15.5.4"
     react "^15.5.3"
     react-dom "^15.5.3"
+    react-redux "^5.0.3"
     react-transition-group "^1.1.1"
-    teasim-helpers "^1.1.1"
-    teasim-presets "^1.1.1"
-    teasim-tools "^1.1.1"
+    redux "^3.6.0"
+    teasim-core "^1.1.5"
+    teasim-helpers "^1.1.5"
+    teasim-presets "^1.1.5"
+    teasim-tools "^1.1.5"
 
-teasim-presets@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/teasim-presets/-/teasim-presets-1.1.1.tgz#0f4ccc62d70d1c3f332638d1d0a7ad7378ff0c1f"
+teasim-presets@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/teasim-presets/-/teasim-presets-1.1.5.tgz#3b5177baf37a80e7f45cd1f92b2eded3bed879b5"
 
-teasim-samples@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/teasim-samples/-/teasim-samples-1.1.1.tgz#66d0de7a633eb3da9d51933e65f63d4b7e8b4189"
+teasim-samples@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/teasim-samples/-/teasim-samples-1.1.5.tgz#8cfdef558542cf833c59270ae05bf1ebee86fb5f"
   dependencies:
     prop-types "^15.5.4"
     react "^15.5.3"
@@ -8326,39 +8343,60 @@ teasim-samples@^1.1.1:
     react-motion "^0.4.7"
     react-router-dom "^4.0.0"
     react-transition-group "^1.1.1"
-    teasim "^1.1.1"
-    teasim-animations "^1.1.1"
-    teasim-form "^1.1.1"
-    teasim-helpers "^1.1.1"
-    teasim-icon "^1.1.1"
-    teasim-less "^1.1.1"
-    teasim-middlewares "^1.1.1"
-    teasim-plugins "^1.1.1"
-    teasim-presets "^1.1.1"
-    teasim-tools "^1.1.1"
+    teasim "^1.1.5"
+    teasim-animations "^1.1.5"
+    teasim-form "^1.1.5"
+    teasim-helpers "^1.1.5"
+    teasim-icon "^1.1.5"
+    teasim-less "^1.1.5"
+    teasim-middlewares "^1.1.5"
+    teasim-plugins "^1.1.5"
+    teasim-presets "^1.1.5"
+    teasim-tools "^1.1.5"
 
-teasim-tools@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/teasim-tools/-/teasim-tools-1.1.1.tgz#b8e517dcfc8c7bc764d1a008dde5a4c30c8554c7"
+teasim-tools@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/teasim-tools/-/teasim-tools-1.1.5.tgz#ca0d58bf4b37b4ee497439baae4fb6dfe130838c"
 
-teasim@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/teasim/-/teasim-1.1.1.tgz#fd263730913839259680a7f63944a62d5a27b7f2"
+teasim-widgets@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/teasim-widgets/-/teasim-widgets-1.1.5.tgz#77ee8bb4d800a3309c0059fd875a7ba786f9d2a8"
+  dependencies:
+    prop-types "^15.5.4"
+    react "^15.5.3"
+    react-dom "^15.5.3"
+    react-motion "^0.4.7"
+    react-router-dom "^4.0.0"
+    react-transition-group "^1.1.1"
+    teasim "^1.1.5"
+    teasim-animations "^1.1.5"
+    teasim-form "^1.1.5"
+    teasim-helpers "^1.1.5"
+    teasim-icon "^1.1.5"
+    teasim-less "^1.1.5"
+    teasim-middlewares "^1.1.5"
+    teasim-plugins "^1.1.5"
+    teasim-presets "^1.1.5"
+    teasim-tools "^1.1.5"
+
+teasim@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/teasim/-/teasim-1.1.5.tgz#a106ac2934aaf47257e84b265eaefe09b0f4b2cf"
   dependencies:
     expect "^1.20.2"
     prop-types "^15.5.4"
     react "^15.5.3"
     react-dom "^15.5.3"
     react-transition-group "^1.1.1"
-    teasim-chart "^1.1.1"
-    teasim-core "^1.1.1"
-    teasim-form "^1.1.1"
-    teasim-helpers "^1.1.1"
-    teasim-icon "^1.1.1"
-    teasim-less "^1.1.1"
-    teasim-player "^1.1.1"
-    teasim-presets "^1.1.1"
-    teasim-tools "^1.1.1"
+    teasim-chart "^1.1.5"
+    teasim-core "^1.1.5"
+    teasim-form "^1.1.5"
+    teasim-helpers "^1.1.5"
+    teasim-icon "^1.1.5"
+    teasim-less "^1.1.5"
+    teasim-player "^1.1.5"
+    teasim-presets "^1.1.5"
+    teasim-tools "^1.1.5"
 
 tempfile@^1.0.0, tempfile@^1.1.1:
   version "1.1.1"
@@ -8959,13 +8997,9 @@ window-size@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/window-size/-/window-size-0.1.4.tgz#f8e1aa1ee5a53ec5bf151ffa09742a6ad7697876"
 
-wordwrap@0.0.2:
+wordwrap@0.0.2, wordwrap@~0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.2.tgz#b79669bb42ecb409f83d583cad52ca17eaa1643f"
-
-wordwrap@~0.0.2:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
 
 wordwrap@~1.0.0:
   version "1.0.0"
