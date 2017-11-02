@@ -6,7 +6,7 @@ if (process.env.NODE_ENV === 'production') {
 require('shelljs/global');
 
 const path = require('path');
-const fs = require('fs');
+const fs = require('fs-extra');
 const exists = fs.existsSync;
 const writeFile = fs.writeFileSync;
 

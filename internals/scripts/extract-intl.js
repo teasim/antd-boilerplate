@@ -3,7 +3,7 @@
  * This script will extract the internationalization messages from all components
    and package them in the translation json files in the translations file.
  */
-const fs = require('fs');
+const fs = require('fs-extra');
 const nodeGlob = require('glob');
 const transform = require('babel-core').transform;
 

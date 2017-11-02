@@ -4,7 +4,7 @@
  * Exports the generators so plop knows them
  */
 
-const fs = require('fs');
+const fs = require('fs-extra');
 const path = require('path');
 const componentGenerator = require('./component/index.js');
 const containerGenerator = require('./container/index.js');
