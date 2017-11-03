@@ -25,7 +25,7 @@ module.exports = require('./webpack.base.babel')({
     }),
 
     new HtmlWebpackPlugin({
-      template: 'client/app/templates/index.html',
+      template: 'client/app/index.html',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
