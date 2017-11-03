@@ -724,12 +724,6 @@ babel-plugin-react-intl@^2.3.1:
     intl-messageformat-parser "^1.2.0"
     mkdirp "^0.5.1"
 
-babel-plugin-react-transform@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/babel-plugin-react-transform/-/babel-plugin-react-transform-2.0.2.tgz#515bbfa996893981142d90b1f9b1635de2995109"
-  dependencies:
-    lodash "^4.6.1"
-
 babel-plugin-react-transform@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-react-transform/-/babel-plugin-react-transform-3.0.0.tgz#402f25137b7bb66e9b54ead75557dfbc7ecaaa74"
@@ -1208,15 +1202,6 @@ babel-preset-jest@^21.2.0:
     babel-plugin-jest-hoist "^21.2.0"
     babel-plugin-syntax-object-rest-spread "^6.13.0"
 
-babel-preset-react-hmre@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/babel-preset-react-hmre/-/babel-preset-react-hmre-1.1.1.tgz#d216e60cb5b8d4c873e19ed0f54eaff1437bc492"
-  dependencies:
-    babel-plugin-react-transform "^2.0.2"
-    react-transform-catch-errors "^1.0.2"
-    react-transform-hmr "^1.0.3"
-    redbox-react "^1.2.2"
-
 babel-preset-react@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-preset-react/-/babel-preset-react-6.24.1.tgz#ba69dfaea45fc3ec639b6a4ecea6e17702c91380"
@@ -1608,10 +1593,10 @@ browserslist@^1.3.6, browserslist@^1.5.2, browserslist@^1.7.6:
     electron-to-chromium "^1.2.7"
 
 browserslist@^2.1.2, browserslist@^2.5.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-2.6.1.tgz#cc65a05ad6131ebda26f076f2822ba1bc826376b"
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-2.7.0.tgz#dc375dc70048fec3d989042a35022342902eff00"
   dependencies:
-    caniuse-lite "^1.0.30000755"
+    caniuse-lite "^1.0.30000757"
     electron-to-chromium "^1.3.27"
 
 bser@^2.0.0:
@@ -1715,12 +1700,12 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000756"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000756.tgz#e938a6b991630f30d2263dd3458beb65d362268b"
+  version "1.0.30000757"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000757.tgz#fa23a383213d857f4a1e6a3bee17b32668504cbf"
 
-caniuse-lite@^1.0.30000748, caniuse-lite@^1.0.30000755:
-  version "1.0.30000756"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000756.tgz#3da701c1521b9fab87004c6de7c97fa47dbeaad2"
+caniuse-lite@^1.0.30000748, caniuse-lite@^1.0.30000757:
+  version "1.0.30000757"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000757.tgz#81e3bc029728a032933501994ef79db1c21159e3"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -1764,7 +1749,7 @@ chalk@^1.0.0, chalk@^1.1.0, chalk@^1.1.1, chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.2.0:
+chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.2.0, chalk@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.3.0.tgz#b5ea48efc9c1793dccc9b4767c93914d3f2d52ba"
   dependencies:
@@ -2750,7 +2735,7 @@ defaults@^1.0.3:
   dependencies:
     clone "^1.0.2"
 
-define-properties@^1.1.2, define-properties@~1.1.2:
+define-properties@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/define-properties/-/define-properties-1.1.2.tgz#83a73f2fea569898fb737193c8f873caf6d45c94"
   dependencies:
@@ -3668,18 +3653,6 @@ expand-tilde@^2.0.2:
   dependencies:
     homedir-polyfill "^1.0.1"
 
-expect@^1.20.2:
-  version "1.20.2"
-  resolved "https://registry.yarnpkg.com/expect/-/expect-1.20.2.tgz#d458fe4c56004036bae3232416a3f6361f04f965"
-  dependencies:
-    define-properties "~1.1.2"
-    has "^1.0.1"
-    is-equal "^1.5.1"
-    is-regex "^1.0.3"
-    object-inspect "^1.1.0"
-    object-keys "^1.0.9"
-    tmatch "^2.0.1"
-
 expect@^21.2.1:
   version "21.2.1"
   resolved "https://registry.yarnpkg.com/expect/-/expect-21.2.1.tgz#003ac2ac7005c3c29e73b38a272d4afadd6d1d7b"
@@ -3985,9 +3958,9 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
-flow-bin@^0.57.3:
-  version "0.57.3"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.57.3.tgz#843fb80a821b6d0c5847f7bb3f42365ffe53b27b"
+flow-bin@^0.58.0:
+  version "0.58.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.58.0.tgz#62d5a776589419e5656800a0e5230a5e585ca65e"
 
 flux-standard-action@^0.6.1:
   version "0.6.1"
@@ -5041,21 +5014,11 @@ is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-arrayish/-/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
 
-is-arrow-function@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/is-arrow-function/-/is-arrow-function-2.0.3.tgz#29be2c2d8d9450852b8bbafb635ba7b8d8e87ec2"
-  dependencies:
-    is-callable "^1.0.4"
-
 is-binary-path@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-binary-path/-/is-binary-path-1.0.1.tgz#75f16642b480f187a711c814161fd3a4a7655898"
   dependencies:
     binary-extensions "^1.0.0"
-
-is-boolean-object@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/is-boolean-object/-/is-boolean-object-1.0.0.tgz#98f8b28030684219a95f375cfbd88ce3405dff93"
 
 is-buffer@^1.1.5:
   version "1.1.6"
@@ -5071,7 +5034,7 @@ is-bzip2@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-bzip2/-/is-bzip2-1.0.0.tgz#5ee58eaa5a2e9c80e21407bedf23ae5ac091b3fc"
 
-is-callable@^1.0.4, is-callable@^1.1.1, is-callable@^1.1.3:
+is-callable@^1.1.1, is-callable@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/is-callable/-/is-callable-1.1.3.tgz#86eb75392805ddc33af71c92a0eedf74ee7604b2"
 
@@ -5109,22 +5072,6 @@ is-equal-shallow@^0.1.3:
   dependencies:
     is-primitive "^2.0.0"
 
-is-equal@^1.5.1:
-  version "1.5.5"
-  resolved "https://registry.yarnpkg.com/is-equal/-/is-equal-1.5.5.tgz#5e85f1957e052883247feb386965a3bba15fbb3d"
-  dependencies:
-    has "^1.0.1"
-    is-arrow-function "^2.0.3"
-    is-boolean-object "^1.0.0"
-    is-callable "^1.1.3"
-    is-date-object "^1.0.1"
-    is-generator-function "^1.0.6"
-    is-number-object "^1.0.3"
-    is-regex "^1.0.3"
-    is-string "^1.0.4"
-    is-symbol "^1.0.1"
-    object.entries "^1.0.4"
-
 is-extendable@^0.1.0, is-extendable@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/is-extendable/-/is-extendable-0.1.1.tgz#62b110e289a471418e3ec36a617d472e301dfc89"
@@ -5152,10 +5099,6 @@ is-fullwidth-code-point@^1.0.0:
 is-fullwidth-code-point@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz#a3b30a5c4f199183167aaab93beefae3ddfb654f"
-
-is-generator-function@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/is-generator-function/-/is-generator-function-1.0.6.tgz#9e71653cd15fff341c79c4151460a131d31e9fc4"
 
 is-gif@^1.0.0:
   version "1.0.0"
@@ -5216,10 +5159,6 @@ is-natural-number@^2.0.0:
 is-npm@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-npm/-/is-npm-1.0.0.tgz#f2fb63a65e4905b406c86072765a1a4dc793b9f4"
-
-is-number-object@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/is-number-object/-/is-number-object-1.0.3.tgz#f265ab89a9f445034ef6aff15a8f00b00f551799"
 
 is-number@^2.1.0:
   version "2.1.0"
@@ -5287,7 +5226,7 @@ is-redirect@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-redirect/-/is-redirect-1.0.0.tgz#1d03dded53bd8db0f30c26e4f95d36fc7c87dc24"
 
-is-regex@^1.0.3, is-regex@^1.0.4:
+is-regex@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/is-regex/-/is-regex-1.0.4.tgz#5517489b547091b0930e095654ced25ee97e9491"
   dependencies:
@@ -5320,10 +5259,6 @@ is-retry-allowed@^1.0.0:
 is-stream@^1.0.0, is-stream@^1.0.1, is-stream@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
-
-is-string@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/is-string/-/is-string-1.0.4.tgz#cc3a9b69857d621e963725a24caeec873b826e64"
 
 is-subset@^0.1.1:
   version "0.1.1"
@@ -5913,7 +5848,7 @@ lcov-parse@^0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/lcov-parse/-/lcov-parse-0.0.10.tgz#1b0b8ff9ac9c7889250582b70b71315d9da6d9a3"
 
-lerna@^2.4.0:
+lerna@^2.0.0-rc.5:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/lerna/-/lerna-2.5.1.tgz#d07099bd3051ee799f98c753328bd69e96c6fab8"
   dependencies:
@@ -6998,15 +6933,11 @@ object-assign@^4.0.0, object-assign@^4.0.1, object-assign@^4.1.0, object-assign@
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
-object-inspect@^1.1.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.4.0.tgz#7bcd84fd8db2e833285282bf8356ed87dcef7cf8"
-
 object-is@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/object-is/-/object-is-1.0.1.tgz#0aa60ec9989a0b3ed795cf4d06f62cf1ad6539b6"
 
-object-keys@^1.0.10, object-keys@^1.0.8, object-keys@^1.0.9:
+object-keys@^1.0.10, object-keys@^1.0.8:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.0.11.tgz#c54601778ad560f1142ce0e01bcca8b56d13426d"
 
@@ -7803,10 +7734,10 @@ postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0
     supports-color "^3.2.3"
 
 postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.13, postcss@^6.0.8:
-  version "6.0.13"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.13.tgz#b9ecab4ee00c89db3ec931145bd9590bbf3f125f"
+  version "6.0.14"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.14.tgz#5534c72114739e75d0afcf017db853099f562885"
   dependencies:
-    chalk "^2.1.0"
+    chalk "^2.3.0"
     source-map "^0.6.1"
     supports-color "^4.4.0"
 
@@ -7890,7 +7821,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.0.0, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.5.9, prop-types@^15.6.0:
+prop-types@^15.0.0, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.5.9, prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
@@ -7966,7 +7897,7 @@ querystring@0.2.0, querystring@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
 
-raf@^3.1.0, raf@^3.3.0, raf@^3.3.2, raf@^3.4.0:
+raf@^3.1.0, raf@^3.3.2, raf@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/raf/-/raf-3.4.0.tgz#a28876881b4bc2ca9117d4138163ddb80f781575"
   dependencies:
@@ -8033,10 +7964,6 @@ react-cookie@^2.1.1:
     prop-types "^15.0.0"
     universal-cookie "^2.1.0"
 
-react-deep-force-update@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.1.1.tgz#bcd31478027b64b3339f108921ab520b4313dc2c"
-
 react-deep-force-update@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-2.1.1.tgz#8ea4263cd6455a050b37445b3f08fd839d86e909"
@@ -8057,7 +7984,7 @@ react-dom-factories@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/react-dom-factories/-/react-dom-factories-1.0.2.tgz#eb7705c4db36fb501b3aa38ff759616aa0ff96e0"
 
-react-dom@^15.5.3, react-dom@^15.5.4, react-dom@^15.6.1:
+react-dom@^15.5.4:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.2.tgz#41cfadf693b757faf2708443a1d1fd5a02bef730"
   dependencies:
@@ -8131,7 +8058,7 @@ react-modal@^1.7.7:
     prop-types "^15.5.7"
     react-dom-factories "^1.0.0"
 
-react-motion@^0.5.0, react-motion@^0.5.2:
+react-motion@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/react-motion/-/react-motion-0.5.2.tgz#0dd3a69e411316567927917c6626551ba0607316"
   dependencies:
@@ -8139,18 +8066,11 @@ react-motion@^0.5.0, react-motion@^0.5.2:
     prop-types "^15.5.8"
     raf "^3.1.0"
 
-react-portal@^3.1.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-3.2.0.tgz#4224e19b2b05d5cbe730a7ba0e34ec7585de0043"
+react-portal@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-4.0.0.tgz#d327b495dc72a305e8a3e351f212a2d94677f913"
   dependencies:
     prop-types "^15.5.8"
-
-react-proxy@^1.1.7:
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/react-proxy/-/react-proxy-1.1.8.tgz#9dbfd9d927528c3aa9f444e4558c37830ab8c26a"
-  dependencies:
-    lodash "^4.6.1"
-    react-deep-force-update "^1.0.0"
 
 react-proxy@^3.0.0-alpha.0:
   version "3.0.0-alpha.1"
@@ -8230,27 +8150,6 @@ react-style-proptype@^3.0.0:
   dependencies:
     prop-types "^15.5.4"
 
-react-transform-catch-errors@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-transform-catch-errors/-/react-transform-catch-errors-1.0.2.tgz#1b4d4a76e97271896fc16fe3086c793ec88a9eeb"
-
-react-transform-hmr@^1.0.3:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/react-transform-hmr/-/react-transform-hmr-1.0.4.tgz#e1a40bd0aaefc72e8dfd7a7cda09af85066397bb"
-  dependencies:
-    global "^4.3.0"
-    react-proxy "^1.1.7"
-
-react-transition-group@^1.1.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-1.2.1.tgz#e11f72b257f921b213229a774df46612346c7ca6"
-  dependencies:
-    chain-function "^1.0.0"
-    dom-helpers "^3.2.0"
-    loose-envify "^1.3.1"
-    prop-types "^15.5.6"
-    warning "^3.0.0"
-
 react-transition-group@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.2.1.tgz#e9fb677b79e6455fd391b03823afe84849df4a10"
@@ -8262,7 +8161,7 @@ react-transition-group@^2.2.1:
     prop-types "^15.5.8"
     warning "^3.0.0"
 
-react@^15.5.3, react@^15.5.4, react@^15.6.1:
+react@^15.5.3, react@^15.5.4:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
   dependencies:
@@ -8402,7 +8301,7 @@ rechoir@^0.6.2:
   dependencies:
     resolve "^1.1.6"
 
-redbox-react@^1.2.2, redbox-react@^1.3.6:
+redbox-react@^1.3.6:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/redbox-react/-/redbox-react-1.5.0.tgz#04dab11557d26651bf3562a67c22ace56c5d3967"
   dependencies:
@@ -8958,8 +8857,8 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
 sinon@^4.0.1:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-4.0.2.tgz#c81f62456d37986c84e9f522ddb9ce413bda49d2"
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-4.1.0.tgz#cbf7a99165638350019e0faf87658a0c2041c4dc"
   dependencies:
     diff "^3.1.0"
     formatio "1.2.0"
@@ -9013,7 +8912,7 @@ sort-keys@^2.0.0:
   dependencies:
     is-plain-obj "^1.0.0"
 
-soundcloud-audio@^1.1.0, soundcloud-audio@^1.2.1:
+soundcloud-audio@^1.1.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/soundcloud-audio/-/soundcloud-audio-1.2.1.tgz#2451aee2a9f1ad017810e87e5cbc98c1a099ac71"
 
@@ -9460,63 +9359,67 @@ tar@^2.2.1:
     fstream "^1.0.2"
     inherits "2"
 
-teasim-assists@^3.0.8, teasim-assists@^3.0.9, teasim-assists@^3.1.0:
+teasim-assists@^3.0.8, teasim-assists@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/teasim-assists/-/teasim-assists-3.1.0.tgz#6d397d2bafc95dc3938d5f36a0e357f64042ce5d"
   dependencies:
     teasim-shims "^3.0.0"
 
-teasim-chart@^3.0.1-alpha.2:
-  version "3.0.1-alpha.2"
-  resolved "https://registry.yarnpkg.com/teasim-chart/-/teasim-chart-3.0.1-alpha.2.tgz#dc6a0b7dab073216e97fad05c017152853af84e6"
+teasim-assists@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/teasim-assists/-/teasim-assists-3.3.0.tgz#735c40948e46425b5df63aa44a12aa1255a83392"
   dependencies:
-    prop-types "^15.5.4"
-    react "^15.5.3"
-    react-dom "^15.5.3"
-    react-transition-group "^1.1.1"
-    teasim-assists "^3.0.8"
-    teasim-core "^3.0.1-alpha.2"
-    teasim-helpers "^3.0.8"
-    teasim-icon "^3.0.1-alpha.2"
-    teasim-less "^3.0.1-alpha.2"
-    teasim-props "^3.0.1-alpha.2"
-    teasim-tools "^3.0.1-alpha.2"
+    teasim-shims "^3.3.0"
 
-teasim-core@^3.0.1-alpha.2:
-  version "3.0.1-alpha.2"
-  resolved "https://registry.yarnpkg.com/teasim-core/-/teasim-core-3.0.1-alpha.2.tgz#89a86ae034efe96be00b1d887316e99be73a84ec"
+teasim-chart@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/teasim-chart/-/teasim-chart-3.3.1.tgz#272a40aa4524273adedc6b5ab9d07b912bec5670"
   dependencies:
-    dom-css "^2.1.0"
-    prop-types "^15.5.8"
-    raf "^3.3.0"
-    react "^15.5.4"
-    react-dom "^15.5.4"
-    react-transition-group "^1.1.1"
-    teasim-assists "^3.0.8"
-    teasim-helpers "^3.0.8"
-    teasim-icon "^3.0.1-alpha.2"
-    teasim-less "^3.0.1-alpha.2"
-    teasim-props "^3.0.1-alpha.2"
-    teasim-tools "^3.0.1-alpha.2"
+    prop-types "^15.6.0"
+    react "^16.0.0"
+    react-dom "^16.0.0"
+    teasim-assists "^3.3.0"
+    teasim-core "^3.3.1"
+    teasim-helpers "^3.3.0"
+    teasim-icon "^3.3.1"
+    teasim-less "^3.3.1"
+    teasim-presets "^3.3.0"
+    teasim-styles "^3.3.0"
 
-teasim-form@^3.0.1-alpha.2:
-  version "3.0.1-alpha.2"
-  resolved "https://registry.yarnpkg.com/teasim-form/-/teasim-form-3.0.1-alpha.2.tgz#546add41f765da402ed8e46e5e3fa05b2635388d"
+teasim-core@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/teasim-core/-/teasim-core-3.3.1.tgz#b6f3b9f0124c08ba71c9cd09ec55923396fe6079"
+  dependencies:
+    prop-types "^15.6.0"
+    react "^16.0.0"
+    react-dom "^16.0.0"
+    react-transition-group "^2.2.1"
+    teasim-assists "^3.3.0"
+    teasim-helpers "^3.3.0"
+    teasim-icon "^3.3.1"
+    teasim-less "^3.3.1"
+    teasim-presets "^3.3.0"
+    teasim-styles "^3.3.0"
+
+teasim-form@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/teasim-form/-/teasim-form-3.3.1.tgz#52ee6813e329822c8ad14edaa1ce9bf5a93bb8ac"
   dependencies:
     moment "^2.18.1"
-    prop-types "^15.5.4"
-    react "^15.5.3"
-    react-dom "^15.5.3"
-    react-transition-group "^1.1.1"
-    teasim-assists "^3.0.8"
-    teasim-core "^3.0.1-alpha.2"
-    teasim-helpers "^3.0.8"
-    teasim-icon "^3.0.1-alpha.2"
-    teasim-less "^3.0.1-alpha.2"
-    teasim-props "^3.0.1-alpha.2"
-    teasim-tools "^3.0.1-alpha.2"
+    prop-types "^15.6.0"
+    react "^16.0.0"
+    react-dom "^16.0.0"
+    react-portal "^4.0.0"
+    react-transition-group "^2.2.1"
+    teasim-assists "^3.3.0"
+    teasim-core "^3.3.1"
+    teasim-helpers "^3.3.0"
+    teasim-icon "^3.3.1"
+    teasim-less "^3.3.1"
+    teasim-presets "^3.3.0"
+    teasim-styles "^3.3.0"
 
-teasim-helpers@^3.0.8, teasim-helpers@^3.0.9, teasim-helpers@^3.1.0:
+teasim-helpers@^3.0.8:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/teasim-helpers/-/teasim-helpers-3.1.0.tgz#276de695a466f7ed97cca1e4bfec9be2062b0367"
   dependencies:
@@ -9524,66 +9427,65 @@ teasim-helpers@^3.0.8, teasim-helpers@^3.0.9, teasim-helpers@^3.1.0:
     teasim-assists "^3.1.0"
     teasim-shims "^3.0.0"
 
-teasim-icon@^3.0.1-alpha.2:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/teasim-icon/-/teasim-icon-3.1.0.tgz#762ddb046e87446dc38187bd2646c6738abe907d"
+teasim-helpers@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/teasim-helpers/-/teasim-helpers-3.3.0.tgz#0704edfa0a31a78609a596c3c3963f2db455f76d"
   dependencies:
-    prop-types "^15.5.4"
-    react "^15.5.3"
+    immutable "^3.8.1"
+    teasim-assists "^3.3.0"
+    teasim-shims "^3.3.0"
+
+teasim-icon@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/teasim-icon/-/teasim-icon-3.3.1.tgz#bebf223fdc6124bddd8c2b7133f17b50fbf7360e"
+  dependencies:
+    prop-types "^15.6.0"
+    react "^16.0.0"
+    react-dom "^16.0.0"
+    teasim-assists "^3.3.0"
+    teasim-helpers "^3.3.0"
+    teasim-less "^3.3.1"
+    teasim-presets "^3.3.0"
+    teasim-styles "^3.3.0"
+
+teasim-less@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/teasim-less/-/teasim-less-3.3.1.tgz#f12014b54502759dc7ad714af650b59ce63ca018"
+
+teasim-middleware-fetch@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/teasim-middleware-fetch/-/teasim-middleware-fetch-3.3.0.tgz#b347d265b7e7a0199ca2ff70534cf2deb40a8852"
+  dependencies:
+    isomorphic-fetch "^2.2.1"
     teasim-assists "^3.0.8"
-    teasim-helpers "^3.0.8"
-    teasim-props "^3.1.0"
-    teasim-samples "^3.0.0-1"
-    teasim-styles "^3.0.9"
 
-teasim-less@^3.0.1-alpha.2:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/teasim-less/-/teasim-less-3.1.0.tgz#5567c6d9bf854fdb2f458cbb6d78ab89ca6ea7b9"
-
-teasim-player@^3.0.1-alpha.2:
-  version "3.0.1-alpha.2"
-  resolved "https://registry.yarnpkg.com/teasim-player/-/teasim-player-3.0.1-alpha.2.tgz#3efea2ef4027cec4e571ac3f633fccc0f1ba4af1"
+teasim-player@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/teasim-player/-/teasim-player-3.3.1.tgz#a10146adeba748894187474a5fb292ba711ce08e"
   dependencies:
-    prop-types "^15.5.4"
-    react "^15.5.3"
-    react-dom "^15.5.3"
-    react-motion "^0.5.0"
-    react-transition-group "^1.1.1"
+    prop-types "^15.6.0"
+    react "^16.0.0"
+    react-dom "^16.0.0"
+    react-transition-group "^2.2.1"
     soundcloud-audio "^1.1.0"
-    teasim-assists "^3.0.8"
-    teasim-core "^3.0.1-alpha.2"
-    teasim-helpers "^3.0.8"
-    teasim-icon "^3.0.1-alpha.2"
-    teasim-less "^3.0.1-alpha.2"
-    teasim-props "^3.0.1-alpha.2"
-    teasim-tools "^3.0.1-alpha.2"
+    teasim-assists "^3.3.0"
+    teasim-core "^3.3.1"
+    teasim-helpers "^3.3.0"
+    teasim-icon "^3.3.1"
+    teasim-less "^3.3.1"
+    teasim-presets "^3.3.0"
+    teasim-styles "^3.3.0"
 
-teasim-presets@^3.1.0:
-  version "3.1.9"
-  resolved "https://registry.yarnpkg.com/teasim-presets/-/teasim-presets-3.1.9.tgz#f9acda064cb2f3b5b5022fef762ce6effb661ceb"
+teasim-presets@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/teasim-presets/-/teasim-presets-3.3.0.tgz#3e88a49856022fb815390d6cc3f6ee7fe158474f"
   dependencies:
     moment "^2.18.1"
-    prop-types "^15.5.10"
-    react "^15.6.1"
-    react-dom "^15.6.1"
-    teasim-assists "^3.1.0"
-    teasim-helpers "^3.1.0"
-
-teasim-props@^3.0.1-alpha.2, teasim-props@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/teasim-props/-/teasim-props-3.1.0.tgz#b114ea1db45fcb1f1523bf022c831791cf8591a0"
-  dependencies:
-    array.prototype.find "^2.0.4"
-    has "^1.0.1"
-    is-regex "^1.0.4"
-    moment "^2.18.1"
-    object.assign "^4.0.4"
-    object.entries "^1.0.4"
-    prop-types "^15.5.4"
-    react "^15.5.3"
-    teasim-assists "^3.0.8"
-    teasim-helpers "^3.0.8"
-    teasim-presets "^3.1.0"
+    prop-types "^15.6.0"
+    react "^16.0.0"
+    react-dom "^16.0.0"
+    teasim-assists "^3.3.0"
+    teasim-helpers "^3.3.0"
 
 teasim-sample-addon-actions@^3.1.2:
   version "3.1.2"
@@ -9626,7 +9528,7 @@ teasim-sample-helpers@^3.1.2:
     teasim-assists "^3.0.8"
     teasim-helpers "^3.0.8"
 
-teasim-samples@^3.0.0-1:
+teasim-samples@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/teasim-samples/-/teasim-samples-3.1.2.tgz#98ce6e52c59a861209b5276ed1ddca9080e9b894"
   dependencies:
@@ -9656,39 +9558,50 @@ teasim-shims@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/teasim-shims/-/teasim-shims-3.0.0.tgz#d4e3590e9516058ede7ad972552fa5c59ea3a6ab"
 
-teasim-styles@^3.0.9:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/teasim-styles/-/teasim-styles-3.1.0.tgz#1b6b73599114fa34fb07cd4f08e3b679ead828d7"
-  dependencies:
-    react "^15.6.1"
-    teasim-assists "^3.0.9"
+teasim-shims@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/teasim-shims/-/teasim-shims-3.3.0.tgz#c69c2d076979d2264142fbc4437f06aa6defd398"
 
-teasim-tools@^3.0.1-alpha.2:
-  version "3.0.10"
-  resolved "https://registry.yarnpkg.com/teasim-tools/-/teasim-tools-3.0.10.tgz#555c1c17a707aa741c6e2121d0b3029107eb7b75"
+teasim-styles@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/teasim-styles/-/teasim-styles-3.3.0.tgz#a064cfaff13140d12d6a7caf94f25437f6fc5cb4"
   dependencies:
-    prop-types "^15.5.10"
-    react "^15.6.1"
-    react-dom "^15.6.1"
-    teasim-assists "^3.0.9"
-    teasim-helpers "^3.0.9"
+    prop-types "^15.6.0"
+    react "^16.0.0"
+    react-dom "^16.0.0"
+    teasim-assists "^3.3.0"
 
-teasim@^3.0.1-alpha.2:
-  version "3.0.1-alpha.2"
-  resolved "https://registry.yarnpkg.com/teasim/-/teasim-3.0.1-alpha.2.tgz#1d9726cd769df37cbb8560d60ac73383a19e2fc8"
+teasim-tools@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/teasim-tools/-/teasim-tools-3.3.1.tgz#6245510c69978d72282e283c63cd417ee6dfdddc"
   dependencies:
-    expect "^1.20.2"
-    prop-types "^15.5.4"
-    react "^15.5.3"
-    react-dom "^15.5.3"
-    react-transition-group "^1.1.1"
-    teasim-chart "^3.0.1-alpha.2"
-    teasim-core "^3.0.1-alpha.2"
-    teasim-form "^3.0.1-alpha.2"
-    teasim-icon "^3.0.1-alpha.2"
-    teasim-less "^3.0.1-alpha.2"
-    teasim-player "^3.0.1-alpha.2"
-    teasim-tools "^3.0.1-alpha.2"
+    prop-types "^15.6.0"
+    react "^16.0.0"
+    react-dom "^16.0.0"
+    react-transition-group "^2.2.1"
+    teasim-assists "^3.3.0"
+    teasim-helpers "^3.3.0"
+
+teasim@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/teasim/-/teasim-3.3.1.tgz#12442b435138e7f103d7c10c120f8632c243836e"
+  dependencies:
+    moment "^2.19.1"
+    prop-types "^15.6.0"
+    react "^16.0.0"
+    react-dom "^16.0.0"
+    react-portal "^4.0.0"
+    react-transition-group "^2.2.1"
+    teasim-assists "^3.3.0"
+    teasim-chart "^3.3.1"
+    teasim-core "^3.3.1"
+    teasim-form "^3.3.1"
+    teasim-helpers "^3.3.0"
+    teasim-icon "^3.3.1"
+    teasim-less "^3.3.1"
+    teasim-player "^3.3.1"
+    teasim-presets "^3.3.0"
+    teasim-styles "^3.3.0"
 
 temp-dir@^1.0.0:
   version "1.0.0"
@@ -9816,10 +9729,6 @@ title-case@^2.1.0:
   dependencies:
     no-case "^2.2.0"
     upper-case "^1.0.3"
-
-tmatch@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/tmatch/-/tmatch-2.0.1.tgz#0c56246f33f30da1b8d3d72895abaf16660f38cf"
 
 tmp@^0.0.33:
   version "0.0.33"

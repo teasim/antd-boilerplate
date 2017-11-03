@@ -111,7 +111,10 @@ module.exports = options => ({
     new webpack.NamedModulesPlugin()
   ]),
   resolve: {
-    modules: ['client', 'node_modules'],
+    modules: [
+      'client',
+      'node_modules'
+    ],
     extensions: ['.js', '.jsx', '.react.js'],
     mainFields: ['browser', 'jsnext:main', 'main']
   },

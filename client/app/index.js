@@ -5,7 +5,6 @@ import createHistory from 'history/createBrowserHistory'
 import { Provider } from 'react-redux'
 import { AppContainer } from 'react-hot-loader'
 import { ConnectedRouter } from 'react-router-redux'
-import { ApplicationProvider } from 'teasim'
 import { Application, LocaleProvider } from 'app/entrances/index'
 import { translationMessages } from 'app/helpers/internationalization'
 import generateStore from 'app/stores/index'
@@ -38,9 +37,7 @@ const renderDevelopmentApplication = messages => {
       <Provider store={store}>
         <LocaleProvider messages={messages}>
           <ConnectedRouter history={history}>
-            <ApplicationProvider type='webapp'>
-              <Application />
-            </ApplicationProvider>
+            <Application />
           </ConnectedRouter>
         </LocaleProvider>
       </Provider>
@@ -60,9 +57,7 @@ const renderProductionApplication = messages => {
     <Provider store={store}>
       <LocaleProvider messages={messages}>
         <ConnectedRouter history={history}>
-          <ApplicationProvider type='webapp'>
-            <Application />
-          </ApplicationProvider>
+          <Application />
         </ConnectedRouter>
       </LocaleProvider>
     </Provider>
@@ -85,7 +80,6 @@ if (!window.Intl) {
   renderProductionApplication(translationMessages)
 }
 
-/* Install ServiceWorker and AppCache in the end since */
 if (process.env.NODE_ENV === 'production') {
   require('offline-plugin/runtime').install() // eslint-disable-line global-require
 };

@@ -15,7 +15,6 @@ if (!test('-e', 'internals/templates')) {
 
 process.stdout.write('Cleanup started...');
 
-// Reuse existing LanguageProvider and internationalization tests
 cp('client/app/tests/internationalization.test.js', 'internals/templates/app/tests/internationalization.test.js');
 
 // cleanup client/

@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
-import { fetchMiddleware } from 'teasim-middlewares';
+import { fetchMiddleware } from 'teasim-middleware-fetch';
 import { rootReducer } from 'app/reducers/index';
 import thunkMiddleware from 'redux-thunk';
 

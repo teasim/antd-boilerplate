@@ -13,7 +13,7 @@ const plugins = [
   new webpack.NoEmitOnErrorsPlugin(),
   new HtmlWebpackPlugin({
     inject: true,
-    templateContent: templateContent()
+    templateContent: templateContent() // eslint-disable-line no-use-before-define
   }),
   new CircularDependencyPlugin({
     exclude: /a\.js|node_modules/,
@@ -26,7 +26,7 @@ process.noDeprecation = true
 
 module.exports = require('./webpack.base.babel')({
   entry: [
-    'eventsource-polyfill',
+    'eventsource-polyfill', // Necessary for hot reloading with IE
     'react-hot-loader/patch',
     'webpack-hot-middleware/client?reload=true',
     path.join(process.cwd(), 'client/app/index.js')
@@ -37,11 +37,12 @@ module.exports = require('./webpack.base.babel')({
     chunkFilename: '[name].chunk.js'
   },
 
-  plugins: dependencyHandlers().concat(plugins),
+  plugins: dependencyHandlers().concat(plugins), // eslint-disable-line no-use-before-define
 
-  babelQuery: {
-    presets: ['babel-preset-react-hmre'].map(require.resolve)
-  },
+  // Tell babel that we want to hot-reload
+  // babelQuery: {
+  //   presets: ['babel-preset-react-hmre'].map(require.resolve)
+  // },
 
   devtool: 'eval-source-map',
 
@@ -79,7 +80,7 @@ function dependencyHandlers () {
     return [
       new webpack.DllReferencePlugin({
         context: process.cwd(),
-        manifest: require(manifestPath)
+        manifest: require(manifestPath) // eslint-disable-line global-require
       })
     ]
   }
@@ -99,7 +100,7 @@ function dependencyHandlers () {
 
     return new webpack.DllReferencePlugin({
       context: process.cwd(),
-      manifest: require(manifestPath)
+      manifest: require(manifestPath) // eslint-disable-line global-require
     })
   })
 }
