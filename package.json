@@ -109,15 +109,11 @@
     },
     "moduleDirectories": [
       "node_modules",
-      "intermodules",
-      "interalias",
-      "packages",
       "client"
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/",
-      "<rootDir>/internals/",
-      "<rootDir>/storages/"
+      "<rootDir>/internals/"
     ],
     "moduleNameMapper": {
       ".*\\.(css|less|styl|scss|sass)$": "<rootDir>/internals/mocks/cssModule.js",
@@ -152,11 +148,7 @@
     "ignore": [
       "build/**",
       "server/**",
-      "storages/**",
       "internals/**",
-      "packages/*/yarn.lock",
-      "packages/*/build",
-      "packages/*/library",
       "node_modules/**",
       "node_modules_old/**",
       "**/node_modules/*",
@@ -721,6 +713,7 @@
     "teasim-less": "^3.3.1",
     "teasim-middleware-fetch": "^3.3.0",
     "teasim-presets": "^3.3.0",
+    "teasim-shims": "^3.3.0",
     "teasim-styles": "^3.3.0",
     "whatwg-fetch": "^2.0.3"
   },

@@ -20,7 +20,7 @@ module.exports = options => ({
       },
       {
         test: /\.less$/,
-        exclude: /node_modules/,
+        include: /node_modules/,
         use: [
           {
             loader: 'style-loader'
