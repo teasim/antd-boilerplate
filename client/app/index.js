@@ -61,7 +61,7 @@ const renderProductionApplication = messages => {
         </ConnectedRouter>
       </LocaleProvider>
     </Provider>
-  , mountNode)
+ , mountNode)
 }
 
 if (!window.Intl) {

@@ -1,14 +1,11 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { Layout } from 'teasim'
-import { LanguagePicker } from 'app/components/common/index'
+// import { LanguagePicker } from 'app/components/common/index'
 import { HomePage, AboutPage } from 'app/pages/index'
 
 const Application = () => (
   <Layout >
-    <Layout.Topper>
-      <LanguagePicker />
-    </Layout.Topper>
     <Layout.Bodyer>
       <Switch>
         <Route exact path='/' component={HomePage} />

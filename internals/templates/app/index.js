@@ -5,24 +5,23 @@ import createHistory from 'history/createBrowserHistory'
 import { Provider } from 'react-redux'
 import { AppContainer } from 'react-hot-loader'
 import { ConnectedRouter } from 'react-router-redux'
-import { ApplicationProvider } from 'teasim'
 import { Application, LocaleProvider } from 'app/entrances/index'
 import { translationMessages } from 'app/helpers/internationalization'
 import generateStore from 'app/stores/index'
 /* eslint-disable import/no-webpack-loader-syntax */
-import '!file-loader?name=[name].[ext]!app/resources/icons/favicon.ico'
-import '!file-loader?name=[name].[ext]!app/resources/icons/icon-72x72.png'
-import '!file-loader?name=[name].[ext]!app/resources/icons/icon-96x96.png'
-import '!file-loader?name=[name].[ext]!app/resources/icons/icon-120x120.png'
-import '!file-loader?name=[name].[ext]!app/resources/icons/icon-128x128.png'
-import '!file-loader?name=[name].[ext]!app/resources/icons/icon-144x144.png'
-import '!file-loader?name=[name].[ext]!app/resources/icons/icon-152x152.png'
-import '!file-loader?name=[name].[ext]!app/resources/icons/icon-167x167.png'
-import '!file-loader?name=[name].[ext]!app/resources/icons/icon-180x180.png'
-import '!file-loader?name=[name].[ext]!app/resources/icons/icon-192x192.png'
-import '!file-loader?name=[name].[ext]!app/resources/icons/icon-384x384.png'
-import '!file-loader?name=[name].[ext]!app/resources/icons/icon-512x512.png'
-import '!file-loader?name=[name].[ext]!app/resources/icons/manifest.json'
+import '!file-loader?name=[name].[ext]!resources/icons/favicon.ico'
+import '!file-loader?name=[name].[ext]!resources/icons/icon-72x72.png'
+import '!file-loader?name=[name].[ext]!resources/icons/icon-96x96.png'
+import '!file-loader?name=[name].[ext]!resources/icons/icon-120x120.png'
+import '!file-loader?name=[name].[ext]!resources/icons/icon-128x128.png'
+import '!file-loader?name=[name].[ext]!resources/icons/icon-144x144.png'
+import '!file-loader?name=[name].[ext]!resources/icons/icon-152x152.png'
+import '!file-loader?name=[name].[ext]!resources/icons/icon-167x167.png'
+import '!file-loader?name=[name].[ext]!resources/icons/icon-180x180.png'
+import '!file-loader?name=[name].[ext]!resources/icons/icon-192x192.png'
+import '!file-loader?name=[name].[ext]!resources/icons/icon-384x384.png'
+import '!file-loader?name=[name].[ext]!resources/icons/icon-512x512.png'
+import '!file-loader?name=[name].[ext]!resources/icons/manifest.json'
 import 'file-loader?name=[name].[ext]!.htaccess' // eslint-disable-line import/extensions
 /* eslint-enable import/no-webpack-loader-syntax */
 import 'app/styles/application.less'
@@ -38,9 +37,7 @@ const renderDevelopmentApplication = messages => {
       <Provider store={store}>
         <LocaleProvider messages={messages}>
           <ConnectedRouter history={history}>
-            <ApplicationProvider type='webapp'>
-              <Application />
-            </ApplicationProvider>
+            <Application />
           </ConnectedRouter>
         </LocaleProvider>
       </Provider>
@@ -60,13 +57,11 @@ const renderProductionApplication = messages => {
     <Provider store={store}>
       <LocaleProvider messages={messages}>
         <ConnectedRouter history={history}>
-          <ApplicationProvider type='webapp'>
-            <Application />
-          </ApplicationProvider>
+          <Application />
         </ConnectedRouter>
       </LocaleProvider>
     </Provider>
-  , mountNode)
+ , mountNode)
 }
 
 if (!window.Intl) {
@@ -85,7 +80,6 @@ if (!window.Intl) {
   renderProductionApplication(translationMessages)
 }
 
-/* Install ServiceWorker and AppCache in the end since */
 if (process.env.NODE_ENV === 'production') {
   require('offline-plugin/runtime').install() // eslint-disable-line global-require
 };
