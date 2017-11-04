@@ -1,8 +1,8 @@
-const chalk = require('chalk');
+const chalk = require('chalk')
 
-function addCheckMark(callback) {
-  process.stdout.write(chalk.green(' ✓'));
-  if (callback) callback();
+function addCheckMark (callback) {
+  process.stdout.write(chalk.green(' ✓'))
+  if (callback) callback()
 }
 
-module.exports = addCheckMark;
+module.exports = addCheckMark

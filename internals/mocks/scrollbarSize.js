@@ -1,7 +1,7 @@
 jest.mock('dom-helpers/util/scrollbarSize', () => {
   return function getScrollbarSize () {
-    return 20;
-  };
-});
+    return 20
+  }
+})
 
-global.requestAnimationFrame = require('raf');
+global.requestAnimationFrame = require('raf')

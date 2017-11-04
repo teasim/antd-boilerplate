@@ -1,6 +1,6 @@
 const resolve = require('path').resolve
-const pullAll = require('lodash/pullAll')
-const uniq = require('lodash/uniq')
+const pullAll = require('lodash.pullall')
+const uniq = require('lodash.uniq')
 
 const ReactBoilerplate = {
   version: '0.1.0',
@@ -14,7 +14,7 @@ const ReactBoilerplate = {
         'ip',
         'minimist'
       ],
-      include: ['core-js', 'eventsource-polyfill', 'babel-polyfill', 'lodash'],
+      include: ['core-js', 'eventsource-polyfill', 'babel-polyfill'],
       path: resolve('../node_modules/react-boilerplate-dlls')
     },
 
