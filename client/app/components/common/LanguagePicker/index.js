@@ -1,5 +1,2 @@
-import LanguagePicker from './LanguagePicker';
-
-export {
-	LanguagePicker,
-};
+import LanguagePicker from "./LanguagePicker";
+export { LanguagePicker };

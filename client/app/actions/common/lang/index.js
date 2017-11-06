@@ -1,8 +1,4 @@
-import { changeLocaleLanguage } from './actions';
-import { selectLocaleLanguage, selectLanguage } from './selectors';
+import { changeLocaleLanguage } from "./actions";
+import { selectLocaleLanguage, selectLanguage } from "./selectors";
 
-export {
-  changeLocaleLanguage,
-  selectLocaleLanguage,
-  selectLanguage,
-};
+export { changeLocaleLanguage, selectLocaleLanguage, selectLanguage };

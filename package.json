@@ -12,26 +12,31 @@
     "analyze:clean": "rimraf stats.json",
     "preanalyze": "npm run analyze:clean",
     "analyze": "node ./internals/scripts/analyze.js",
-    "extract-intl": "babel-node --presets env,stage-0 -- ./internals/scripts/extract-intl.js",
+    "extract-intl":
+      "babel-node --presets env,stage-0 -- ./internals/scripts/extract-intl.js",
     "npmcheckversion": "node ./internals/scripts/npmcheckversion.js",
     "preinstall": "npm run npmcheckversion",
     "postinstall": "npm run build:dll",
     "prebuild": "npm run build:clean",
-    "build": "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules",
+    "build":
+      "cross-env NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules",
     "build:clean": "rimraf ./build",
     "build:dll": "node ./internals/scripts/dependencies.js",
     "start": "cross-env NODE_ENV=development node server",
-    "start:tunnel": "cross-env NODE_ENV=development ENABLE_TUNNEL=true node server",
+    "start:tunnel":
+      "cross-env NODE_ENV=development ENABLE_TUNNEL=true node server",
     "start:production": "npm run test && npm run build && npm run start:prod",
     "start:prod": "cross-env NODE_ENV=production node server",
     "presetup": "npm i chalk shelljs",
     "setup": "node ./internals/scripts/setup.js",
     "postsetup": "npm run build:dll",
     "clean": "shjs ./internals/scripts/clean.js",
-    "clean:all": "npm run analyze:clean && npm run test:clean && npm run build:clean",
+    "clean:all":
+      "npm run analyze:clean && npm run test:clean && npm run build:clean",
     "generate": "plop --plopfile internals/generators/index.js",
     "lint": "npm run lint:js",
-    "lint:eslint": "eslint --ignore-path .eslintignore --ignore-pattern internals/scripts",
+    "lint:eslint":
+      "eslint --ignore-path .eslintignore --ignore-pattern internals/scripts",
     "lint:js": "npm run lint:eslint -- . ",
     "lint:staged": "lint-staged",
     "pretest": "npm run test:clean && npm run lint",
@@ -51,21 +56,12 @@
         "env",
         {
           "targets": {
-            "browsers": [
-              "last 2 versions",
-              "safari >= 7"
-            ]
+            "browsers": ["last 2 versions", "safari >= 7"]
           },
           "loose": true,
           "modules": "commonjs",
-          "include": [
-            "transform-es2015-arrow-functions",
-            "es6.map"
-          ],
-          "exclude": [
-            "transform-regenerator",
-            "es6.set"
-          ]
+          "include": ["transform-es2015-arrow-functions", "es6.map"],
+          "exclude": ["transform-regenerator", "es6.set"]
         }
       ],
       "es2015",
@@ -75,9 +71,7 @@
     ],
     "env": {
       "production": {
-        "only": [
-          "client"
-        ],
+        "only": ["client"],
         "plugins": [
           "transform-react-remove-prop-types",
           "transform-react-constant-elements",
@@ -85,10 +79,7 @@
         ]
       },
       "test": {
-        "plugins": [
-          "transform-es2015-modules-commonjs",
-          "dynamic-import-node"
-        ]
+        "plugins": ["transform-es2015-modules-commonjs", "dynamic-import-node"]
       }
     }
   },
@@ -107,22 +98,20 @@
         "lines": 98
       }
     },
-    "moduleDirectories": [
-      "node_modules",
-      "client"
-    ],
+    "moduleDirectories": ["node_modules", "client"],
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/",
       "<rootDir>/internals/"
     ],
     "moduleNameMapper": {
-      ".*\\.(css|less|styl|scss|sass)$": "<rootDir>/internals/mocks/cssModule.js",
-      ".*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/image.js"
+      ".*\\.(css|less|styl|scss|sass)$":
+        "<rootDir>/internals/mocks/cssModule.js",
+      ".*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+        "<rootDir>/internals/mocks/image.js"
     },
-    "setupTestFrameworkScriptFile": "<rootDir>/internals/testing/test-bundler.js",
-    "setupFiles": [
-      "<rootDir>/internals/mocks/scrollbarSize.js"
-    ],
+    "setupTestFrameworkScriptFile":
+      "<rootDir>/internals/testing/test-bundler.js",
+    "setupFiles": ["<rootDir>/internals/mocks/scrollbarSize.js"],
     "testRegex": ".*\\.jest\\.js$",
     "verbose": true
   },
@@ -136,44 +125,18 @@
       "ip",
       "minimist"
     ],
-    "include": [
-      "core-js",
-      "eventsource-polyfill",
-      "babel-polyfill"
-    ]
-  },
-  "standard": {
-    "parser": "babel-eslint",
-    "ignore": [
-      "build/**",
-      "server/**",
-      "internals/**",
-      "node_modules/**",
-      "node_modules_old/**",
-      "**/node_modules/*",
-      "**/node_modules_old/*"
-    ],
-    "global": [
-      "afterAll",
-      "afterEach",
-      "beforeAll",
-      "beforeEach",
-      "describe",
-      "expect",
-      "fdescribe",
-      "fit",
-      "getComputedStyle",
-      "it",
-      "jest",
-      "spyOn"
-    ]
+    "include": ["core-js", "eventsource-polyfill", "babel-polyfill"]
   },
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": [
-      "eslint:recommended",
       "plugin:jest/recommended",
-      "plugin:flowtype/recommended"
+      "plugin:react/recommended",
+      "plugin:flowtype/recommended",
+      "prettier",
+      "prettier/flowtype",
+      "prettier/react",
+      "prettier/standard"
     ],
     "env": {
       "browser": true,
@@ -186,7 +149,9 @@
       "react",
       "flowtype",
       "import",
-      "jest"
+      "jest",
+      "prettier",
+      "standard"
     ],
     "parserOptions": {
       "ecmaVersion": 6,
@@ -196,358 +161,7 @@
       }
     },
     "rules": {
-      "array-bracket-spacing": [
-        "error",
-        "never"
-      ],
-      "arrow-spacing": "error",
-      "arrow-parens": [
-        "error",
-        "as-needed",
-        {
-          "requireForBlockBody": true
-        }
-      ],
-      "arrow-body-style": [
-        "error",
-        "as-needed"
-      ],
-      "block-spacing": [
-        "error",
-        "always"
-      ],
-      "brace-style": "error",
-      "comma-dangle": [
-        "error",
-        "never"
-      ],
-      "comma-spacing": [
-        "error",
-        {
-          "before": false,
-          "after": true
-        }
-      ],
-      "comma-style": [
-        "error",
-        "last"
-      ],
-      "computed-property-spacing": [
-        "error",
-        "never"
-      ],
-      "consistent-this": [
-        "error",
-        "self"
-      ],
-      "consistent-return": "off",
-      "dot-notation": "error",
-      "dot-location": [
-        "error",
-        "property"
-      ],
-      "eqeqeq": [
-        "error",
-        "smart"
-      ],
-      "eol-last": "error",
-      "indent": [
-        "error",
-        2,
-        {
-          "SwitchCase": 1
-        }
-      ],
-      "id-blacklist": [
-        "error",
-        "e"
-      ],
-      "jsx-quotes": [
-        "error",
-        "prefer-single"
-      ],
-      "keyword-spacing": "error",
-      "key-spacing": "error",
-      "max-len": [
-        "error",
-        520,
-        4
-      ],
-      "new-cap": [
-        "off",
-        {
-          "capIsNew": true,
-          "newIsCap": true
-        }
-      ],
-      "no-use-before-define": [
-        "error",
-        "nofunc"
-      ],
-      "no-unused-expressions": "error",
-      "no-unused-vars": "error",
-      "no-shadow": "off",
-      "no-spaced-func": "error",
-      "no-multiple-empty-lines": "error",
-      "no-multi-spaces": "error",
-      "no-undef": "error",
-      "no-empty-pattern": "error",
-      "no-dupe-keys": "error",
-      "no-dupe-args": "error",
-      "no-duplicate-case": "error",
-      "no-cond-assign": "error",
-      "no-extra-semi": "error",
-      "no-extra-boolean-cast": "error",
-      "no-trailing-spaces": "error",
-      "no-underscore-dangle": [
-        "error",
-        {
-          "allowAfterThis": true
-        }
-      ],
-      "no-unneeded-ternary": "error",
-      "no-unreachable": "error",
-      "no-var": "error",
-      "one-var": [
-        "error",
-        "never"
-      ],
-      "no-mixed-operators": [
-        "off",
-        {
-          "groups": [
-            [
-              "+",
-              "-",
-              "*",
-              "/",
-              "%",
-              "**"
-            ],
-            [
-              "&",
-              "|",
-              "^",
-              "~",
-              "<<",
-              ">>",
-              ">>>"
-            ],
-            [
-              "==",
-              "!=",
-              "===",
-              "!==",
-              ">",
-              ">=",
-              "<",
-              "<="
-            ],
-            [
-              "&&",
-              "||"
-            ],
-            [
-              "in",
-              "instanceof"
-            ]
-          ],
-          "allowSamePrecedence": true
-        }
-      ],
-      "operator-linebreak": [
-        "off",
-        "before"
-      ],
-      "padded-blocks": [
-        "error",
-        "never"
-      ],
-      "prefer-arrow-callback": "off",
-      "prefer-const": "error",
-      "prefer-template": "error",
-      "quotes": [
-        "error",
-        "single",
-        {
-          "allowTemplateLiterals": true
-        }
-      ],
-      "semi": [
-        "error",
-        "never"
-      ],
-      "space-before-blocks": [
-        "error",
-        "always"
-      ],
-      "space-before-function-paren": [
-        "error",
-        "always"
-      ],
-      "space-infix-ops": "error",
-      "space-unary-ops": [
-        "error",
-        {
-          "words": true,
-          "nonwords": false
-        }
-      ],
-      "spaced-comment": "error",
-      "yoda": "error",
-      "babel/object-curly-spacing": [
-        "error",
-        "always"
-      ],
-      "generator-star-spacing": "error",
-      "no-await-in-loop": "error",
-      "jest/no-disabled-tests": "warn",
-      "jest/no-focused-tests": "error",
-      "jest/no-identical-title": "error",
-      "jest/valid-expect": "error",
-      "react/display-name": "error",
-      "react/jsx-boolean-value": [
-        "error",
-        "never"
-      ],
-      "react/jsx-closing-bracket-location": [
-        "error",
-        {
-          "selfClosing": "tag-aligned",
-          "nonEmpty": "after-props"
-        }
-      ],
-      "react/jsx-curly-spacing": "error",
-      "react/jsx-equals-spacing": "error",
-      "react/jsx-filename-extension": [
-        "error",
-        {
-          "extensions": [
-            ".js"
-          ]
-        }
-      ],
-      "react/jsx-first-prop-new-line": [
-        "error",
-        "multiline"
-      ],
-      "react/jsx-handler-names": "error",
-      "react/jsx-indent": [
-        "error",
-        2
-      ],
-      "react/jsx-indent-props": [
-        "error",
-        2
-      ],
-      "react/jsx-max-props-per-line": [
-        "error",
-        {
-          "maximum": 3
-        }
-      ],
-      "react/jsx-tag-spacing": [
-        "error",
-        {
-          "beforeSelfClosing": "always"
-        }
-      ],
-      "react/jsx-no-comment-textnodes": "error",
-      "react/jsx-no-duplicate-props": "error",
-      "react/jsx-no-undef": "error",
-      "react/jsx-pascal-case": "error",
-      "react/jsx-space-before-closing": "error",
-      "react/jsx-uses-react": "error",
-      "react/jsx-uses-vars": "error",
-      "react/jsx-wrap-multilines": "error",
-      "react/no-danger": "error",
-      "react/no-deprecated": "error",
-      "react/no-did-mount-set-state": "error",
-      "react/no-did-update-set-state": "error",
-      "react/no-direct-mutation-state": "error",
-      "react/no-multi-comp": "off",
-      "react/no-render-return-value": "error",
-      "react/no-is-mounted": "error",
-      "react/no-unknown-property": "error",
-      "react/prefer-arrow-callback": "off",
-      "react/prefer-es6-class": "error",
-      "react/prop-types": "error",
-      "react/react-in-jsx-scope": "error",
-      "import/extensions": "off",
-      "import/newline-after-import": 0,
-      "import/no-dynamic-require": 0,
-      "import/no-extraneous-dependencies": 0,
-      "import/no-named-as-default": 0,
-      "import/prefer-default-export": 0,
-      "import/no-webpack-loader-syntax": 0,
-      "react/require-render-return": "error",
-      "react/self-closing-comp": "error",
-      "react/sort-comp": "error",
-      "react/no-string-refs": "warn",
-      "strict": "off",
-      "no-case-declarations": "off",
-      "react/jsx-key": "off",
-      "react/jsx-no-bind": "off",
-      "react/jsx-no-literals": "off",
-      "react/jsx-no-target-blank": "off",
-      "react/jsx-sort-props": "off",
-      "react/no-set-state": "off",
-      "react/forbid-prop-types": "off",
-      "react/prefer-stateless-function": "off",
-      "react/require-optimization": "off",
-      "babel/object-shorthand": "off",
-      "babel/new-cap": "off",
-      "flowtype/object-type-delimiter": [
-        "error",
-        "comma"
-      ],
-      "flowtype/boolean-style": [
-        "error",
-        "boolean"
-      ],
-      "flowtype/define-flow-type": "error",
-      "flowtype/delimiter-dangle": [
-        "error",
-        "never"
-      ],
-      "flowtype/generic-spacing": [
-        "error",
-        "never"
-      ],
-      "flowtype/no-primitive-constructor-types": "error",
-      "flowtype/no-types-missing-file-annotation": "error",
-      "flowtype/no-weak-types": "error",
-      "flowtype/require-parameter-type": "error",
-      "flowtype/require-return-type": [
-        "error",
-        "always",
-        {
-          "annotateUndefined": "never"
-        }
-      ],
-      "flowtype/require-valid-file-annotation": "error",
-      "flowtype/space-after-type-colon": [
-        "error",
-        "always"
-      ],
-      "flowtype/space-before-generic-bracket": [
-        "error",
-        "never"
-      ],
-      "flowtype/space-before-type-colon": [
-        "error",
-        "never"
-      ],
-      "flowtype/type-id-match": [
-        "off",
-        "^([A-Z][a-z0-9]+)+Type$"
-      ],
-      "flowtype/union-intersection-spacing": [
-        "error",
-        "always"
-      ],
-      "flowtype/use-flow-type": 1,
-      "flowtype/valid-syntax": 1
+      "prettier/prettier": "error"
     },
     "settings": {
       "import/resolver": {
@@ -595,11 +209,8 @@
     "css-loader": "^0.28.7",
     "dom-helpers": "^3.2.1",
     "empty-module": "0.0.2",
-    "enzyme": "^3.1.0",
     "eslint": "^4.9.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-config-standard-jsx": "^4.0.2",
-    "eslint-config-standard-react": "^5.0.0",
+    "eslint-config-prettier": "^2.7.0",
     "eslint-import-resolver-webpack": "^0.8.3",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-flowtype": "^2.39.1",
@@ -655,7 +266,6 @@
     "serve-favicon": "^2.4.5",
     "shelljs": "^0.7.8",
     "sinon": "^4.1.1",
-    "standard": "^10.0.3",
     "style-loader": "^0.19.0",
     "teasim-samples": "^3.1.2",
     "teasim-tools": "^3.3.1",

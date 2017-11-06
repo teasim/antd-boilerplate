@@ -1,5 +1,3 @@
-import LanguageToggle from './LanguageToggle';
+import LanguageToggle from "./LanguageToggle";
 
-export {
-  LanguageToggle,
-};
+export { LanguageToggle };

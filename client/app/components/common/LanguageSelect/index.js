@@ -1,7 +1,4 @@
-import LanguageOption from './LanguageOption';
-import LanguageSelect from './LanguageSelect';
+import LanguageOption from "./LanguageOption";
+import LanguageSelect from "./LanguageSelect";
 
-export {
-	LanguageOption,
-  LanguageSelect,
-};
+export { LanguageOption, LanguageSelect };

@@ -1,7 +1,4 @@
-import Application from './Application';
-import LocaleProvider from './LocaleProvider';
+import Application from "./Application";
+import LocaleProvider from "./LocaleProvider";
 
-export {
-  Application,
-  LocaleProvider,
-};
+export { Application, LocaleProvider };

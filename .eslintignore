@@ -1,5 +1,15 @@
-node_modules/**
-node_modules_old/**
+# Third party
 **/node_modules/*
 **/node_modules_old/*
-build/**
+
+# Not written by hand
+packages/react-art/npm/lib
+
+# Build products
+build/
+coverage/
+fixtures/
+scripts/bench/benchmarks/**/*.js
+
+# React repository clone
+scripts/bench/remote-repo/
