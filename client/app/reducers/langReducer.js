@@ -1,4 +1,4 @@
-import { merge } from "teasim-tools";
+import merge from "teasim-assists/merge";
 import { DEFAULT_LOCALE, CHANGE_LOCALE } from "app/actions/lang/types";
 
 const initialState = {

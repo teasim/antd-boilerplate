@@ -1,17 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Section, Row, Column } from "teasim";
-import { LanguageToggle } from "app/containers/common/lang/index";
+import { LanguageToggle } from "app/containers/LanguageToggle/index";
 
-const LanguagePicker = props => (
-  <Section size={props.size} isNarrow>
-    <Row>
-      <Column>
-        <LanguageToggle />
-      </Column>
-    </Row>
-  </Section>
-);
+const LanguagePicker = props => <LanguageToggle />;
 
 LanguagePicker.propTypes = {
   size: PropTypes.string
