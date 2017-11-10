@@ -7,6 +7,6 @@ export default defineMessages({
   },
   name: {
     id: "app.pages.home.HomePage.name",
-    defaultMessage: "My name is Teasim"
+    defaultMessage: "My name is LWH"
   }
 });

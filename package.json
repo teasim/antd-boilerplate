@@ -259,6 +259,7 @@
     "less-loader": "^4.0.5",
     "less-vars-loader": "^1.1.0",
     "lint-staged": "^4.3.0",
+    "localStorage": "^1.0.3",
     "lodash.defaultsdeep": "^4.6.0",
     "lodash.pullall": "^4.2.0",
     "lodash.uniq": "^4.5.0",
@@ -291,6 +292,8 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "bcryptjs": "^2.4.3",
+    "btoa": "^1.1.2",
     "history": "^4.7.2",
     "immutable": "^3.8.2",
     "intl": "^1.2.5",

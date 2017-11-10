@@ -7,7 +7,7 @@ import { AppContainer } from "react-hot-loader";
 import { ConnectedRouter } from "react-router-redux";
 import { LanguageProvider } from "app/containers/index";
 import { translationMessages } from "app/helpers/internationalization";
-import generateStore from "app/stores/index";
+import genStore from "app/stores/index";
 import Application from "app/pages/index";
 /* eslint-disable import/no-webpack-loader-syntax */
 import "!file-loader?name=[name].[ext]!resources/icons/favicon.ico";
@@ -30,7 +30,7 @@ import "app/styles/application.less";
 // Create redux store with history
 const initialState = {};
 const browserHistory = createHistory();
-const { store, history } = generateStore(initialState, browserHistory);
+const { store, history } = genStore(initialState, browserHistory);
 const mountNode = document.getElementById("application");
 
 /* Render development instance */
