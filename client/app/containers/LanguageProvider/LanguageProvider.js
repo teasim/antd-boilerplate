@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { IntlProvider } from "react-intl";
 import { connect } from "react-redux";
 import { createSelector } from "reselect";
-import { selectLocaleLanguage } from "app/actions/lang/index";
+import { selectLocaleLanguage } from "app/actions/locale/index";
 
-class LocaleProvider extends React.PureComponent {
+class LanguageProvider extends React.PureComponent {
   render() {
     return (
       <IntlProvider
@@ -19,7 +19,7 @@ class LocaleProvider extends React.PureComponent {
   }
 }
 
-LocaleProvider.propTypes = {
+LanguageProvider.propTypes = {
   locale: PropTypes.string,
   messages: PropTypes.object,
   children: PropTypes.element.isRequired
@@ -29,4 +29,4 @@ const mapStateToProps = createSelector(selectLocaleLanguage(), locale => ({
   locale
 }));
 
-export default connect(mapStateToProps)(LocaleProvider);
+export default connect(mapStateToProps)(LanguageProvider);

@@ -1,1 +1,1 @@
-export * from "./lang/index";
+export * from "./locale/index";

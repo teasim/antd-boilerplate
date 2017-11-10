@@ -5,24 +5,24 @@ import createHistory from "history/createBrowserHistory";
 import { Provider } from "react-redux";
 import { AppContainer } from "react-hot-loader";
 import { ConnectedRouter } from "react-router-redux";
-import { LocaleProvider } from "app/containers/index";
+import { LanguageProvider } from "app/containers/index";
 import { translationMessages } from "app/helpers/internationalization";
 import generateStore from "app/stores/index";
 import Application from "app/pages/index";
 /* eslint-disable import/no-webpack-loader-syntax */
-import "!file-loader?name=[name].[ext]!app/resources/icons/favicon.ico";
-import "!file-loader?name=[name].[ext]!app/resources/icons/icon-72x72.png";
-import "!file-loader?name=[name].[ext]!app/resources/icons/icon-96x96.png";
-import "!file-loader?name=[name].[ext]!app/resources/icons/icon-120x120.png";
-import "!file-loader?name=[name].[ext]!app/resources/icons/icon-128x128.png";
-import "!file-loader?name=[name].[ext]!app/resources/icons/icon-144x144.png";
-import "!file-loader?name=[name].[ext]!app/resources/icons/icon-152x152.png";
-import "!file-loader?name=[name].[ext]!app/resources/icons/icon-167x167.png";
-import "!file-loader?name=[name].[ext]!app/resources/icons/icon-180x180.png";
-import "!file-loader?name=[name].[ext]!app/resources/icons/icon-192x192.png";
-import "!file-loader?name=[name].[ext]!app/resources/icons/icon-384x384.png";
-import "!file-loader?name=[name].[ext]!app/resources/icons/icon-512x512.png";
-import "!file-loader?name=[name].[ext]!app/resources/icons/manifest.json";
+import "!file-loader?name=[name].[ext]!resources/icons/favicon.ico";
+import "!file-loader?name=[name].[ext]!resources/icons/icon-72x72.png";
+import "!file-loader?name=[name].[ext]!resources/icons/icon-96x96.png";
+import "!file-loader?name=[name].[ext]!resources/icons/icon-120x120.png";
+import "!file-loader?name=[name].[ext]!resources/icons/icon-128x128.png";
+import "!file-loader?name=[name].[ext]!resources/icons/icon-144x144.png";
+import "!file-loader?name=[name].[ext]!resources/icons/icon-152x152.png";
+import "!file-loader?name=[name].[ext]!resources/icons/icon-167x167.png";
+import "!file-loader?name=[name].[ext]!resources/icons/icon-180x180.png";
+import "!file-loader?name=[name].[ext]!resources/icons/icon-192x192.png";
+import "!file-loader?name=[name].[ext]!resources/icons/icon-384x384.png";
+import "!file-loader?name=[name].[ext]!resources/icons/icon-512x512.png";
+import "!file-loader?name=[name].[ext]!resources/icons/manifest.json";
 import "file-loader?name=[name].[ext]!.htaccess";
 /* eslint-enable import/no-webpack-loader-syntax */
 import "app/styles/application.less";
@@ -38,11 +38,11 @@ const renderDevelopmentApplication = messages => {
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
-        <LocaleProvider messages={messages}>
+        <LanguageProvider messages={messages}>
           <ConnectedRouter history={history}>
             <Application />
           </ConnectedRouter>
-        </LocaleProvider>
+        </LanguageProvider>
       </Provider>
     </AppContainer>,
     mountNode
@@ -59,11 +59,11 @@ if (module.hot) {
 const renderProductionApplication = messages => {
   ReactDOM.render(
     <Provider store={store}>
-      <LocaleProvider messages={messages}>
+      <LanguageProvider messages={messages}>
         <ConnectedRouter history={history}>
           <Application />
         </ConnectedRouter>
-      </LocaleProvider>
+      </LanguageProvider>
     </Provider>,
     mountNode
   );

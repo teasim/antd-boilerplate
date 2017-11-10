@@ -1,8 +1,8 @@
 import { CHANGE_LOCALE } from "./types";
 
-export function changeLocaleLanguage(languageLocale) {
+export function changeLocaleLanguage(language) {
   return {
     type: CHANGE_LOCALE,
-    payload: languageLocale
+    payload: language
   };
 }

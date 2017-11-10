@@ -1,2 +1,2 @@
+export * from "./LanguageProvider/index";
 export * from "./LanguageToggle/index";
-export * from "./LocaleProvider/index";
