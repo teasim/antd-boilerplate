@@ -4,11 +4,11 @@ import { bindActionCreators } from "redux";
 import { createSelector } from "reselect";
 import { connect } from "react-redux";
 import { appLocales } from "app/helpers/internationalization";
-import { LanguageSelect } from "app/components/common/LanguageSelect/index";
+import { LanguageSelect } from "app/components/LanguageSelect/index";
 import {
   changeLocaleLanguage,
   selectLocaleLanguage
-} from "app/actions/common/lang/index";
+} from "app/actions/lang/index";
 import messages from "./messages";
 
 class LanguageToggle extends React.PureComponent {

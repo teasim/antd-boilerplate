@@ -1,5 +1,5 @@
 import { merge } from "teasim-tools";
-import { DEFAULT_LOCALE, CHANGE_LOCALE } from "app/actions/common/lang/types";
+import { DEFAULT_LOCALE, CHANGE_LOCALE } from "app/actions/lang/types";
 
 const initialState = {
   locale: DEFAULT_LOCALE

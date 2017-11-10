@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { IntlProvider } from "react-intl";
 import { connect } from "react-redux";
 import { createSelector } from "reselect";
-import { selectLocaleLanguage } from "app/actions/common/lang/index";
+import { selectLocaleLanguage } from "app/actions/lang/index";
 
 class LocaleProvider extends React.PureComponent {
   render() {

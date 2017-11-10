@@ -5,9 +5,10 @@ import createHistory from "history/createBrowserHistory";
 import { Provider } from "react-redux";
 import { AppContainer } from "react-hot-loader";
 import { ConnectedRouter } from "react-router-redux";
-import { Application, LocaleProvider } from "app/entrances/index";
+import { LocaleProvider } from "app/containers/index";
 import { translationMessages } from "app/helpers/internationalization";
 import generateStore from "app/stores/index";
+import Application from "app/pages/index";
 /* eslint-disable import/no-webpack-loader-syntax */
 import "!file-loader?name=[name].[ext]!resources/icons/favicon.ico";
 import "!file-loader?name=[name].[ext]!resources/icons/icon-72x72.png";
