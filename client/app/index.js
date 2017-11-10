@@ -5,8 +5,8 @@ import createHistory from "history/createBrowserHistory";
 import { Provider } from "react-redux";
 import { AppContainer } from "react-hot-loader";
 import { ConnectedRouter } from "react-router-redux";
-import { LanguageProvider } from "app/containers/index";
 import { translationMessages } from "app/helpers/internationalization";
+import LanguageProvider from "app/containers/LanguageProvider/index";
 import genStore from "app/stores/index";
 import Application from "app/pages/index";
 /* eslint-disable import/no-webpack-loader-syntax */
