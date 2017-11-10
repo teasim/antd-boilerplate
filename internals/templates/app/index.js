@@ -1,34 +1,38 @@
-import 'babel-polyfill'
-import React from 'react'
-import ReactDOM from 'react-dom'
-import createHistory from 'history/createBrowserHistory'
-import { Provider } from 'react-redux'
-import { AppContainer } from 'react-hot-loader'
-import { ConnectedRouter } from 'react-router-redux'
-import { Application, LocaleProvider } from 'app/entrances/index'
-import { translationMessages } from 'app/helpers/internationalization'
-import generateStore from 'app/stores/index'
+import "babel-polyfill";
+import React from "react";
+import ReactDOM from "react-dom";
+import createHistory from "history/createBrowserHistory";
+import { Provider } from "react-redux";
+import { AppContainer } from "react-hot-loader";
+import { ConnectedRouter } from "react-router-redux";
+import { LocaleProvider } from "app/containers/index";
+import { translationMessages } from "app/helpers/internationalization";
+import generateStore from "app/stores/index";
+import Application from "app/pages/index";
 /* eslint-disable import/no-webpack-loader-syntax */
-import '!file-loader?name=[name].[ext]!resources/icons/favicon.ico'
-import '!file-loader?name=[name].[ext]!resources/icons/icon-72x72.png'
-import '!file-loader?name=[name].[ext]!resources/icons/icon-96x96.png'
-import '!file-loader?name=[name].[ext]!resources/icons/icon-120x120.png'
-import '!file-loader?name=[name].[ext]!resources/icons/icon-128x128.png'
-import '!file-loader?name=[name].[ext]!resources/icons/icon-144x144.png'
-import '!file-loader?name=[name].[ext]!resources/icons/icon-152x152.png'
-import '!file-loader?name=[name].[ext]!resources/icons/icon-167x167.png'
-import '!file-loader?name=[name].[ext]!resources/icons/icon-180x180.png'
-import '!file-loader?name=[name].[ext]!resources/icons/icon-192x192.png'
-import '!file-loader?name=[name].[ext]!resources/icons/icon-384x384.png'
-import '!file-loader?name=[name].[ext]!resources/icons/icon-512x512.png'
-import '!file-loader?name=[name].[ext]!resources/icons/manifest.json'
-import 'file-loader?name=[name].[ext]!.htaccess' // eslint-disable-line import/extensions
+import "!file-loader?name=[name].[ext]!app/resources/icons/favicon.ico";
+import "!file-loader?name=[name].[ext]!app/resources/icons/icon-72x72.png";
+import "!file-loader?name=[name].[ext]!app/resources/icons/icon-96x96.png";
+import "!file-loader?name=[name].[ext]!app/resources/icons/icon-120x120.png";
+import "!file-loader?name=[name].[ext]!app/resources/icons/icon-128x128.png";
+import "!file-loader?name=[name].[ext]!app/resources/icons/icon-144x144.png";
+import "!file-loader?name=[name].[ext]!app/resources/icons/icon-152x152.png";
+import "!file-loader?name=[name].[ext]!app/resources/icons/icon-167x167.png";
+import "!file-loader?name=[name].[ext]!app/resources/icons/icon-180x180.png";
+import "!file-loader?name=[name].[ext]!app/resources/icons/icon-192x192.png";
+import "!file-loader?name=[name].[ext]!app/resources/icons/icon-384x384.png";
+import "!file-loader?name=[name].[ext]!app/resources/icons/icon-512x512.png";
+import "!file-loader?name=[name].[ext]!app/resources/icons/manifest.json";
+import "file-loader?name=[name].[ext]!.htaccess";
 /* eslint-enable import/no-webpack-loader-syntax */
-import 'app/styles/application.less'
+import "app/styles/application.less";
 
-const mountNode = document.getElementById('application')
-const browserHistory = createHistory()
-const { store, history } = generateStore(browserHistory, window.__INITIAL_STATE__); // eslint-disable-line 
+const mountNode = document.getElementById("application");
+const browserHistory = createHistory();
+const { store, history } = generateStore(
+  browserHistory,
+  window.__INITIAL_STATE__
+); // eslint-disable-line
 
 /* development instance */
 const renderDevelopmentApplication = messages => {
@@ -41,15 +45,16 @@ const renderDevelopmentApplication = messages => {
           </ConnectedRouter>
         </LocaleProvider>
       </Provider>
-    </AppContainer>
-  , mountNode)
-}
+    </AppContainer>,
+    mountNode
+  );
+};
 
 if (module.hot) {
-  module.hot.accept('app/helpers/internationalization', () => {
-    renderDevelopmentApplication(translationMessages)
-  })
-};
+  module.hot.accept("app/helpers/internationalization", () => {
+    renderDevelopmentApplication(translationMessages);
+  });
+}
 
 /* production instance */
 const renderProductionApplication = messages => {
@@ -60,26 +65,29 @@ const renderProductionApplication = messages => {
           <Application />
         </ConnectedRouter>
       </LocaleProvider>
-    </Provider>
- , mountNode)
-}
+    </Provider>,
+    mountNode
+  );
+};
 
 if (!window.Intl) {
-  (new Promise((resolve) => {
-    resolve(import('intl'))
-  }))
-    .then(() => Promise.all([
-      import('intl/locale-data/jsonp/en.js'),
-      import('intl/locale-data/jsonp/zh.js')
-    ]))
+  new Promise(resolve => {
+    resolve(import("intl"));
+  })
+    .then(() =>
+      Promise.all([
+        import("intl/locale-data/jsonp/en.js"),
+        import("intl/locale-data/jsonp/zh.js")
+      ])
+    )
     .then(() => renderProductionApplication(translationMessages))
-    .catch((err) => {
-      throw err
-    })
+    .catch(err => {
+      throw err;
+    });
 } else {
-  renderProductionApplication(translationMessages)
+  renderProductionApplication(translationMessages);
 }
 
-if (process.env.NODE_ENV === 'production') {
-  require('offline-plugin/runtime').install() // eslint-disable-line global-require
-};
+if (process.env.NODE_ENV === "production") {
+  require("offline-plugin/runtime").install(); // eslint-disable-line global-require
+}
