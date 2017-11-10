@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { bindActionCreators } from "redux";
 import { createSelector } from "reselect";
 import { connect } from "react-redux";
 import { appLocales } from "app/helpers/internationalization";
@@ -14,12 +13,12 @@ import messages from "./messages";
 class LanguageToggle extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.handleChange = this.handleChange.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
-    this.props.actions.changeLocaleLanguage(event.target.value);
-  }
+  // handleChange(event) {
+  //   this.props.actions.changeLocaleLanguage(event.target.value);
+  // }
 
   render() {
     return (
@@ -27,7 +26,7 @@ class LanguageToggle extends React.PureComponent {
         value={this.props.locale}
         values={appLocales}
         messages={messages}
-        onToggle={this.handleChange}
+        onToggle={this.props.onLocaleToggle}
       />
     );
   }
@@ -35,7 +34,7 @@ class LanguageToggle extends React.PureComponent {
 
 LanguageToggle.propTypes = {
   locale: PropTypes.string,
-  actions: PropTypes.object.isRequired
+  onLocaleToggle: PropTypes.func
 };
 
 const mapStateToProps = createSelector(selectLocaleLanguage(), locale => ({
@@ -43,7 +42,8 @@ const mapStateToProps = createSelector(selectLocaleLanguage(), locale => ({
 }));
 
 const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators({ changeLocaleLanguage }, dispatch)
+  onLocaleToggle: evt => dispatch(changeLocaleLanguage(evt.target.value)),
+  dispatch
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LanguageToggle);

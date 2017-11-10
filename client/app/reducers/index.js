@@ -1,8 +1,10 @@
-import { combineReducers } from "redux";
-import { routerReducer } from "react-router-redux";
-import langReducer from "./langReducer";
+import { combineReducers } from "redux-immutable";
+import languageReducer from "./languageReducer";
+import routeReducer from "./routeReducer";
 
-export const rootReducer = combineReducers({
-  routing: routerReducer,
-  lang: langReducer
-});
+export default function createReducer() {
+  return combineReducers({
+    route: routeReducer,
+    language: languageReducer
+  });
+}

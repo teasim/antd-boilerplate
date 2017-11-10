@@ -1,6 +1,6 @@
 import { createSelector } from "reselect";
 
-export const selectLanguage = state => state.lang;
+export const selectLanguage = state => state.get("language");
 
 export const selectLocaleLanguage = () =>
-  createSelector(selectLanguage, lang => lang.locale);
+  createSelector(selectLanguage, language => language.get("locale"));

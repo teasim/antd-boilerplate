@@ -27,14 +27,13 @@ import "file-loader?name=[name].[ext]!.htaccess";
 /* eslint-enable import/no-webpack-loader-syntax */
 import "app/styles/application.less";
 
-const mountNode = document.getElementById("application");
+// Create redux store with history
+const initialState = {};
 const browserHistory = createHistory();
-const { store, history } = generateStore(
-  browserHistory,
-  window.__INITIAL_STATE__
-); // eslint-disable-line
+const { store, history } = generateStore(initialState, browserHistory);
+const mountNode = document.getElementById("application");
 
-/* development instance */
+/* Render development instance */
 const renderDevelopmentApplication = messages => {
   ReactDOM.render(
     <AppContainer>
@@ -56,7 +55,7 @@ if (module.hot) {
   });
 }
 
-/* production instance */
+/* Render production instance */
 const renderProductionApplication = messages => {
   ReactDOM.render(
     <Provider store={store}>
@@ -70,6 +69,7 @@ const renderProductionApplication = messages => {
   );
 };
 
+// Chunked polyfill for browsers without Intl support
 if (!window.Intl) {
   new Promise(resolve => {
     resolve(import("intl"));
@@ -88,6 +88,9 @@ if (!window.Intl) {
   renderProductionApplication(translationMessages);
 }
 
+// Install ServiceWorker and AppCache in the end since
+// it's not most important operation and if main code fails,
+// we do not want it installed
 if (process.env.NODE_ENV === "production") {
   require("offline-plugin/runtime").install(); // eslint-disable-line global-require
 }
