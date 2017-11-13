@@ -3,9 +3,12 @@ import { fromJS } from "immutable";
 import { createStore, applyMiddleware, compose } from "redux";
 import { routerMiddleware } from "react-router-redux";
 import { createLogger } from "redux-logger";
+import { loadUser } from 'redux-oidc';
+import userManager from "app/helpers/userManager";
 import createSagaMiddleware from "redux-saga";
 import rootReducer from "app/reducers/index";
 import rootSaga from "app/sagas/index";
+
 
 export default function genStore(initialState = {}, baseHistory) {
   const loggingMiddleware = createLogger();
@@ -38,6 +41,7 @@ export default function genStore(initialState = {}, baseHistory) {
 
   const history = baseHistory;
 
+  loadUser(store, userManager);
   sagaMiddleware.run(rootSaga);
 
   return { store, history };

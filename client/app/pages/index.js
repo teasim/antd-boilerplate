@@ -6,6 +6,7 @@ import LanguageToggle from "app/containers/LanguageToggle/index";
 import HomePage from "./HomePage/index";
 import AboutPage from "./AboutPage/index";
 import NotFoundPage from "./NotFoundPage/index";
+import CallbackPage from "./CallbackPage/index";
 
 const Application = () => (
   <div>
@@ -23,6 +24,7 @@ const Application = () => (
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
+          <Route exact path="/callback" component={CallbackPage} />
           <Route path="" component={NotFoundPage} />
         </Switch>
       </Layout.Bodyer>

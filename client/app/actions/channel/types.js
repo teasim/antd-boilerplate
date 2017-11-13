@@ -1,0 +1,2 @@
+export const LOAD_SUBSCRIPTIONS_START = 'redux-oidc-sample/LOAD_SUBSCRIPTIONS_START';
+export const LOAD_SUBSCRIPTIONS_SUCCESS = 'redux-oidc-sample/LOAD_SUBSCRIPTIONS_SUCCESS';
