@@ -1773,7 +1773,7 @@ change-case@^3.0.1:
     upper-case "^1.1.1"
     upper-case-first "^1.1.0"
 
-cheerio@^0.22.0:
+cheerio@0.22.0:
   version "0.22.0"
   resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-0.22.0.tgz#a9baa860a3f9b595a6b81b1a86873121ed3a269e"
   dependencies:
@@ -4651,7 +4651,7 @@ imagemin@^5.2.2:
     pify "^2.3.0"
     replace-ext "^1.0.0"
 
-immutable@^3.8.1, immutable@^3.8.2:
+immutable@^3.8.2:
   version "3.8.2"
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.2.tgz#c2439951455bb39913daf281376f1530e104adf3"
 
@@ -6411,11 +6411,11 @@ moment-jalaali@^0.7.2:
     moment "^2.18.1"
     rimraf "^2.6.1"
 
-moment@^2.18.1, moment@^2.19.1, moment@^2.6.0:
+moment@^2.18.1, moment@^2.6.0:
   version "2.19.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.1.tgz#56da1a2d1cbf01d38b7e1afc31c10bcfa1929167"
 
-moment@^2.19.2:
+moment@^2.19.1, moment@^2.19.2:
   version "2.19.2"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.2.tgz#8a7f774c95a64550b4c7ebd496683908f9419dbe"
 
@@ -8998,61 +8998,64 @@ teasim-assists@^3.3.0:
   dependencies:
     teasim-shims "^3.3.0"
 
+teasim-assists@^3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/teasim-assists/-/teasim-assists-3.3.3.tgz#31e38e9f87b9d5e89641768486466bc5056d63a0"
+
 teasim-chart@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/teasim-chart/-/teasim-chart-3.3.1.tgz#272a40aa4524273adedc6b5ab9d07b912bec5670"
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/teasim-chart/-/teasim-chart-3.3.2.tgz#ccb5bb38d9503275785f85ad45986a9a7965122a"
   dependencies:
     prop-types "^15.6.0"
-    react "^16.0.0"
-    react-dom "^16.0.0"
+    react "^16.1.0"
+    react-dom "^16.1.0"
     teasim-assists "^3.3.0"
-    teasim-core "^3.3.1"
-    teasim-helpers "^3.3.0"
+    teasim-core "^3.3.2"
+    teasim-helpers "^3.3.1"
     teasim-icon "^3.3.1"
     teasim-less "^3.3.1"
-    teasim-presets "^3.3.0"
-    teasim-styles "^3.3.0"
+    teasim-presets "^3.3.1"
+    teasim-styles "^3.3.1"
 
-teasim-core@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/teasim-core/-/teasim-core-3.3.1.tgz#b6f3b9f0124c08ba71c9cd09ec55923396fe6079"
+teasim-core@^3.3.1, teasim-core@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/teasim-core/-/teasim-core-3.3.2.tgz#57898983bcb1aa3e4b3e59787715e17a166becaa"
   dependencies:
     prop-types "^15.6.0"
-    react "^16.0.0"
-    react-dom "^16.0.0"
+    react "^16.1.0"
+    react-dom "^16.1.0"
     react-transition-group "^2.2.1"
     teasim-assists "^3.3.0"
-    teasim-helpers "^3.3.0"
+    teasim-helpers "^3.3.1"
     teasim-icon "^3.3.1"
     teasim-less "^3.3.1"
-    teasim-presets "^3.3.0"
-    teasim-styles "^3.3.0"
+    teasim-presets "^3.3.1"
+    teasim-styles "^3.3.1"
 
 teasim-form@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/teasim-form/-/teasim-form-3.3.1.tgz#52ee6813e329822c8ad14edaa1ce9bf5a93bb8ac"
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/teasim-form/-/teasim-form-3.3.2.tgz#902b7507d908429d4f5b403c09b66949646268eb"
   dependencies:
     moment "^2.18.1"
     prop-types "^15.6.0"
-    react "^16.0.0"
-    react-dom "^16.0.0"
+    react "^16.1.0"
+    react-dom "^16.1.0"
     react-portal "^4.0.0"
     react-transition-group "^2.2.1"
     teasim-assists "^3.3.0"
-    teasim-core "^3.3.1"
-    teasim-helpers "^3.3.0"
+    teasim-core "^3.3.2"
+    teasim-helpers "^3.3.1"
     teasim-icon "^3.3.1"
     teasim-less "^3.3.1"
-    teasim-presets "^3.3.0"
-    teasim-styles "^3.3.0"
+    teasim-presets "^3.3.1"
+    teasim-styles "^3.3.1"
 
-teasim-helpers@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/teasim-helpers/-/teasim-helpers-3.3.0.tgz#0704edfa0a31a78609a596c3c3963f2db455f76d"
+teasim-helpers@^3.3.0, teasim-helpers@^3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/teasim-helpers/-/teasim-helpers-3.3.3.tgz#5525ab8a5073182630d885d6f45581721aebe326"
   dependencies:
-    immutable "^3.8.1"
-    teasim-assists "^3.3.0"
-    teasim-shims "^3.3.0"
+    immutable "^3.8.2"
+    teasim-assists "^3.3.3"
 
 teasim-helpers@^3.3.1:
   version "3.3.1"
@@ -9079,44 +9082,26 @@ teasim-less@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/teasim-less/-/teasim-less-3.3.1.tgz#f12014b54502759dc7ad714af650b59ce63ca018"
 
-teasim-middleware-fetch@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/teasim-middleware-fetch/-/teasim-middleware-fetch-3.3.1.tgz#266b6a004155a0f05fa0a811ccb649f5f499e233"
-  dependencies:
-    isomorphic-fetch "^2.2.1"
-    teasim-assists "^3.3.0"
-
 teasim-player@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/teasim-player/-/teasim-player-3.3.1.tgz#a10146adeba748894187474a5fb292ba711ce08e"
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/teasim-player/-/teasim-player-3.3.2.tgz#4016ceed2eb11d5f190168e6fdc49c6b64e4046b"
   dependencies:
     prop-types "^15.6.0"
-    react "^16.0.0"
-    react-dom "^16.0.0"
+    react "^16.1.0"
+    react-dom "^16.1.0"
     react-transition-group "^2.2.1"
     soundcloud-audio "^1.1.0"
     teasim-assists "^3.3.0"
-    teasim-core "^3.3.1"
-    teasim-helpers "^3.3.0"
+    teasim-core "^3.3.2"
+    teasim-helpers "^3.3.1"
     teasim-icon "^3.3.1"
     teasim-less "^3.3.1"
-    teasim-presets "^3.3.0"
-    teasim-styles "^3.3.0"
+    teasim-presets "^3.3.1"
+    teasim-styles "^3.3.1"
 
-teasim-presets@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/teasim-presets/-/teasim-presets-3.3.0.tgz#3e88a49856022fb815390d6cc3f6ee7fe158474f"
-  dependencies:
-    moment "^2.18.1"
-    prop-types "^15.6.0"
-    react "^16.0.0"
-    react-dom "^16.0.0"
-    teasim-assists "^3.3.0"
-    teasim-helpers "^3.3.0"
-
-teasim-presets@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/teasim-presets/-/teasim-presets-3.3.1.tgz#70472eb4318aed4f4f85a7a64bc3195f7f656038"
+teasim-presets@^3.3.0, teasim-presets@^3.3.1, teasim-presets@^3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/teasim-presets/-/teasim-presets-3.3.3.tgz#9715704e2d09878aa1693120fef021e89e77aaa9"
   dependencies:
     moment "^2.18.1"
     prop-types "^15.6.0"
@@ -9189,34 +9174,14 @@ teasim-shims@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/teasim-shims/-/teasim-shims-3.3.0.tgz#c69c2d076979d2264142fbc4437f06aa6defd398"
 
-teasim-styles@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/teasim-styles/-/teasim-styles-3.3.0.tgz#a064cfaff13140d12d6a7caf94f25437f6fc5cb4"
-  dependencies:
-    prop-types "^15.6.0"
-    react "^16.0.0"
-    react-dom "^16.0.0"
-    teasim-assists "^3.3.0"
-
-teasim-styles@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/teasim-styles/-/teasim-styles-3.3.1.tgz#8a5c741b47639b6892d839792fd602538d420aad"
+teasim-styles@^3.3.0, teasim-styles@^3.3.1, teasim-styles@^3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/teasim-styles/-/teasim-styles-3.3.3.tgz#bd352c1da69e9af62c9ca78683fdbab912728e3e"
   dependencies:
     prop-types "^15.6.0"
     react "^16.1.0"
     react-dom "^16.1.0"
-    teasim-assists "^3.3.0"
-
-teasim-tools@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/teasim-tools/-/teasim-tools-3.3.1.tgz#6245510c69978d72282e283c63cd417ee6dfdddc"
-  dependencies:
-    prop-types "^15.6.0"
-    react "^16.0.0"
-    react-dom "^16.0.0"
-    react-transition-group "^2.2.1"
-    teasim-assists "^3.3.0"
-    teasim-helpers "^3.3.0"
+    teasim-assists "^3.3.3"
 
 teasim@^3.3.1:
   version "3.3.1"
