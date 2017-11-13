@@ -111,7 +111,7 @@ acorn@^4.0.3, acorn@^4.0.4:
   version "4.0.13"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.13.tgz#105495ae5361d697bd195c825192e1ad7f253787"
 
-acorn@^5.0.0, acorn@^5.1.1:
+acorn@^5.0.0, acorn@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.2.1.tgz#317ac7821826c22c702d66189ab8359675f135d7"
 
@@ -145,7 +145,7 @@ ajv@^4.9.1:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
 
-ajv@^5.0.0, ajv@^5.1.0, ajv@^5.1.5, ajv@^5.2.0, ajv@^5.2.3:
+ajv@^5.0.0, ajv@^5.1.0, ajv@^5.1.5, ajv@^5.2.3, ajv@^5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-5.3.0.tgz#4414ff74a50879c208ee5fdc826e32c303549eda"
   dependencies:
@@ -205,6 +205,10 @@ ansi-styles@^3.1.0, ansi-styles@^3.2.0:
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.0.tgz#c159b8d5be0f9e5a6f346dab94f16ce022161b88"
   dependencies:
     color-convert "^1.9.0"
+
+any-observable@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/any-observable/-/any-observable-0.2.0.tgz#c67870058003579009083f54ac0abafb5c33d242"
 
 anymatch@^1.3.0:
   version "1.3.2"
@@ -695,13 +699,11 @@ babel-plugin-check-es2015-constants@^6.22.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-dynamic-import-node@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-1.1.0.tgz#bd1d88ac7aaf98df4917c384373b04d971a2b37a"
+babel-plugin-dynamic-import-node@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-1.2.0.tgz#f91631e703e0595e47d4beafbb088576c87fbeee"
   dependencies:
     babel-plugin-syntax-dynamic-import "^6.18.0"
-    babel-template "^6.26.0"
-    babel-types "^6.26.0"
 
 babel-plugin-istanbul@^4.0.0:
   version "4.1.5"
@@ -2294,19 +2296,6 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-cosmiconfig@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-1.1.0.tgz#0dea0f9804efdfb929fbb1b188e25553ea053d37"
-  dependencies:
-    graceful-fs "^4.1.2"
-    js-yaml "^3.4.3"
-    minimist "^1.2.0"
-    object-assign "^4.0.1"
-    os-homedir "^1.0.1"
-    parse-json "^2.2.0"
-    pinkie-promise "^2.0.0"
-    require-from-string "^1.1.0"
-
 cosmiconfig@^2.1.0, cosmiconfig@^2.1.1:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-2.2.2.tgz#6173cebd56fac042c1f4390edf7af6c07c7cb892"
@@ -2318,6 +2307,15 @@ cosmiconfig@^2.1.0, cosmiconfig@^2.1.1:
     os-homedir "^1.0.1"
     parse-json "^2.2.0"
     require-from-string "^1.1.0"
+
+cosmiconfig@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-3.1.0.tgz#640a94bf9847f321800403cd273af60665c73397"
+  dependencies:
+    is-directory "^0.3.1"
+    js-yaml "^3.9.0"
+    parse-json "^3.0.0"
+    require-from-string "^2.0.1"
 
 coveralls@^3.0.0:
   version "3.0.0"
@@ -2377,14 +2375,6 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     ripemd160 "^2.0.0"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
-
-create-react-class@^15.5.2, create-react-class@^15.6.0:
-  version "15.6.2"
-  resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.2.tgz#cf1ed15f12aad7f14ef5f2dfe05e6c42f91ef02a"
-  dependencies:
-    fbjs "^0.8.9"
-    loose-envify "^1.3.1"
-    object-assign "^4.1.1"
 
 cross-env@^5.1.0:
   version "5.1.1"
@@ -2998,10 +2988,6 @@ elegant-spinner@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/elegant-spinner/-/elegant-spinner-1.0.1.tgz#db043521c95d7e303fd8f345bedc3349cfb0729e"
 
-element-class@^0.2.0:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/element-class/-/element-class-0.2.2.tgz#9d3bbd0767f9013ef8e1c8ebe722c1402a60050e"
-
 elliptic@^6.0.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.4.0.tgz#cac9af8762c85836187003c8dfe193e5e2eae5df"
@@ -3288,11 +3274,11 @@ eslint-scope@^3.7.1:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint@^4.9.0:
-  version "4.10.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.10.0.tgz#f25d0d7955c81968c2309aa5c9a229e045176bb7"
+eslint@^4.11.0:
+  version "4.11.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.11.0.tgz#39a8c82bc0a3783adf5a39fa27fdd9d36fac9a34"
   dependencies:
-    ajv "^5.2.0"
+    ajv "^5.3.0"
     babel-code-frame "^6.22.0"
     chalk "^2.1.0"
     concat-stream "^1.6.0"
@@ -3300,7 +3286,7 @@ eslint@^4.9.0:
     debug "^3.0.1"
     doctrine "^2.0.0"
     eslint-scope "^3.7.1"
-    espree "^3.5.1"
+    espree "^3.5.2"
     esquery "^1.0.0"
     estraverse "^4.2.0"
     esutils "^2.0.2"
@@ -3313,7 +3299,7 @@ eslint@^4.9.0:
     inquirer "^3.0.6"
     is-resolvable "^1.0.0"
     js-yaml "^3.9.1"
-    json-stable-stringify "^1.0.1"
+    json-stable-stringify-without-jsonify "^1.0.1"
     levn "^0.3.0"
     lodash "^4.17.4"
     minimatch "^3.0.2"
@@ -3330,11 +3316,11 @@ eslint@^4.9.0:
     table "^4.0.1"
     text-table "~0.2.0"
 
-espree@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/espree/-/espree-3.5.1.tgz#0c988b8ab46db53100a1954ae4ba995ddd27d87e"
+espree@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/espree/-/espree-3.5.2.tgz#756ada8b979e9dcfcdb30aad8d1a9304a905e1ca"
   dependencies:
-    acorn "^5.1.1"
+    acorn "^5.2.1"
     acorn-jsx "^3.0.0"
 
 esprima-fb@^15001.1.0-dev-harmony-fb:
@@ -3457,11 +3443,7 @@ executable@^1.0.0:
   dependencies:
     meow "^3.1.0"
 
-exenv@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.0.tgz#3835f127abf075bfe082d0aed4484057c78e3c89"
-
-exenv@^1.2.1:
+exenv@^1.2.0, exenv@^1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d"
 
@@ -3721,6 +3703,10 @@ find-cache-dir@^1.0.0:
 find-index@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/find-index/-/find-index-0.1.1.tgz#675d358b2ca3892d795a1ab47232f8b6e2e0dde4"
+
+find-parent-dir@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/find-parent-dir/-/find-parent-dir-0.3.0.tgz#33c44b429ab2b2f0646299c5f9f718f376ff8d54"
 
 find-root@^0.1.1:
   version "0.1.2"
@@ -4975,6 +4961,12 @@ is-obj@^1.0.0, is-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-obj/-/is-obj-1.0.1.tgz#3e4729ac1f5fde025cd7d83a896dab9f4f67db0f"
 
+is-observable@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/is-observable/-/is-observable-0.2.0.tgz#b361311d83c6e5d726cabf5e250b0237106f5ae2"
+  dependencies:
+    symbol-observable "^0.2.2"
+
 is-path-cwd@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-path-cwd/-/is-path-cwd-1.0.0.tgz#d225ec23132e89edd38fda767472e62e65f1106d"
@@ -5452,7 +5444,7 @@ js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
-js-yaml@^3.4.3, js-yaml@^3.6.1, js-yaml@^3.7.0, js-yaml@^3.9.1:
+js-yaml@^3.4.3, js-yaml@^3.6.1, js-yaml@^3.7.0, js-yaml@^3.9.0, js-yaml@^3.9.1:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.10.0.tgz#2e78441646bd4682e963f22b6e92823c309c62dc"
   dependencies:
@@ -5517,6 +5509,10 @@ json-schema-traverse@^0.3.0:
 json-schema@0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/json-schema/-/json-schema-0.2.3.tgz#b480c892e59a2f05954ce727bd3f2a4e882f9e13"
+
+json-stable-stringify-without-jsonify@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
 
 json-stable-stringify@^1.0.0, json-stable-stringify@^1.0.1:
   version "1.0.1"
@@ -5737,23 +5733,27 @@ liftoff@^2.2.0, liftoff@^2.3.0:
     rechoir "^0.6.2"
     resolve "^1.1.7"
 
-lint-staged@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-4.3.0.tgz#ed0779ad9a42c0dc62bb3244e522870b41125879"
+lint-staged@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-5.0.0.tgz#f1c670e03e2fdf3f3d0eb81f72d3bcf658770e54"
   dependencies:
     app-root-path "^2.0.0"
     chalk "^2.1.0"
     commander "^2.11.0"
-    cosmiconfig "^1.1.0"
+    cosmiconfig "^3.1.0"
+    dedent "^0.7.0"
     execa "^0.8.0"
+    find-parent-dir "^0.3.0"
     is-glob "^4.0.0"
     jest-validate "^21.1.0"
-    listr "^0.12.0"
+    listr "^0.13.0"
     lodash "^4.17.4"
     log-symbols "^2.0.0"
     minimatch "^3.0.0"
     npm-which "^3.0.1"
     p-map "^1.1.1"
+    path-is-inside "^1.0.2"
+    pify "^3.0.0"
     staged-git-files "0.0.4"
     stringify-object "^3.2.0"
 
@@ -5761,9 +5761,9 @@ listr-silent-renderer@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/listr-silent-renderer/-/listr-silent-renderer-1.1.1.tgz#924b5a3757153770bf1a8e3fbf74b8bbf3f9242e"
 
-listr-update-renderer@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/listr-update-renderer/-/listr-update-renderer-0.2.0.tgz#ca80e1779b4e70266807e8eed1ad6abe398550f9"
+listr-update-renderer@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/listr-update-renderer/-/listr-update-renderer-0.4.0.tgz#344d980da2ca2e8b145ba305908f32ae3f4cc8a7"
   dependencies:
     chalk "^1.1.3"
     cli-truncate "^0.2.1"
@@ -5783,25 +5783,26 @@ listr-verbose-renderer@^0.4.0:
     date-fns "^1.27.2"
     figures "^1.7.0"
 
-listr@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/listr/-/listr-0.12.0.tgz#6bce2c0f5603fa49580ea17cd6a00cc0e5fa451a"
+listr@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/listr/-/listr-0.13.0.tgz#20bb0ba30bae660ee84cc0503df4be3d5623887d"
   dependencies:
     chalk "^1.1.3"
     cli-truncate "^0.2.1"
     figures "^1.7.0"
     indent-string "^2.1.0"
+    is-observable "^0.2.0"
     is-promise "^2.1.0"
     is-stream "^1.1.0"
     listr-silent-renderer "^1.1.1"
-    listr-update-renderer "^0.2.0"
+    listr-update-renderer "^0.4.0"
     listr-verbose-renderer "^0.4.0"
     log-symbols "^1.0.2"
     log-update "^1.0.2"
     ora "^0.2.3"
     p-map "^1.1.1"
-    rxjs "^5.0.0-beta.11"
-    stream-to-observable "^0.1.0"
+    rxjs "^5.4.2"
+    stream-to-observable "^0.2.0"
     strip-ansi "^3.0.1"
 
 load-json-file@^1.0.0:
@@ -5917,10 +5918,6 @@ lodash._topath@^3.0.0:
   resolved "https://registry.yarnpkg.com/lodash._topath/-/lodash._topath-3.8.1.tgz#3ec5e2606014f4cb97f755fe6914edd8bfc00eac"
   dependencies:
     lodash.isarray "^3.0.0"
-
-lodash.assign@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
 
 lodash.assignin@^4.0.9:
   version "4.2.0"
@@ -6417,6 +6414,10 @@ moment-jalaali@^0.7.2:
 moment@^2.18.1, moment@^2.19.1, moment@^2.6.0:
   version "2.19.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.1.tgz#56da1a2d1cbf01d38b7e1afc31c10bcfa1929167"
+
+moment@^2.19.2:
+  version "2.19.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.2.tgz#8a7f774c95a64550b4c7ebd496683908f9419dbe"
 
 mozjpeg@^4.0.0:
   version "4.1.1"
@@ -7542,7 +7543,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.0.0, prop-types@^15.5.0, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.6.0:
+prop-types@^15.0.0, prop-types@^15.5.0, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
@@ -7689,19 +7690,6 @@ react-docgen@^2.15.0:
     node-dir "^0.1.10"
     recast "^0.12.6"
 
-react-dom-factories@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-dom-factories/-/react-dom-factories-1.0.2.tgz#eb7705c4db36fb501b3aa38ff759616aa0ff96e0"
-
-react-dom@^15.5.4:
-  version "15.6.2"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.2.tgz#41cfadf693b757faf2708443a1d1fd5a02bef730"
-  dependencies:
-    fbjs "^0.8.9"
-    loose-envify "^1.1.0"
-    object-assign "^4.1.0"
-    prop-types "^15.5.10"
-
 react-dom@^16.0.0, react-dom@^16.1.0:
   version "16.1.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.1.0.tgz#ab6fd2a285096f388aeba51919a573d06c9bdde4"
@@ -7762,16 +7750,12 @@ react-loadable@^5.3.1:
   dependencies:
     prop-types "^15.5.0"
 
-react-modal@^1.7.7:
-  version "1.9.7"
-  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-1.9.7.tgz#07ef56790b953e3b98ef1e2989e347983c72871d"
+react-modal@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.1.2.tgz#6e1fd656315d6fc62a1edda2b5aecc9752ac6bca"
   dependencies:
-    create-react-class "^15.5.2"
-    element-class "^0.2.0"
-    exenv "1.2.0"
-    lodash.assign "^4.2.0"
-    prop-types "^15.5.7"
-    react-dom-factories "^1.0.0"
+    exenv "^1.2.0"
+    prop-types "^15.5.10"
 
 react-portal@^4.0.0:
   version "4.0.0"
@@ -7867,16 +7851,6 @@ react-transition-group@^2.2.1:
     loose-envify "^1.3.1"
     prop-types "^15.5.8"
     warning "^3.0.0"
-
-react@^15.5.3, react@^15.5.4:
-  version "15.6.2"
-  resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
-  dependencies:
-    create-react-class "^15.6.0"
-    fbjs "^0.8.9"
-    loose-envify "^1.1.0"
-    object-assign "^4.1.0"
-    prop-types "^15.5.10"
 
 react@^16.0.0, react@^16.1.0:
   version "16.1.0"
@@ -8234,6 +8208,10 @@ require-from-string@^1.1.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/require-from-string/-/require-from-string-1.2.1.tgz#529c9ccef27380adfec9a2f965b649bbee636418"
 
+require-from-string@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/require-from-string/-/require-from-string-2.0.1.tgz#c545233e9d7da6616e9d59adfb39fc9f588676ff"
+
 require-main-filename@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
@@ -8327,7 +8305,7 @@ rx-lite@*, rx-lite@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/rx-lite/-/rx-lite-4.0.8.tgz#0b1e11af8bc44836f04a6407e92da42467b79444"
 
-rxjs@^5.0.0-beta.11:
+rxjs@^5.4.2:
   version "5.5.2"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.2.tgz#28d403f0071121967f18ad665563255d54236ac3"
   dependencies:
@@ -8734,9 +8712,11 @@ stream-shift@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/stream-shift/-/stream-shift-1.0.0.tgz#d5c752825e5367e786f78e18e445ea223a155952"
 
-stream-to-observable@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/stream-to-observable/-/stream-to-observable-0.1.0.tgz#45bf1d9f2d7dc09bed81f1c307c430e68b84cffe"
+stream-to-observable@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/stream-to-observable/-/stream-to-observable-0.2.0.tgz#59d6ea393d87c2c0ddac10aa0d561bc6ba6f0e10"
+  dependencies:
+    any-observable "^0.2.0"
 
 strict-uri-encode@^1.0.0:
   version "1.1.0"
@@ -8951,6 +8931,10 @@ swap-case@^1.1.0:
     lower-case "^1.1.1"
     upper-case "^1.1.1"
 
+symbol-observable@^0.2.2:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-0.2.4.tgz#95a83db26186d6af7e7a18dbd9760a2f86d08f40"
+
 symbol-observable@^1.0.1, symbol-observable@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
@@ -9008,7 +8992,7 @@ tar@^2.2.1:
     fstream "^1.0.2"
     inherits "2"
 
-teasim-assists@^3.0.8, teasim-assists@^3.3.0:
+teasim-assists@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/teasim-assists/-/teasim-assists-3.3.0.tgz#735c40948e46425b5df63aa44a12aa1255a83392"
   dependencies:
@@ -9062,11 +9046,19 @@ teasim-form@^3.3.1:
     teasim-presets "^3.3.0"
     teasim-styles "^3.3.0"
 
-teasim-helpers@^3.0.8, teasim-helpers@^3.3.0:
+teasim-helpers@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/teasim-helpers/-/teasim-helpers-3.3.0.tgz#0704edfa0a31a78609a596c3c3963f2db455f76d"
   dependencies:
     immutable "^3.8.1"
+    teasim-assists "^3.3.0"
+    teasim-shims "^3.3.0"
+
+teasim-helpers@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/teasim-helpers/-/teasim-helpers-3.3.1.tgz#1a80d9709ec544031471cdfb3788a8e405d55a80"
+  dependencies:
+    immutable "^3.8.2"
     teasim-assists "^3.3.0"
     teasim-shims "^3.3.0"
 
@@ -9087,12 +9079,12 @@ teasim-less@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/teasim-less/-/teasim-less-3.3.1.tgz#f12014b54502759dc7ad714af650b59ce63ca018"
 
-teasim-middleware-fetch@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/teasim-middleware-fetch/-/teasim-middleware-fetch-3.3.0.tgz#b347d265b7e7a0199ca2ff70534cf2deb40a8852"
+teasim-middleware-fetch@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/teasim-middleware-fetch/-/teasim-middleware-fetch-3.3.1.tgz#266b6a004155a0f05fa0a811ccb649f5f499e233"
   dependencies:
     isomorphic-fetch "^2.2.1"
-    teasim-assists "^3.0.8"
+    teasim-assists "^3.3.0"
 
 teasim-player@^3.3.1:
   version "3.3.1"
@@ -9122,70 +9114,74 @@ teasim-presets@^3.3.0:
     teasim-assists "^3.3.0"
     teasim-helpers "^3.3.0"
 
-teasim-sample-addon-actions@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/teasim-sample-addon-actions/-/teasim-sample-addon-actions-3.1.2.tgz#cd98e02093bc81811df7835a0ca13dfaa347df85"
+teasim-presets@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/teasim-presets/-/teasim-presets-3.3.1.tgz#70472eb4318aed4f4f85a7a64bc3195f7f656038"
+  dependencies:
+    moment "^2.18.1"
+    prop-types "^15.6.0"
+    react "^16.1.0"
+    react-dom "^16.1.0"
+    teasim-assists "^3.3.0"
+    teasim-helpers "^3.3.1"
+
+teasim-sample-addons@^3.3.4:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/teasim-sample-addons/-/teasim-sample-addons-3.3.4.tgz#d76f2b53789c12dc133ad3291c0b3805974f6211"
   dependencies:
     json-stringify-safe "^5.0.1"
     prop-types "^15.5.4"
-    react "^15.5.3"
+    react "^16.1.0"
     react-inspector "^2.0.0"
-    teasim-assists "^3.0.8"
-    teasim-helpers "^3.0.8"
-    teasim-sample-helpers "^3.1.2"
+    teasim-assists "^3.3.0"
+    teasim-helpers "^3.3.1"
+    teasim-sample-helpers "^3.3.4"
 
-teasim-sample-addon-links@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/teasim-sample-addon-links/-/teasim-sample-addon-links-3.1.2.tgz#34db635f1c1586235a86674a2751cf23c50157d0"
-  dependencies:
-    teasim-sample-helpers "^3.1.2"
-
-teasim-sample-core@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/teasim-sample-core/-/teasim-sample-core-3.1.2.tgz#5fb1b7f379880ef918a7a98cd021497abfd2da69"
+teasim-sample-core@^3.3.4:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/teasim-sample-core/-/teasim-sample-core-3.3.4.tgz#287492e5ffa299454ca9b0838cf4b741188bec28"
   dependencies:
     fuse.js "^3.0.3"
     json-stringify-safe "^5.0.1"
     mantra-core "^1.7.0"
     prop-types "^15.5.4"
-    react "^15.5.3"
-    react-modal "^1.7.7"
+    react "^16.1.0"
+    react-modal "^3.1.2"
     react-split-pane "^0.1.63"
-    teasim-assists "^3.0.8"
-    teasim-helpers "^3.0.8"
-    teasim-sample-helpers "^3.1.2"
+    teasim-assists "^3.3.0"
+    teasim-helpers "^3.3.1"
+    teasim-sample-helpers "^3.3.4"
 
-teasim-sample-helpers@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/teasim-sample-helpers/-/teasim-sample-helpers-3.1.2.tgz#58cee1e06c098d5bcf2ca6cd22a6c33689023ad6"
+teasim-sample-helpers@^3.3.4:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/teasim-sample-helpers/-/teasim-sample-helpers-3.3.4.tgz#9a4eecc1f491d63a4304d353b036a5b1d7e3089c"
   dependencies:
     fuzzysearch "^1.0.3"
-    teasim-assists "^3.0.8"
-    teasim-helpers "^3.0.8"
+    teasim-assists "^3.3.0"
+    teasim-helpers "^3.3.1"
 
-teasim-samples@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/teasim-samples/-/teasim-samples-3.1.2.tgz#98ce6e52c59a861209b5276ed1ddca9080e9b894"
+teasim-samples@^3.3.4:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/teasim-samples/-/teasim-samples-3.3.4.tgz#df3b70575438b9bcb5adad7de5503ecc152efe12"
   dependencies:
     airbnb-js-shims "^1.1.1"
     case-sensitive-paths-webpack-plugin "^2.0.0"
-    chalk "^1.1.3"
+    chalk "^2.3.0"
     commander "^2.9.0"
     common-tags "^1.4.0"
     express "^4.15.3"
     prop-types "^15.5.10"
     qs "^6.4.0"
-    react "^15.5.4"
-    react-dom "^15.5.4"
+    react "^16.1.0"
+    react-dom "^16.1.0"
     redux "^3.6.0"
     serve-favicon "^2.4.3"
     spawn-sync "^1.0.15"
-    teasim-assists "^3.0.8"
-    teasim-helpers "^3.0.8"
-    teasim-sample-addon-actions "^3.1.2"
-    teasim-sample-addon-links "^3.1.2"
-    teasim-sample-core "^3.1.2"
-    teasim-sample-helpers "^3.1.2"
+    teasim-assists "^3.3.0"
+    teasim-helpers "^3.3.1"
+    teasim-sample-addons "^3.3.4"
+    teasim-sample-core "^3.3.4"
+    teasim-sample-helpers "^3.3.4"
     update-notifier "^2.1.0"
     util-deprecate "^1.0.2"
 
@@ -9200,6 +9196,15 @@ teasim-styles@^3.3.0:
     prop-types "^15.6.0"
     react "^16.0.0"
     react-dom "^16.0.0"
+    teasim-assists "^3.3.0"
+
+teasim-styles@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/teasim-styles/-/teasim-styles-3.3.1.tgz#8a5c741b47639b6892d839792fd602538d420aad"
+  dependencies:
+    prop-types "^15.6.0"
+    react "^16.1.0"
+    react-dom "^16.1.0"
     teasim-assists "^3.3.0"
 
 teasim-tools@^3.3.1:
