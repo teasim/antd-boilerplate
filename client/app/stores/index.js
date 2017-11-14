@@ -15,8 +15,8 @@ export default function genStore(initialState = {}, baseHistory) {
   const oidcMiddleware = createOidcMiddleware(userManager);
 
   const middlewares = [
-    sagaMiddleware,
     oidcMiddleware,
+    sagaMiddleware,
     routerMiddleware(baseHistory),
     loggingMiddleware
   ];

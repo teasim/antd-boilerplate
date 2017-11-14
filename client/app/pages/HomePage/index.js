@@ -5,9 +5,9 @@ import { compose } from "redux";
 import { Helmet } from "react-helmet";
 import { Section } from "teasim";
 import { FormattedMessage } from "react-intl";
-import { createStructuredSelector } from "reselect";
 import messages from "./messages";
 import ReposList from "app/components/ReposList/index";
+import { createStructuredSelector } from "reselect";
 import {
   makeSelectRepos,
   makeSelectLoading,

@@ -1,15 +1,10 @@
 import React from "react";
 import { connect } from 'react-redux';
 import userManager from 'app/helpers/userManager';
-import { loadSubscriptionsStart } from 'app/actions/channel/actions';
-import ChannelInfo from 'app/components/ChannelInfo';
+import { createStructuredSelector } from "reselect";
+import { makeSelectOidcUser } from "app/actions/channel/selectors";
 
 class MainPage extends React.Component {
-  // load the subscriptions
-  componentWillMount() {
-    this.props.dispatch(loadSubscriptionsStart());
-  }
-
   // display the current user
   showUserInfoButtonClick = (event) => {
     event.preventDefault();
@@ -22,28 +17,14 @@ class MainPage extends React.Component {
     userManager.removeUser(); // removes the user data from sessionStorage
   }
 
-  // the channels list
-  get channels() {
-    const { channels } = this.props;
-    return (
-      <ul style={styles.list}>
-        {channels.map((channel) => (
-          <li key={channel.id} style={styles.li}><ChannelInfo channel={channel} /></li>
-        ))}
-      </ul>
-    );
-  }
-
   render() {
-    const { user, channels } = this.props;
+    const { user } = this.props;
 
     return (
       <div style={styles.root}>
         <div style={styles.title}>
           <h3>Welcome, {user ? user.profile.name : 'Mister Unknown'}!</h3>
-          <p>Your 5 most recent YouTube channel subscriptions:</p>
         </div>
-        { channels.length > 0 ? this.channels : <i>You have no subscriptions.</i>}
         <button onClick={this.showUserInfoButtonClick}>Show user info</button>
         <button onClick={this.onLogoutButtonClicked}>Logout</button>
       </div>
@@ -67,12 +48,9 @@ const styles = {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    user: state.oidc.user,
-    channels: state.subscriptions.channels
-  };
-}
+const mapStateToProps = createStructuredSelector({
+  user: makeSelectOidcUser()
+});
 
 function mapDispatchToProps(dispatch) {
   return {

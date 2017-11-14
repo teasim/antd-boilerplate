@@ -3,20 +3,20 @@ import { connect } from 'react-redux';
 import { compose } from "redux";
 import MainPage from '../MainPage';
 import LoginPage from '../LoginPage';
+import { createStructuredSelector } from "reselect";
+import { makeSelectOidcUser } from "app/actions/channel/selectors";
 
 function OidcHomePage(props) {
-  const { oidc } = props;
+  const { user } = props;
 
   return (
-    !oidc || oidc.expired ? <LoginPage/> : <MainPage />
+    !user || user.expired ? <LoginPage/> : <MainPage />
   )
 }
 
-function mapStateToProps(state) {
-  return {
-    oidc: state.oidc
-  };
-}
+const mapStateToProps = createStructuredSelector({
+  user: makeSelectOidcUser()
+});
 
 function mapDispatchToProps(dispatch) {
   return {
