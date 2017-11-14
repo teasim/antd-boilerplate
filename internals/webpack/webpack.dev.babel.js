@@ -1,25 +1,37 @@
-const path = require('path')
-const fs = require('fs-extra')
-const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CircularDependencyPlugin = require('circular-dependency-plugin')
-const cheerio = require('cheerio')
-const logger = require('../../server/logger')
-const pkg = require(path.resolve(process.cwd(), 'package.json'))
-const dllPlugin = pkg.dllPlugin
+const path = require('path');
+const fs = require('fs-extra');
+const glob = require('glob');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
+const logger = require('../../server/logger');
+const pkg = require(path.resolve(process.cwd(), 'package.json'));
+const dllPlugin = pkg.dllPlugin;
 
 const plugins = [
   new webpack.HotModuleReplacementPlugin(),
   new webpack.NoEmitOnErrorsPlugin(),
   new HtmlWebpackPlugin({
     inject: true,
-    templateContent: templateContent() // eslint-disable-line no-use-before-define
+    template: 'client/app/index.html'
   }),
   new CircularDependencyPlugin({
     exclude: /a\.js|node_modules/,
     failOnError: false
   })
 ]
+
+if (dllPlugin) {
+  glob.sync(`${dllPlugin.path}/*.dll.js`).forEach((dllPath) => {
+    plugins.push(
+      new AddAssetHtmlPlugin({
+        filepath: dllPath,
+        includeSourcemap: false,
+      })
+    );
+  });
+}
 
 process.traceDeprecation = true
 process.noDeprecation = true
@@ -38,11 +50,6 @@ module.exports = require('./webpack.base.babel')({
   },
 
   plugins: dependencyHandlers().concat(plugins), // eslint-disable-line no-use-before-define
-
-  // Tell babel that we want to hot-reload
-  // babelQuery: {
-  //   presets: ['babel-preset-react-hmre'].map(require.resolve)
-  // },
 
   devtool: 'eval-source-map',
 
@@ -103,22 +110,4 @@ function dependencyHandlers () {
       manifest: require(manifestPath) // eslint-disable-line global-require
     })
   })
-}
-
-function templateContent () {
-  const html = fs.readFileSync(
-    path.resolve(process.cwd(), 'client/app/index.html')
-  ).toString()
-
-  if (!dllPlugin) {
-    return html
-  }
-
-  const doc = cheerio(html)
-  const body = doc.find('body')
-  const dllNames = !dllPlugin.dlls ? ['reactBoilerplateDeps'] : Object.keys(dllPlugin.dlls)
-
-  dllNames.forEach(dllName => body.append(`<script data-dll='true' src='/${dllName}.dll.js'></script>`))
-
-  return doc.toString()
 }
