@@ -6,7 +6,6 @@ import { Helmet } from "react-helmet";
 import { Section } from "teasim";
 import { FormattedMessage } from "react-intl";
 import { createStructuredSelector } from "reselect";
-
 import messages from "./messages";
 import ReposList from "app/components/ReposList/index";
 import {
@@ -67,7 +66,7 @@ HomePage.propTypes = {
   repos: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
   onSubmitForm: PropTypes.func,
   username: PropTypes.string,
-  onChangeUsername: PropTypes.func
+  onChangeUsername: PropTypes.func,
 };
 
 const mapStateToProps = createStructuredSelector({

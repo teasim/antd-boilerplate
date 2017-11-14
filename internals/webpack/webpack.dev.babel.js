@@ -46,12 +46,13 @@ module.exports = require('./webpack.base.babel')({
 
   output: {
     filename: '[name].js',
-    chunkFilename: '[name].chunk.js'
+    chunkFilename: '[name].chunk.js',
+    crossOriginLoading: "anonymous"
   },
 
   plugins: dependencyHandlers().concat(plugins), // eslint-disable-line no-use-before-define
 
-  devtool: 'eval-source-map',
+  devtool: 'cheap-module-source-map',
 
   performance: {
     hints: false

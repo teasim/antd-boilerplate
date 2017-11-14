@@ -1,5 +1,5 @@
 import { combineReducers } from "redux-immutable";
-import { reducer as oidcReducer } from 'redux-oidc';
+import { immutableReducer as oidcReducer } from 'redux-oidc';
 import languageReducer from "./languageReducer";
 import routeReducer from "./routeReducer";
 import homeReducer from "./homeReducer";

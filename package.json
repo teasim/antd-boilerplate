@@ -218,6 +218,7 @@
     "chalk": "^2.3.0",
     "circular-dependency-plugin": "^4.2.1",
     "compression": "^1.7.1",
+    "cors": "^2.8.4",
     "coveralls": "^3.0.0",
     "cpx": "^1.5.0",
     "cross-env": "^5.1.0",

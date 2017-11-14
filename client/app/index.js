@@ -3,12 +3,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import createHistory from "history/createBrowserHistory";
 import { Provider } from "react-redux";
+import { OidcProvider } from 'redux-oidc';
 import { AppContainer } from "react-hot-loader";
 import { ConnectedRouter } from "react-router-redux";
 import { translationMessages } from "app/helpers/internationalization";
 import LanguageProvider from "app/containers/LanguageProvider/index";
 import genStore from "app/stores/index";
 import Application from "app/pages/index";
+import userManager from "app/helpers/userManager";
+
 /* eslint-disable import/no-webpack-loader-syntax */
 import "!file-loader?name=[name].[ext]!app/resources/icons/favicon.ico";
 import "!file-loader?name=[name].[ext]!app/resources/icons/icon-72x72.png";
@@ -32,7 +35,6 @@ const initialState = {};
 const browserHistory = createHistory();
 const { store, history } = genStore(initialState, browserHistory);
 const mountNode = document.getElementById("application");
-
 /* Render development instance */
 const renderDevelopmentApplication = messages => {
   ReactDOM.render(
@@ -40,7 +42,9 @@ const renderDevelopmentApplication = messages => {
       <Provider store={store}>
         <LanguageProvider messages={messages}>
           <ConnectedRouter history={history}>
-            <Application />
+            <OidcProvider store={store} userManager={userManager}>
+              <Application />
+            </OidcProvider>
           </ConnectedRouter>
         </LanguageProvider>
       </Provider>
@@ -61,7 +65,9 @@ const renderProductionApplication = messages => {
     <Provider store={store}>
       <LanguageProvider messages={messages}>
         <ConnectedRouter history={history}>
-          <Application />
+          <OidcProvider store={store} userManager={userManager}>
+            <Application />
+          </OidcProvider>
         </ConnectedRouter>
       </LanguageProvider>
     </Provider>,
