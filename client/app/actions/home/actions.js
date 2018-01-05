@@ -1,16 +1,9 @@
 import {
-  CHANGE_USERNAME,
   LOAD_REPOS,
   LOAD_REPOS_SUCCESS,
-  LOAD_REPOS_ERROR
+  LOAD_REPOS_ERROR,
+  CHANGE_USERNAME
 } from "./types";
-
-export function changeUsername(name) {
-  return {
-    type: CHANGE_USERNAME,
-    name
-  };
-}
 
 export function loadRepos() {
   return {
@@ -30,5 +23,12 @@ export function repoLoadingError(error) {
   return {
     type: LOAD_REPOS_ERROR,
     error
+  };
+}
+
+export function changeUsername(name) {
+  return {
+    type: CHANGE_USERNAME,
+    name
   };
 }

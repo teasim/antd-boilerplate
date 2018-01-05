@@ -1,61 +1,111 @@
 import React from "react";
-import { connect } from 'react-redux';
-import userManager from 'app/helpers/userManager';
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { compose } from "redux";
+import { Helmet } from "react-helmet";
+import { Section } from "teasim";
+import { FormattedMessage } from "react-intl";
 import { createStructuredSelector } from "reselect";
-import { makeSelectOidcUser } from "app/actions/channel/selectors";
+import {
+  loadRepos,
+  changeUsername,
+  makeSelectRepos,
+  makeSelectLoading,
+  makeSelectError,
+  makeSelectUsername
+} from "app/actions/home/index";
+import { makeSelectAuthUser } from "app/actions/auth/index";
+import userManager from "app/helpers/userManager";
+import messages from "./messages";
+import ReposList from "app/components/ReposList/index";
 
-class MainPage extends React.Component {
-  // display the current user
-  showUserInfoButtonClick = (event) => {
+class MainPage extends React.PureComponent {
+  componentDidMount() {
+    if (this.props.username && this.props.username.trim().length > 0) {
+      this.props.onSubmitForm();
+    }
+  }
+
+  showUserInfoButtonClick = event => {
     event.preventDefault();
     alert(JSON.stringify(this.props.user, null, 2));
-  }
+  };
 
-  // log out
-  onLogoutButtonClicked = (event) => {
+  onLogoutButtonClicked = event => {
     event.preventDefault();
     userManager.removeUser(); // removes the user data from sessionStorage
-  }
+  };
 
   render() {
-    const { user } = this.props;
+    const { loading, error, repos, user } = this.props;
+    const reposListProps = {
+      loading,
+      error,
+      repos
+    };
 
     return (
-      <div style={styles.root}>
-        <div style={styles.title}>
-          <h3>Welcome, {user ? user.profile.name : 'Mister Unknown'}!</h3>
-        </div>
-        <button onClick={this.showUserInfoButtonClick}>Show user info</button>
-        <button onClick={this.onLogoutButtonClicked}>Logout</button>
-      </div>
+      <article>
+        <Helmet>
+          <title>Home Page</title>
+          <meta
+            name="description"
+            content="A React.js Boilerplate application homepage"
+          />
+        </Helmet>
+        <Section size="huge">
+          <h3>Welcome, {user ? user.profile.name : "Mister Unknown"}!</h3>
+          <button onClick={this.showUserInfoButtonClick}>Show user info</button>
+          <button onClick={this.onLogoutButtonClicked}>Logout</button>
+        </Section>
+        <hr />
+        <Section size="huge">
+          <FormattedMessage {...messages.hello} />
+          <form onSubmit={this.props.onSubmitForm}>
+            <label htmlFor="username">
+              <input
+                id="username"
+                type="text"
+                placeholder="mxstbr"
+                value={this.props.username}
+                onChange={this.props.onChangeUsername}
+              />
+            </label>
+          </form>
+          <ReposList {...reposListProps} />
+        </Section>
+      </article>
     );
   }
 }
 
-const styles = {
-  root: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  title: {
-    flex: '1 0 auto',
-  },
-  list: {
-    listStyle: 'none',
-  },
-  li: {
-    display: 'flex',
-  }
-}
+MainPage.propTypes = {
+  user: PropTypes.object,
+  loading: PropTypes.bool,
+  error: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+  repos: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
+  onSubmitForm: PropTypes.func,
+  username: PropTypes.string,
+  onChangeUsername: PropTypes.func
+};
 
 const mapStateToProps = createStructuredSelector({
-  user: makeSelectOidcUser()
+  user: makeSelectAuthUser(),
+  repos: makeSelectRepos(),
+  username: makeSelectUsername(),
+  loading: makeSelectLoading(),
+  error: makeSelectError()
 });
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatch
+    onChangeUsername: evt => dispatch(changeUsername(evt.target.value)),
+    onSubmitForm: evt => {
+      if (evt !== undefined && evt.preventDefault) evt.preventDefault();
+      dispatch(loadRepos());
+    }
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainPage);
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
+export default compose(withConnect)(MainPage);

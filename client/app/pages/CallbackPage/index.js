@@ -1,20 +1,22 @@
 import React from "react";
-import { connect } from 'react-redux';
-import { CallbackComponent } from 'redux-oidc';
-import { push } from 'react-router-redux';
-import userManager from 'app/helpers/userManager';
+import { connect } from "react-redux";
+import { CallbackComponent } from "teasim-plugin-authman";
+import { push } from "react-router-redux";
+import userManager from "app/helpers/userManager";
 
 class CallbackPage extends React.Component {
   successCallback = () => {
-    this.props.dispatch(push('/'));
-  }
+    this.props.dispatch(push("/"));
+  };
 
   render() {
     return (
-      <CallbackComponent userManager={userManager} successCallback={this.successCallback} errorCallback={this.successCallback}>
-        <div>
-          Redirecting...
-        </div>
+      <CallbackComponent
+        userManager={userManager}
+        successCallback={this.successCallback}
+        errorCallback={this.successCallback}
+      >
+        <div>Redirecting...</div>
       </CallbackComponent>
     );
   }

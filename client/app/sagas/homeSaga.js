@@ -1,8 +1,11 @@
 import { call, put, select, takeLatest } from "redux-saga/effects";
-import { LOAD_REPOS } from "app/actions/home/types";
-import { reposLoaded, repoLoadingError } from "app/actions/home/actions";
-import { makeSelectUsername } from "app/actions/home/selectors";
 import request from "app/helpers/request";
+import { LOAD_REPOS } from "app/actions/home/types";
+import {
+  reposLoaded,
+  repoLoadingError,
+  makeSelectUsername
+} from "app/actions/home/index";
 
 export function* getRepos() {
   const username = yield select(makeSelectUsername());

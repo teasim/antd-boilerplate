@@ -2,8 +2,9 @@ import "babel-polyfill";
 import React from "react";
 import ReactDOM from "react-dom";
 import createHistory from "history/createBrowserHistory";
+import FontFaceObserver from "fontfaceobserver";
 import { Provider } from "react-redux";
-import { OidcProvider } from 'redux-oidc';
+import { AuthProvider } from "teasim-plugin-authman";
 import { AppContainer } from "react-hot-loader";
 import { ConnectedRouter } from "react-router-redux";
 import { translationMessages } from "app/helpers/internationalization";
@@ -28,13 +29,25 @@ import "!file-loader?name=[name].[ext]!app/resources/icons/icon-512x512.png";
 import "!file-loader?name=[name].[ext]!app/resources/icons/manifest.json";
 import "file-loader?name=[name].[ext]!.htaccess";
 /* eslint-enable import/no-webpack-loader-syntax */
-import "app/styles/application.less";
+import "app/styles/index.less";
 
 // Create redux store with history
 const initialState = {};
 const browserHistory = createHistory();
 const { store, history } = genStore(initialState, browserHistory);
 const mountNode = document.getElementById("application");
+
+//  When Open Sans is loaded, add a font-family using Open Sans to the body
+const openSansObserver = new FontFaceObserver("Open Sans", {});
+openSansObserver.load().then(
+  () => {
+    document.body.classList.add("fontLoaded");
+  },
+  () => {
+    document.body.classList.remove("fontLoaded");
+  }
+);
+
 /* Render development instance */
 const renderDevelopmentApplication = messages => {
   ReactDOM.render(
@@ -42,9 +55,9 @@ const renderDevelopmentApplication = messages => {
       <Provider store={store}>
         <LanguageProvider messages={messages}>
           <ConnectedRouter history={history}>
-            <OidcProvider store={store} userManager={userManager}>
+            <AuthProvider store={store} userManager={userManager}>
               <Application />
-            </OidcProvider>
+            </AuthProvider>
           </ConnectedRouter>
         </LanguageProvider>
       </Provider>
@@ -65,9 +78,9 @@ const renderProductionApplication = messages => {
     <Provider store={store}>
       <LanguageProvider messages={messages}>
         <ConnectedRouter history={history}>
-          <OidcProvider store={store} userManager={userManager}>
+          <AuthProvider store={store} userManager={userManager}>
             <Application />
-          </OidcProvider>
+          </AuthProvider>
         </ConnectedRouter>
       </LanguageProvider>
     </Provider>,

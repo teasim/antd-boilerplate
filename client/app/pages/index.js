@@ -7,7 +7,6 @@ import HomePage from "./HomePage/index";
 import AboutPage from "./AboutPage/index";
 import NotFoundPage from "./NotFoundPage/index";
 import CallbackPage from "./CallbackPage/index";
-import OidcHomePage from "./OidcHomePage/index";
 
 const Application = () => (
   <div>
@@ -23,10 +22,9 @@ const Application = () => (
       </Layout.Topper>
       <Layout.Bodyer>
         <Switch>
-          <Route exact path="/" component={OidcHomePage} />
-          <Route exact path="/callback" component={CallbackPage} />
-          <Route exact path="/home" component={HomePage} />
+          <Route exact path="/" component={HomePage} />
           <Route exact path="/about" component={AboutPage} />
+          <Route exact path="/callback" component={CallbackPage} />
           <Route path="" component={NotFoundPage} />
         </Switch>
       </Layout.Bodyer>
