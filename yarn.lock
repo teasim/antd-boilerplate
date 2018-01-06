@@ -68,8 +68,8 @@
   resolved "https://registry.yarnpkg.com/@types/inline-style-prefixer/-/inline-style-prefixer-3.0.1.tgz#8541e636b029124b747952e9a28848286d2b5bf6"
 
 "@types/node@*":
-  version "8.5.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.5.5.tgz#6f9e8164ae1a55a9beb1d2571cfb7acf9d720c61"
+  version "8.5.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.5.7.tgz#9c498c35af354dcfbca3790fb2e81129e93cf0e2"
 
 "@types/react@^16.0.18":
   version "16.0.34"
@@ -516,7 +516,7 @@ babel-cli@^6.26.0:
   optionalDependencies:
     chokidar "^1.6.1"
 
-babel-code-frame@^6.11.0, babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
+babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-code-frame/-/babel-code-frame-6.26.0.tgz#63fd43f7dc1e3bb7ce35947db8fe369a3f58c74b"
   dependencies:
@@ -1609,12 +1609,6 @@ browserify-sign@^4.0.0:
     inherits "^2.0.1"
     parse-asn1 "^5.0.0"
 
-browserify-zlib@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/browserify-zlib/-/browserify-zlib-0.1.4.tgz#bb35f8a519f600e0fa6b8485241c979d0141fb2d"
-  dependencies:
-    pako "~0.2.0"
-
 browserify-zlib@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/browserify-zlib/-/browserify-zlib-0.2.0.tgz#2869459d9aa3be245fe8fe2ca1f46e2e7f54d73f"
@@ -2509,22 +2503,22 @@ css-in-js-utils@^2.0.0:
   dependencies:
     hyphenate-style-name "^1.0.2"
 
-css-loader@^0.28.7:
-  version "0.28.7"
-  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-0.28.7.tgz#5f2ee989dd32edd907717f953317656160999c1b"
+css-loader@^0.28.8:
+  version "0.28.8"
+  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-0.28.8.tgz#ff36381464dea18fe60f2601a060ba6445886bd5"
   dependencies:
-    babel-code-frame "^6.11.0"
+    babel-code-frame "^6.26.0"
     css-selector-tokenizer "^0.7.0"
-    cssnano ">=2.6.1 <4"
+    cssnano "^3.10.0"
     icss-utils "^2.1.0"
     loader-utils "^1.0.2"
     lodash.camelcase "^4.3.0"
-    object-assign "^4.0.1"
+    object-assign "^4.1.1"
     postcss "^5.0.6"
-    postcss-modules-extract-imports "^1.0.0"
-    postcss-modules-local-by-default "^1.0.1"
-    postcss-modules-scope "^1.0.0"
-    postcss-modules-values "^1.1.0"
+    postcss-modules-extract-imports "^1.1.0"
+    postcss-modules-local-by-default "^1.2.0"
+    postcss-modules-scope "^1.1.0"
+    postcss-modules-values "^1.3.0"
     postcss-value-parser "^3.3.0"
     source-list-map "^2.0.0"
 
@@ -2561,7 +2555,7 @@ cssesc@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-0.1.0.tgz#c814903e45623371a0477b40109aaafbeeaddbb4"
 
-"cssnano@>=2.6.1 <4":
+cssnano@^3.10.0:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/cssnano/-/cssnano-3.10.0.tgz#4f38f6cea2b9b17fa01490f23f1dc68ea65c1c38"
   dependencies:
@@ -2666,7 +2660,7 @@ dateformat@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-2.2.0.tgz#4065e2013cf9fb916ddfd82efb506ad4c6769062"
 
-debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8:
+debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8, debug@^2.6.9:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   dependencies:
@@ -3207,7 +3201,7 @@ es6-symbol@3.1.1, es6-symbol@^3.1.1, es6-symbol@~3.1.1:
     d "1"
     es5-ext "~0.10.14"
 
-es6-templates@^0.2.2:
+es6-templates@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/es6-templates/-/es6-templates-0.2.3.tgz#5cb9ac9fb1ded6eb1239342b81d792bbb4078ee4"
   dependencies:
@@ -3258,15 +3252,15 @@ eslint-config-prettier@^2.9.0:
     get-stdin "^5.0.1"
 
 eslint-import-resolver-node@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.1.tgz#4422574cde66a9a7b099938ee4d508a199e0e3cc"
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.2.tgz#58f15fb839b8d0576ca980413476aab2472db66a"
   dependencies:
-    debug "^2.6.8"
-    resolve "^1.2.0"
+    debug "^2.6.9"
+    resolve "^1.5.0"
 
-eslint-import-resolver-webpack@^0.8.3:
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/eslint-import-resolver-webpack/-/eslint-import-resolver-webpack-0.8.3.tgz#ad61e28df378a474459d953f246fd43f92675385"
+eslint-import-resolver-webpack@^0.8.4:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/eslint-import-resolver-webpack/-/eslint-import-resolver-webpack-0.8.4.tgz#0f7cd74bc9d7fc1773e8d5fc25baf864b2f87a42"
   dependencies:
     array-find "^1.0.0"
     debug "^2.6.8"
@@ -3276,7 +3270,7 @@ eslint-import-resolver-webpack@^0.8.3:
     interpret "^1.0.0"
     is-absolute "^0.2.3"
     lodash.get "^3.7.0"
-    node-libs-browser "^1.0.0"
+    node-libs-browser "^1.0.0 || ^2.0.0"
     resolve "^1.2.0"
     semver "^5.3.0"
 
@@ -4341,7 +4335,7 @@ gulp-sourcemaps@1.6.0:
     through2 "^2.0.0"
     vinyl "^1.0.0"
 
-gulp-util@^3.0.1, gulp-util@^3.0.8:
+gulp-util@^3.0.1:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
   dependencies:
@@ -4573,17 +4567,17 @@ html-entities@^1.2.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-1.2.1.tgz#0df29351f0721163515dfb9e5543e5f6eed5162f"
 
-html-loader@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/html-loader/-/html-loader-0.5.1.tgz#4f1e8396a1ea6ab42bedc987dfac058070861ebe"
+html-loader@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/html-loader/-/html-loader-0.5.4.tgz#70f36e30a923cc52536fdc812cec6f556aeb47a4"
   dependencies:
-    es6-templates "^0.2.2"
+    es6-templates "^0.2.3"
     fastparse "^1.1.1"
-    html-minifier "^3.0.1"
-    loader-utils "^1.0.2"
-    object-assign "^4.1.0"
+    html-minifier "^3.5.8"
+    loader-utils "^1.1.0"
+    object-assign "^4.1.1"
 
-html-minifier@^3.0.1, html-minifier@^3.2.3:
+html-minifier@^3.2.3, html-minifier@^3.5.8:
   version "3.5.8"
   resolved "https://registry.yarnpkg.com/html-minifier/-/html-minifier-3.5.8.tgz#5ccdb1f73a0d654e6090147511f6e6b2ee312700"
   dependencies:
@@ -4656,10 +4650,6 @@ http-signature@~1.2.0:
     assert-plus "^1.0.0"
     jsprim "^1.2.2"
     sshpk "^1.7.0"
-
-https-browserify@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-0.0.1.tgz#3f91365cabe60b77ed0ebba24b454e3e09d95a82"
 
 https-browserify@^1.0.0:
   version "1.0.0"
@@ -6536,8 +6526,8 @@ mime@^1.2.11, mime@^1.4.1:
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.6.0.tgz#32cd9e5c64553bd58d19a568af452acff04981b1"
 
 mime@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/mime/-/mime-2.1.0.tgz#1022a5ada445aa30686e4059abaea83d0b4e8f9c"
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/mime/-/mime-2.2.0.tgz#161e541965551d3b549fa1114391e3a3d55b923b"
 
 mimic-fn@^1.0.0:
   version "1.1.0"
@@ -6608,7 +6598,7 @@ moment-jalaali@^0.7.2:
     moment "^2.18.1"
     rimraf "^2.6.1"
 
-moment@^2.18.1, moment@^2.19.1, moment@^2.20.1, moment@^2.6.0:
+moment@^2.18.1, moment@^2.20.1, moment@^2.6.0:
   version "2.20.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.20.1.tgz#d6eb1a46cbcc14a2b2f9434112c1ff8907f313fd"
 
@@ -6701,35 +6691,7 @@ node-int64@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/node-int64/-/node-int64-0.4.0.tgz#87a9065cdb355d3182d8f94ce11188b825c68a3b"
 
-node-libs-browser@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/node-libs-browser/-/node-libs-browser-1.1.1.tgz#2a38243abedd7dffcd07a97c9aca5668975a6fea"
-  dependencies:
-    assert "^1.1.1"
-    browserify-zlib "^0.1.4"
-    buffer "^4.3.0"
-    console-browserify "^1.1.0"
-    constants-browserify "^1.0.0"
-    crypto-browserify "^3.11.0"
-    domain-browser "^1.1.1"
-    events "^1.0.0"
-    https-browserify "0.0.1"
-    os-browserify "^0.2.0"
-    path-browserify "0.0.0"
-    process "^0.11.0"
-    punycode "^1.2.4"
-    querystring-es3 "^0.2.0"
-    readable-stream "^2.0.5"
-    stream-browserify "^2.0.1"
-    stream-http "^2.3.1"
-    string_decoder "^0.10.25"
-    timers-browserify "^1.4.2"
-    tty-browserify "0.0.0"
-    url "^0.11.0"
-    util "^0.10.3"
-    vm-browserify "0.0.4"
-
-node-libs-browser@^2.0.0:
+"node-libs-browser@^1.0.0 || ^2.0.0", node-libs-browser@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/node-libs-browser/-/node-libs-browser-2.1.0.tgz#5f94263d404f6e44767d726901fff05478d600df"
   dependencies:
@@ -6839,8 +6801,8 @@ normalize-url@^1.4.0:
     sort-keys "^1.0.0"
 
 npm-path@^2.0.2:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/npm-path/-/npm-path-2.0.3.tgz#15cff4e1c89a38da77f56f6055b24f975dfb2bbe"
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/npm-path/-/npm-path-2.0.4.tgz#c641347a5ff9d6a09e4d9bce5580c4f505278e64"
   dependencies:
     which "^1.2.10"
 
@@ -7074,10 +7036,6 @@ ordered-read-streams@^0.3.0:
     is-stream "^1.0.1"
     readable-stream "^2.0.1"
 
-os-browserify@^0.2.0:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/os-browserify/-/os-browserify-0.2.1.tgz#63fc4ccee5d2d7763d26bbf8601078e6c2e0044f"
-
 os-browserify@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/os-browserify/-/os-browserify-0.3.0.tgz#854373c7f5c2315914fc9bfc6bd8238fdda1ec27"
@@ -7157,10 +7115,6 @@ package-json@^4.0.0, package-json@^4.0.1:
     registry-auth-token "^3.0.1"
     registry-url "^3.0.3"
     semver "^5.1.0"
-
-pako@~0.2.0:
-  version "0.2.9"
-  resolved "https://registry.yarnpkg.com/pako/-/pako-0.2.9.tgz#f3f7522f4ef782348da8161bad9ecfd51bf83a75"
 
 pako@~1.0.5:
   version "1.0.6"
@@ -7569,27 +7523,27 @@ postcss-minify-selectors@^2.0.4:
     postcss "^5.0.14"
     postcss-selector-parser "^2.0.0"
 
-postcss-modules-extract-imports@^1.0.0:
+postcss-modules-extract-imports@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/postcss-modules-extract-imports/-/postcss-modules-extract-imports-1.1.0.tgz#b614c9720be6816eaee35fb3a5faa1dba6a05ddb"
   dependencies:
     postcss "^6.0.1"
 
-postcss-modules-local-by-default@^1.0.1:
+postcss-modules-local-by-default@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/postcss-modules-local-by-default/-/postcss-modules-local-by-default-1.2.0.tgz#f7d80c398c5a393fa7964466bd19500a7d61c069"
   dependencies:
     css-selector-tokenizer "^0.7.0"
     postcss "^6.0.1"
 
-postcss-modules-scope@^1.0.0:
+postcss-modules-scope@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/postcss-modules-scope/-/postcss-modules-scope-1.1.0.tgz#d6ea64994c79f97b62a72b426fbe6056a194bb90"
   dependencies:
     css-selector-tokenizer "^0.7.0"
     postcss "^6.0.1"
 
-postcss-modules-values@^1.1.0:
+postcss-modules-values@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/postcss-modules-values/-/postcss-modules-values-1.3.0.tgz#ecffa9d7e192518389f42ad0e83f72aec456ea20"
   dependencies:
@@ -7694,9 +7648,9 @@ postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.15, postcss@^6.0.8:
-  version "6.0.15"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.15.tgz#f460cd6269fede0d1bf6defff0b934a9845d974d"
+postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.15, postcss@^6.0.16, postcss@^6.0.8:
+  version "6.0.16"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.16.tgz#112e2fe2a6d2109be0957687243170ea5589e146"
   dependencies:
     chalk "^2.3.0"
     source-map "^0.6.1"
@@ -7755,7 +7709,7 @@ process-nextick-args@~1.0.6:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-1.0.7.tgz#150e20b756590ad3f91093f25a4f2ad8bff30ba3"
 
-process@^0.11.0, process@^0.11.10, process@~0.11.0:
+process@^0.11.10:
   version "0.11.10"
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
 
@@ -8103,7 +8057,7 @@ react-transition-group@^2.2.1:
     prop-types "^15.5.8"
     warning "^3.0.0"
 
-react@^16.0.0, react@^16.1.0, react@^16.1.1, react@^16.2.0:
+react@^16.0.0, react@^16.1.0, react@^16.2.0:
   version "16.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
   dependencies:
@@ -8531,7 +8485,7 @@ resolve@1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
-resolve@^1.1.6, resolve@^1.1.7, resolve@^1.2.0, resolve@^1.3.3:
+resolve@^1.1.6, resolve@^1.1.7, resolve@^1.2.0, resolve@^1.3.3, resolve@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.5.0.tgz#1f09acce796c9a762579f31b2c1cc4c3cddf9f36"
   dependencies:
@@ -9057,7 +9011,7 @@ stream-combiner2@^1.1.1:
     duplexer2 "~0.1.0"
     readable-stream "^2.0.2"
 
-stream-http@^2.3.1, stream-http@^2.7.2:
+stream-http@^2.7.2:
   version "2.7.2"
   resolved "https://registry.yarnpkg.com/stream-http/-/stream-http-2.7.2.tgz#40a050ec8dc3b53b33d9909415c02c0bf1abfbad"
   dependencies:
@@ -9119,15 +9073,15 @@ string.prototype.padstart@^3.0.0:
     es-abstract "^1.4.3"
     function-bind "^1.0.2"
 
-string_decoder@^0.10.25, string_decoder@~0.10.x:
-  version "0.10.31"
-  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
-
 string_decoder@^1.0.0, string_decoder@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.0.3.tgz#0fc67d7c141825de94282dd536bec6b9bce860ab"
   dependencies:
     safe-buffer "~5.1.0"
+
+string_decoder@~0.10.x:
+  version "0.10.31"
+  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
 
 stringify-object@^3.2.0:
   version "3.2.1"
@@ -9357,7 +9311,11 @@ teasim-assists@^3.3.0, teasim-assists@^3.3.3:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/teasim-assists/-/teasim-assists-3.3.3.tgz#31e38e9f87b9d5e89641768486466bc5056d63a0"
 
-teasim-chart@^3.3.1:
+teasim-assists@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/teasim-assists/-/teasim-assists-4.0.0.tgz#a343cf6b6503a12820e55c2bb1cde49b15e45a3d"
+
+teasim-chart@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/teasim-chart/-/teasim-chart-3.3.2.tgz#ccb5bb38d9503275785f85ad45986a9a7965122a"
   dependencies:
@@ -9372,7 +9330,7 @@ teasim-chart@^3.3.1:
     teasim-presets "^3.3.1"
     teasim-styles "^3.3.1"
 
-teasim-core@^3.3.1, teasim-core@^3.3.2:
+teasim-core@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/teasim-core/-/teasim-core-3.3.2.tgz#57898983bcb1aa3e4b3e59787715e17a166becaa"
   dependencies:
@@ -9387,30 +9345,50 @@ teasim-core@^3.3.1, teasim-core@^3.3.2:
     teasim-presets "^3.3.1"
     teasim-styles "^3.3.1"
 
-teasim-form@^3.3.1:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/teasim-form/-/teasim-form-3.3.2.tgz#902b7507d908429d4f5b403c09b66949646268eb"
+teasim-core@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/teasim-core/-/teasim-core-4.0.0.tgz#87607bba496307adbe3e07c585349d60e722f9a2"
+  dependencies:
+    prop-types "^15.6.0"
+    react "^16.2.0"
+    react-dom "^16.2.0"
+    react-transition-group "^2.2.1"
+    teasim-assists "^4.0.0"
+    teasim-helpers "^4.0.0"
+    teasim-icon "^4.0.0"
+    teasim-less "^4.0.0"
+    teasim-presets "^4.0.0"
+
+teasim-form@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/teasim-form/-/teasim-form-4.0.0.tgz#ffd3562072433c97f15a1680fb43e394b2ffe46f"
   dependencies:
     moment "^2.18.1"
     prop-types "^15.6.0"
-    react "^16.1.0"
-    react-dom "^16.1.0"
+    react "^16.2.0"
+    react-dom "^16.2.0"
     react-portal "^4.0.0"
     react-transition-group "^2.2.1"
-    teasim-assists "^3.3.0"
-    teasim-core "^3.3.2"
-    teasim-helpers "^3.3.1"
-    teasim-icon "^3.3.1"
-    teasim-less "^3.3.1"
-    teasim-presets "^3.3.1"
-    teasim-styles "^3.3.1"
+    teasim-assists "^4.0.0"
+    teasim-core "^4.0.0"
+    teasim-helpers "^4.0.0"
+    teasim-icon "^4.0.0"
+    teasim-less "^4.0.0"
+    teasim-presets "^4.0.0"
 
-teasim-helpers@^3.3.0, teasim-helpers@^3.3.1, teasim-helpers@^3.3.3:
+teasim-helpers@^3.3.0, teasim-helpers@^3.3.1:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/teasim-helpers/-/teasim-helpers-3.3.3.tgz#5525ab8a5073182630d885d6f45581721aebe326"
   dependencies:
     immutable "^3.8.2"
     teasim-assists "^3.3.3"
+
+teasim-helpers@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/teasim-helpers/-/teasim-helpers-4.0.0.tgz#da9610bcae80151bec9eaacf31c836688b128af7"
+  dependencies:
+    immutable "^3.8.2"
+    teasim-assists "^4.0.0"
 
 teasim-icon@^3.3.1:
   version "3.3.1"
@@ -9425,60 +9403,88 @@ teasim-icon@^3.3.1:
     teasim-presets "^3.3.0"
     teasim-styles "^3.3.0"
 
+teasim-icon@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/teasim-icon/-/teasim-icon-4.0.0.tgz#d1454bb7dd989f057d25f8d6889402f13d6bd96b"
+  dependencies:
+    prop-types "^15.6.0"
+    react "^16.2.0"
+    react-dom "^16.2.0"
+    teasim-assists "^4.0.0"
+    teasim-helpers "^4.0.0"
+    teasim-less "^4.0.0"
+    teasim-presets "^4.0.0"
+
 teasim-less@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/teasim-less/-/teasim-less-3.3.1.tgz#f12014b54502759dc7ad714af650b59ce63ca018"
 
-teasim-player@^3.3.1:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/teasim-player/-/teasim-player-3.3.2.tgz#4016ceed2eb11d5f190168e6fdc49c6b64e4046b"
+teasim-less@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/teasim-less/-/teasim-less-4.0.0.tgz#f5f8170951b9cc742e1c93c4b156528706d0a66d"
+
+teasim-player@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/teasim-player/-/teasim-player-4.0.0.tgz#72743c1c573c545e975139b966765b6b2844f215"
   dependencies:
     prop-types "^15.6.0"
-    react "^16.1.0"
-    react-dom "^16.1.0"
+    react "^16.2.0"
+    react-dom "^16.2.0"
     react-transition-group "^2.2.1"
     soundcloud-audio "^1.1.0"
-    teasim-assists "^3.3.0"
-    teasim-core "^3.3.2"
-    teasim-helpers "^3.3.1"
-    teasim-icon "^3.3.1"
-    teasim-less "^3.3.1"
-    teasim-presets "^3.3.1"
-    teasim-styles "^3.3.1"
+    teasim-assists "^4.0.0"
+    teasim-core "^4.0.0"
+    teasim-helpers "^4.0.0"
+    teasim-icon "^4.0.0"
+    teasim-less "^4.0.0"
+    teasim-presets "^4.0.0"
 
-teasim-plugin-authentic@^3.3.7:
-  version "3.3.7"
-  resolved "https://registry.yarnpkg.com/teasim-plugin-authentic/-/teasim-plugin-authentic-3.3.7.tgz#d1e172ca4aa98031f90251898c1644d3a2bbcc1d"
+teasim-plugin-authentic@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/teasim-plugin-authentic/-/teasim-plugin-authentic-4.0.0.tgz#7e6fbc58df5e9f9832be21dbda727ac0ab1db966"
   dependencies:
     prop-types "^15.6.0"
     query-string "^5.0.1"
-    react "^16.1.1"
+    react "^16.2.0"
+    react-dom "^16.2.0"
     react-redux "^5.0.6"
-    teasim-assists "^3.3.3"
-    teasim-helpers "^3.3.3"
+    teasim-assists "^4.0.0"
+    teasim-helpers "^4.0.0"
 
-teasim-plugin-authman@^3.3.7:
-  version "3.3.7"
-  resolved "https://registry.yarnpkg.com/teasim-plugin-authman/-/teasim-plugin-authman-3.3.7.tgz#0a1f58d7e7570f4f06167a90db8f22a78eb6c9f3"
+teasim-plugin-authman@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/teasim-plugin-authman/-/teasim-plugin-authman-4.0.0.tgz#8ac834ed93b3ea761ebf59153bd8c47e440f4421"
   dependencies:
     immutable "^3.8.2"
     jsrsasign "^8.0.4"
     prop-types "^15.6.0"
-    react "^16.1.1"
+    react "^16.2.0"
+    react-dom "^16.2.0"
     react-redux "^5.0.6"
-    teasim-assists "^3.3.3"
-    teasim-helpers "^3.3.3"
+    teasim-assists "^4.0.0"
+    teasim-helpers "^4.0.0"
 
-teasim-plugin-request@^3.3.7:
-  version "3.3.7"
-  resolved "https://registry.yarnpkg.com/teasim-plugin-request/-/teasim-plugin-request-3.3.7.tgz#275c4c49c9235480bfc83b88dfdc77cd2199f522"
+teasim-plugin-request@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/teasim-plugin-request/-/teasim-plugin-request-4.0.0.tgz#3c4cad829ace97fc35344a118b4bc9a3883d0daa"
   dependencies:
     isomorphic-fetch "^2.2.1"
-    teasim-assists "^3.3.3"
+    teasim-assists "^4.0.0"
 
-teasim-presets@^3.3.0, teasim-presets@^3.3.1, teasim-presets@^3.3.3:
+teasim-presets@^3.3.0, teasim-presets@^3.3.1:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/teasim-presets/-/teasim-presets-3.3.3.tgz#9715704e2d09878aa1693120fef021e89e77aaa9"
+  dependencies:
+    moment "^2.18.1"
+    prop-types "^15.6.0"
+    react "^16.1.0"
+    react-dom "^16.1.0"
+    teasim-assists "^3.3.0"
+    teasim-helpers "^3.3.1"
+
+teasim-presets@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/teasim-presets/-/teasim-presets-4.0.0.tgz#decc43eafaca724ee713cb499fc6e451441c1947"
   dependencies:
     moment "^2.18.1"
     prop-types "^15.6.0"
@@ -9522,9 +9528,9 @@ teasim-sample-helpers@^3.3.4:
     teasim-assists "^3.3.0"
     teasim-helpers "^3.3.1"
 
-teasim-samples@^3.3.4:
-  version "3.3.4"
-  resolved "https://registry.yarnpkg.com/teasim-samples/-/teasim-samples-3.3.4.tgz#df3b70575438b9bcb5adad7de5503ecc152efe12"
+teasim-samples@^3.3.5:
+  version "3.3.5"
+  resolved "https://registry.yarnpkg.com/teasim-samples/-/teasim-samples-3.3.5.tgz#61eee6596a6a61cf8b861ecfc3484d0799703a12"
   dependencies:
     airbnb-js-shims "^1.1.1"
     case-sensitive-paths-webpack-plugin "^2.0.0"
@@ -9532,10 +9538,17 @@ teasim-samples@^3.3.4:
     commander "^2.9.0"
     common-tags "^1.4.0"
     express "^4.15.3"
+    fuse.js "^3.0.3"
+    fuzzysearch "^1.0.3"
+    json-stringify-safe "^5.0.1"
+    mantra-core "^1.7.0"
     prop-types "^15.5.10"
     qs "^6.4.0"
     react "^16.1.0"
     react-dom "^16.1.0"
+    react-inspector "^2.0.0"
+    react-modal "^3.1.2"
+    react-split-pane "^0.1.63"
     redux "^3.6.0"
     serve-favicon "^2.4.3"
     spawn-sync "^1.0.15"
@@ -9556,26 +9569,26 @@ teasim-styles@^3.3.0, teasim-styles@^3.3.1, teasim-styles@^3.3.3:
     react-dom "^16.1.0"
     teasim-assists "^3.3.3"
 
-teasim@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/teasim/-/teasim-3.3.1.tgz#12442b435138e7f103d7c10c120f8632c243836e"
+teasim@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/teasim/-/teasim-4.0.0.tgz#f7cc25c278faa1e9ecf988a4f60faab3e9e6aaad"
   dependencies:
-    moment "^2.19.1"
+    moment "^2.20.1"
     prop-types "^15.6.0"
-    react "^16.0.0"
-    react-dom "^16.0.0"
-    react-portal "^4.0.0"
+    react "^16.2.0"
+    react-dom "^16.2.0"
+    react-portal "^4.1.2"
     react-transition-group "^2.2.1"
-    teasim-assists "^3.3.0"
-    teasim-chart "^3.3.1"
-    teasim-core "^3.3.1"
-    teasim-form "^3.3.1"
-    teasim-helpers "^3.3.0"
-    teasim-icon "^3.3.1"
-    teasim-less "^3.3.1"
-    teasim-player "^3.3.1"
-    teasim-presets "^3.3.0"
-    teasim-styles "^3.3.0"
+    teasim-assists "^4.0.0"
+    teasim-chart "^3.3.2"
+    teasim-core "^4.0.0"
+    teasim-form "^4.0.0"
+    teasim-helpers "^4.0.0"
+    teasim-icon "^4.0.0"
+    teasim-less "^4.0.0"
+    teasim-player "^4.0.0"
+    teasim-presets "^4.0.0"
+    teasim-styles "^3.3.3"
 
 temp-dir@^1.0.0:
   version "1.0.0"
@@ -9674,12 +9687,6 @@ timed-out@^3.0.0:
 timed-out@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/timed-out/-/timed-out-4.0.1.tgz#f32eacac5a175bea25d7fab565ab3ed8741ef56f"
-
-timers-browserify@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-1.4.2.tgz#c9c58b575be8407375cb5e2462dacee74359f41d"
-  dependencies:
-    process "~0.11.0"
 
 timers-browserify@^2.0.4:
   version "2.0.4"
