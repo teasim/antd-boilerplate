@@ -47,21 +47,6 @@ module.exports = options => ({
         ]
       },
       {
-        test: /\.css$/,
-        include: /node_modules/,
-        use: [
-          "style-loader",
-          {
-            loader: "css-loader",
-            options: { modules: true, importLoaders: 1 }
-          },
-          {
-            loader: "postcss-loader",
-            options: { plugins: [autoprefixer] }
-          }
-        ]
-      },
-      {
         test: /\.(eot|svg|otf|ttf|woff|woff2)$/,
         use: "file-loader"
       },

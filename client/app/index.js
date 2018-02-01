@@ -13,6 +13,8 @@ import genStore from "app/stores/index";
 import Application from "app/pages/index";
 import userManager from "app/helpers/userManager";
 
+import "app/styles/index.less";
+
 /* eslint-disable import/no-webpack-loader-syntax */
 import "!file-loader?name=[name].[ext]!app/resources/icons/favicon.ico";
 import "!file-loader?name=[name].[ext]!app/resources/icons/icon-72x72.png";
@@ -29,7 +31,6 @@ import "!file-loader?name=[name].[ext]!app/resources/icons/icon-512x512.png";
 import "!file-loader?name=[name].[ext]!app/resources/icons/manifest.json";
 import "file-loader?name=[name].[ext]!.htaccess";
 /* eslint-enable import/no-webpack-loader-syntax */
-import "app/styles/index.less";
 
 // Create redux store with history
 const initialState = {};

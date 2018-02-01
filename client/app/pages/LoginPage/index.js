@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "teasim";
 import userManager from "app/helpers/userManager";
 
 class LoginPage extends React.Component {
@@ -12,7 +13,7 @@ class LoginPage extends React.Component {
       <div style={styles.root}>
         <h3>Welcome to the teasim-plugin-authman sample app!</h3>
         <p>Please log in to continue</p>
-        <button onClick={this.onLoginButtonClick}>Login with Google</button>
+        <Button onClick={this.onLoginButtonClick}>Login with Google</Button>
       </div>
     );
   }

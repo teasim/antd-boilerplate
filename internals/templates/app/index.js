@@ -9,6 +9,9 @@ import { LocaleProvider } from "app/containers/index";
 import { translationMessages } from "app/helpers/internationalization";
 import generateStore from "app/stores/index";
 import Application from "app/pages/index";
+
+import "app/styles/application.less";
+
 /* eslint-disable import/no-webpack-loader-syntax */
 import "!file-loader?name=[name].[ext]!app/resources/icons/favicon.ico";
 import "!file-loader?name=[name].[ext]!app/resources/icons/icon-72x72.png";
@@ -25,7 +28,6 @@ import "!file-loader?name=[name].[ext]!app/resources/icons/icon-512x512.png";
 import "!file-loader?name=[name].[ext]!app/resources/icons/manifest.json";
 import "file-loader?name=[name].[ext]!.htaccess";
 /* eslint-enable import/no-webpack-loader-syntax */
-import "app/styles/application.less";
 
 const mountNode = document.getElementById("application");
 const browserHistory = createHistory();
