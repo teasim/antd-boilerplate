@@ -12,7 +12,6 @@ import LanguageProvider from "app/containers/LanguageProvider/index";
 import genStore from "app/stores/index";
 import Application from "app/pages/index";
 import userManager from "app/helpers/userManager";
-
 import "app/styles/index.less";
 
 /* eslint-disable import/no-webpack-loader-syntax */
