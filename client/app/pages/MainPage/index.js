@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import { Helmet } from "react-helmet";
-import { Section } from "teasim";
+import { Area } from "teasim";
 import { FormattedMessage } from "react-intl";
 import { createStructuredSelector } from "reselect";
 import {
@@ -53,13 +53,13 @@ class MainPage extends React.PureComponent {
             content="A React.js Boilerplate application homepage"
           />
         </Helmet>
-        <Section size="huge">
+        <Area>
           <h3>Welcome, {user ? user.profile.name : "Mister Unknown"}!</h3>
           <button onClick={this.showUserInfoButtonClick}>Show user info</button>
           <button onClick={this.onLogoutButtonClicked}>Logout</button>
-        </Section>
+        </Area>
         <hr />
-        <Section size="huge">
+        <Area>
           <FormattedMessage {...messages.hello} />
           <form onSubmit={this.props.onSubmitForm}>
             <label htmlFor="username">
@@ -73,7 +73,7 @@ class MainPage extends React.PureComponent {
             </label>
           </form>
           <ReposList {...reposListProps} />
-        </Section>
+        </Area>
       </article>
     );
   }

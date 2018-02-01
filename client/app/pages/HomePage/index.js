@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import { compose } from "redux";
-import MainPage from "../MainPage";
-import LoginPage from "../LoginPage";
 import { createStructuredSelector } from "reselect";
 import { makeSelectAuthUser } from "app/actions/auth/selectors";
+import MainPage from "../MainPage";
+import LoginPage from "../LoginPage";
 
 function HomePage(props) {
   const { user } = props;

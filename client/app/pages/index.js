@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { Layout } from "teasim";
 import { Helmet } from "react-helmet";
+import { Layout } from "teasim-layout";
 import LanguageToggle from "app/containers/LanguageToggle/index";
 import HomePage from "./HomePage/index";
 import AboutPage from "./AboutPage/index";

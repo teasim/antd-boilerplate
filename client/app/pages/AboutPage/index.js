@@ -1,7 +1,7 @@
 import React from "react";
-import { Section } from "teasim";
+import { Area } from "teasim";
 import { withLogin } from "app/helpers/authentication";
 
-const AboutPage = () => <Section size="huge">Hello AboutPage!</Section>;
+const AboutPage = () => <Area >Hello AboutPage!</Area>;
 
 export default withLogin(AboutPage);
