@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const autoprefixer = require("autoprefixer");
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = options => ({
   entry: options.entry,
@@ -23,27 +24,27 @@ module.exports = options => ({
       },
       {
         test: /\.less$/,
-        use: [
-          {
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader",
-            options: { modules: true, importLoaders: 1 }
-          },
-          {
-            loader: "postcss-loader",
-            options: {
-              plugins: [autoprefixer]
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: { importLoaders: 2 }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: [autoprefixer]
+              }
+            },
+            {
+              loader: 'less-loader',
+              options: {
+                noIeCompat: true
+              }
             }
-          },
-          {
-            loader: "less-loader",
-            options: {
-              noIeCompat: true
-            }
-          }
-        ]
+          ]
+        })
       },
       {
         test: /\.(eot|svg|otf|ttf|woff|woff2)$/,
@@ -101,7 +102,8 @@ module.exports = options => ({
       false,
       /js$/
     ),
-    new webpack.NamedModulesPlugin()
+    new webpack.NamedModulesPlugin(),
+    new ExtractTextPlugin('application.css')
   ]),
   resolve: {
     modules: [
