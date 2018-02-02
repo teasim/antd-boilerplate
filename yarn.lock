@@ -1905,7 +1905,7 @@ cli-spinners@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/cli-spinners/-/cli-spinners-0.1.2.tgz#bb764d88e185fb9e1e6a2a1f19772318f605e31c"
 
-cli-spinners@^1.0.0:
+cli-spinners@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/cli-spinners/-/cli-spinners-1.1.0.tgz#f1847b168844d917a671eb9d147e3df497c90d06"
 
@@ -6550,8 +6550,8 @@ mime@^2.1.0:
   resolved "https://registry.yarnpkg.com/mime/-/mime-2.2.0.tgz#161e541965551d3b549fa1114391e3a3d55b923b"
 
 mimic-fn@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.1.0.tgz#e667783d92e89dbd342818b5230b9d62a672ad18"
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
 
 min-document@^2.19.0:
   version "2.19.0"
@@ -7041,13 +7041,13 @@ ora@^0.2.3:
     object-assign "^4.0.1"
 
 ora@^1.1.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/ora/-/ora-1.3.0.tgz#80078dd2b92a934af66a3ad72a5b910694ede51a"
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/ora/-/ora-1.4.0.tgz#884458215b3a5d4097592285f93321bb7a79e2e5"
   dependencies:
-    chalk "^1.1.1"
+    chalk "^2.1.0"
     cli-cursor "^2.1.0"
-    cli-spinners "^1.0.0"
-    log-symbols "^1.0.2"
+    cli-spinners "^1.0.1"
+    log-symbols "^2.1.0"
 
 ordered-read-streams@^0.3.0:
   version "0.3.0"
@@ -7478,14 +7478,14 @@ postcss-load-plugins@^2.3.0:
     cosmiconfig "^2.1.1"
     object-assign "^4.1.0"
 
-postcss-loader@^2.0.10:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-2.0.10.tgz#090db0540140bd56a7a7f717c41bc29aeef4c674"
+postcss-loader@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-2.1.0.tgz#038c2d6d59753fef4667827fd3ae03f5dc5e6a7a"
   dependencies:
     loader-utils "^1.1.0"
     postcss "^6.0.0"
     postcss-load-config "^1.2.0"
-    schema-utils "^0.3.0"
+    schema-utils "^0.4.0"
 
 postcss-merge-idents@^2.1.5:
   version "2.1.7"
@@ -8611,7 +8611,7 @@ schema-utils@^0.3.0:
   dependencies:
     ajv "^5.0.0"
 
-schema-utils@^0.4.3:
+schema-utils@^0.4.0, schema-utils@^0.4.3:
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-0.4.3.tgz#e2a594d3395834d5e15da22b48be13517859458e"
   dependencies:
@@ -9356,38 +9356,38 @@ teasim-assists@^4.0.1, teasim-assists@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/teasim-assists/-/teasim-assists-4.0.2.tgz#7a1d17b25fa61236fc112dfe294f366220434753"
 
-teasim-chart@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/teasim-chart/-/teasim-chart-4.0.2.tgz#fb00ae1fd054d221f70f786dc9b0c9473bc243b3"
+teasim-chart@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/teasim-chart/-/teasim-chart-4.0.3.tgz#fbeafa6b35aa7c0c4681c9d12602976f9bc4b844"
   dependencies:
     prop-types "^15.6.0"
     react "^16.2.0"
     react-dom "^16.2.0"
     teasim-assists "^4.0.2"
-    teasim-core "^4.0.2"
-    teasim-foundation "^4.0.2"
+    teasim-core "^4.0.3"
+    teasim-foundation "^4.0.3"
     teasim-helpers "^4.0.2"
-    teasim-icon "^4.0.2"
-    teasim-less "^4.0.2"
+    teasim-icon "^4.0.3"
+    teasim-less "^4.0.3"
     teasim-presets "^4.0.2"
 
-teasim-core@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/teasim-core/-/teasim-core-4.0.2.tgz#49856c1f82d02784635c1fc46c9c9e0f66d8d8df"
+teasim-core@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/teasim-core/-/teasim-core-4.0.3.tgz#33f9c950cbfd2227c46e32eebd16b1aac9905122"
   dependencies:
     prop-types "^15.6.0"
     react "^16.2.0"
     react-dom "^16.2.0"
     teasim-assists "^4.0.2"
-    teasim-foundation "^4.0.2"
+    teasim-foundation "^4.0.3"
     teasim-helpers "^4.0.2"
-    teasim-icon "^4.0.2"
-    teasim-less "^4.0.2"
+    teasim-icon "^4.0.3"
+    teasim-less "^4.0.3"
     teasim-presets "^4.0.2"
 
-teasim-form@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/teasim-form/-/teasim-form-4.0.2.tgz#24658bd8306776547b336269e6c7e3fb0b2f7250"
+teasim-form@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/teasim-form/-/teasim-form-4.0.3.tgz#6759721a4ae76edeb87f5bbad15e301afe4ee350"
   dependencies:
     moment "^2.18.1"
     prop-types "^15.6.0"
@@ -9395,16 +9395,16 @@ teasim-form@^4.0.2:
     react-dom "^16.2.0"
     react-portal "^4.0.0"
     teasim-assists "^4.0.2"
-    teasim-core "^4.0.2"
-    teasim-foundation "^4.0.2"
+    teasim-core "^4.0.3"
+    teasim-foundation "^4.0.3"
     teasim-helpers "^4.0.2"
-    teasim-icon "^4.0.2"
-    teasim-less "^4.0.2"
+    teasim-icon "^4.0.3"
+    teasim-less "^4.0.3"
     teasim-presets "^4.0.2"
 
-teasim-foundation@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/teasim-foundation/-/teasim-foundation-4.0.2.tgz#bd5d7c23d6816419cb3c6ddb0df97afb193b42b1"
+teasim-foundation@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/teasim-foundation/-/teasim-foundation-4.0.3.tgz#1ebac4dc63e00e4a9a2b47a1dc4a29f6cbc7e4dc"
   dependencies:
     prop-types "^15.6.0"
     react "^16.2.0"
@@ -9420,49 +9420,49 @@ teasim-helpers@^4.0.1, teasim-helpers@^4.0.2:
     immutable "^3.8.2"
     teasim-assists "^4.0.2"
 
-teasim-icon@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/teasim-icon/-/teasim-icon-4.0.2.tgz#bb86b811b26a522dbc10ef032b67d4d3fcc417e2"
+teasim-icon@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/teasim-icon/-/teasim-icon-4.0.3.tgz#7fbb30877ad6a2442eddfd1cc9c0fe8710e866a5"
   dependencies:
     prop-types "^15.6.0"
     react "^16.2.0"
     react-dom "^16.2.0"
     teasim-assists "^4.0.2"
     teasim-helpers "^4.0.2"
-    teasim-less "^4.0.2"
+    teasim-less "^4.0.3"
     teasim-presets "^4.0.2"
 
-teasim-layout@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/teasim-layout/-/teasim-layout-4.0.2.tgz#cae81615cff3a066267036e0c9ff10d887669204"
+teasim-layout@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/teasim-layout/-/teasim-layout-4.0.3.tgz#6f8ca3074a7b9b5c323384e73b698c72822328b8"
   dependencies:
     prop-types "^15.6.0"
     react "^16.2.0"
     react-dom "^16.2.0"
     teasim-assists "^4.0.2"
-    teasim-foundation "^4.0.2"
+    teasim-foundation "^4.0.3"
     teasim-helpers "^4.0.2"
-    teasim-less "^4.0.2"
+    teasim-less "^4.0.3"
     teasim-presets "^4.0.2"
 
-teasim-less@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/teasim-less/-/teasim-less-4.0.2.tgz#81d09b9773408a54b615ae21fa1206d6a0fc409f"
+teasim-less@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/teasim-less/-/teasim-less-4.0.3.tgz#6983d17421a0d6a48c95417368ba132287fffcca"
 
-teasim-player@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/teasim-player/-/teasim-player-4.0.2.tgz#3bb795ad79b649a66b6c6854032ff4d0196249c4"
+teasim-player@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/teasim-player/-/teasim-player-4.0.3.tgz#64e398c3985de06ab8c1e9355fc7d2871851c1fa"
   dependencies:
     prop-types "^15.6.0"
     react "^16.2.0"
     react-dom "^16.2.0"
     soundcloud-audio "^1.1.0"
     teasim-assists "^4.0.2"
-    teasim-core "^4.0.2"
-    teasim-foundation "^4.0.2"
+    teasim-core "^4.0.3"
+    teasim-foundation "^4.0.3"
     teasim-helpers "^4.0.2"
-    teasim-icon "^4.0.2"
-    teasim-less "^4.0.2"
+    teasim-icon "^4.0.3"
+    teasim-less "^4.0.3"
     teasim-presets "^4.0.2"
 
 teasim-plugin-authentic@^4.0.1:
@@ -9508,9 +9508,9 @@ teasim-presets@^4.0.2:
     teasim-assists "^4.0.2"
     teasim-helpers "^4.0.2"
 
-teasim-samples@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/teasim-samples/-/teasim-samples-4.0.1.tgz#aabf3aa055e2485533302c7d41a5bb10b2e3e44c"
+teasim-samples@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/teasim-samples/-/teasim-samples-4.0.2.tgz#516edfc5ce175c71529899f813a42f774092b17c"
   dependencies:
     airbnb-js-shims "^1.1.1"
     case-sensitive-paths-webpack-plugin "^2.0.0"
@@ -9532,8 +9532,8 @@ teasim-samples@^4.0.1:
     redux "^3.6.0"
     serve-favicon "^2.4.3"
     spawn-sync "^1.0.15"
-    teasim-assists "^4.0.1"
-    teasim-helpers "^4.0.1"
+    teasim-assists "^4.0.2"
+    teasim-helpers "^4.0.2"
     teasim-widget-splitpane "^0.0.1"
     update-notifier "^2.1.0"
     util-deprecate "^1.0.2"
@@ -9557,9 +9557,9 @@ teasim-widget-splitpane@^0.0.1:
     react-dom "^16.2.0"
     react-style-proptype "^3.0.0"
 
-teasim@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/teasim/-/teasim-4.0.2.tgz#df473e09f0f11d08e579b9f207e519ebb8b6597c"
+teasim@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/teasim/-/teasim-4.0.3.tgz#8482c362b50b276a01de2374060d0f19b0049404"
   dependencies:
     moment "^2.20.1"
     prop-types "^15.6.0"
@@ -9569,14 +9569,15 @@ teasim@^4.0.2:
     react-style-proptype "^3.1.0"
     react-transition-group "^2.2.1"
     teasim-assists "^4.0.2"
-    teasim-chart "^4.0.2"
-    teasim-core "^4.0.2"
-    teasim-form "^4.0.2"
-    teasim-foundation "^4.0.2"
+    teasim-chart "^4.0.3"
+    teasim-core "^4.0.3"
+    teasim-form "^4.0.3"
+    teasim-foundation "^4.0.3"
     teasim-helpers "^4.0.2"
-    teasim-icon "^4.0.2"
-    teasim-less "^4.0.2"
-    teasim-player "^4.0.2"
+    teasim-icon "^4.0.3"
+    teasim-layout "^4.0.3"
+    teasim-less "^4.0.3"
+    teasim-player "^4.0.3"
     teasim-presets "^4.0.2"
 
 temp-dir@^1.0.0:

@@ -11,7 +11,7 @@ class LoginPage extends React.Component {
   render() {
     return (
       <div style={styles.root}>
-        <h3>Welcome to the teasim-plugin-authman sample app!</h3>
+        <h3>teasim-boilerplate</h3>
         <p>Please log in to continue</p>
         <Button onClick={this.onLoginButtonClick}>Login with Google</Button>
       </div>

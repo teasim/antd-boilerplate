@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import { Helmet } from "react-helmet";
-import { Area } from "teasim";
+import { Area, Button } from "teasim";
 import { FormattedMessage } from "react-intl";
 import { createStructuredSelector } from "reselect";
 import {
@@ -55,10 +55,9 @@ class MainPage extends React.PureComponent {
         </Helmet>
         <Area>
           <h3>Welcome, {user ? user.profile.name : "Mister Unknown"}!</h3>
-          <button onClick={this.showUserInfoButtonClick}>Show user info</button>
-          <button onClick={this.onLogoutButtonClicked}>Logout</button>
+          <Button onClick={this.showUserInfoButtonClick}>Show user info</Button>
+          <Button onClick={this.onLogoutButtonClicked}>Logout</Button>
         </Area>
-        <hr />
         <Area>
           <FormattedMessage {...messages.hello} />
           <form onSubmit={this.props.onSubmitForm}>
