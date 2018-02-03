@@ -14,30 +14,18 @@ import {
   makeSelectError,
   makeSelectUsername
 } from "app/actions/home/index";
-import { makeSelectAuthUser } from "app/actions/auth/index";
-import userManager from "app/helpers/userManager";
 import messages from "./messages";
 import ReposList from "app/components/ReposList/index";
 
-class MainPage extends React.PureComponent {
+class Repositories extends React.PureComponent {
   componentDidMount() {
     if (this.props.username && this.props.username.trim().length > 0) {
       this.props.onSubmitForm();
     }
   }
 
-  showUserInfoButtonClick = event => {
-    event.preventDefault();
-    alert(JSON.stringify(this.props.user, null, 2));
-  };
-
-  onLogoutButtonClicked = event => {
-    event.preventDefault();
-    userManager.removeUser(); // removes the user data from sessionStorage
-  };
-
   render() {
-    const { loading, error, repos, user } = this.props;
+    const { loading, error, repos } = this.props;
     const reposListProps = {
       loading,
       error,
@@ -53,11 +41,6 @@ class MainPage extends React.PureComponent {
             content="A React.js Boilerplate application homepage"
           />
         </Helmet>
-        <Area>
-          <h3>Welcome, {user ? user.profile.name : "Mister Unknown"}!</h3>
-          <Button onClick={this.showUserInfoButtonClick}>Show user info</Button>
-          <Button onClick={this.onLogoutButtonClicked}>Logout</Button>
-        </Area>
         <Area>
           <FormattedMessage {...messages.hello} />
           <form onSubmit={this.props.onSubmitForm}>
@@ -78,8 +61,7 @@ class MainPage extends React.PureComponent {
   }
 }
 
-MainPage.propTypes = {
-  user: PropTypes.object,
+Repositories.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
   repos: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
@@ -89,7 +71,6 @@ MainPage.propTypes = {
 };
 
 const mapStateToProps = createStructuredSelector({
-  user: makeSelectAuthUser(),
   repos: makeSelectRepos(),
   username: makeSelectUsername(),
   loading: makeSelectLoading(),
@@ -107,4 +88,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
-export default compose(withConnect)(MainPage);
+export default compose(withConnect)(Repositories);
