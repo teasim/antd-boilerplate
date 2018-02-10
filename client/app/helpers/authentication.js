@@ -2,7 +2,7 @@ import {
   withLocationplate,
   withRouteRedirect,
   withAuthentication
-} from "teasim-plugin-authentic";
+} from "teasim-plugin-authent";
 import {
   makeSelectAuthUser,
   makeSelectAuthLoading

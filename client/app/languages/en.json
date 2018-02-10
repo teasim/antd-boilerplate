@@ -1,6 +1,20 @@
 {
-  "app.containers.common.lang.LanguageToggle.en": "English",
-  "app.containers.common.lang.LanguageToggle.zh": "简体中文",
-  "application.pages.home.HomePage.hello": "Hello",
-  "application.pages.home.HomePage.name": "word"
+  "app.containers.LanguageToggle.en": "EN",
+  "app.containers.LanguageToggle.zh": "中",
+  "app.components.Brand.name": "Teasim",
+  "app.pages.Notfound.title": "Page not found.",
+  "app.pages.Home.Landing.slogan": "Build cross platform apps with React and Electron.",
+  "app.pages.Home.Landing.introduceTitle": "It's easier than you think",
+  "app.pages.Home.Landing.introduceContent": "If you can build a website, you can build a desktop app. Electron is a framework for creating native applications with web technologies like JavaScript, HTML, and CSS. It takes care of the hard parts so you can focus on the core of your application.",
+  "app.pages.Home.Landing.featureBrowserTitle": "Browser",
+  "app.pages.Home.Landing.featureBrowserContent": "Electron uses Chromium and Node.js so you can build your app with HTML, CSS, and JavaScript.",
+  "app.pages.Home.Landing.featureDesktopTitle": "Desktop",
+  "app.pages.Home.Landing.featureDesktopContent": "Electron is an open source project maintained by GitHub and an active community of contributors.",
+  "app.pages.Home.Landing.featureMobileTitle": "Mobile",
+  "app.pages.Home.Landing.featureMobileContent": "Compatible with Mac, Windows, and Linux, Electron apps build and run on three platforms.",
+  "app.pages.Home.Landing.hardpardTitle": "The hard parts made easy",
+  "app.pages.Home.Landing.exampleTitle": "Who's using Teasim ?",
+  "app.pages.Home.Landing.exampleContent": "With Electron, creating a desktop application for your company or idea is easy. Initially developed for GitHub's Atom editor, Electron has since been used to create applications by companies like Microsoft, Facebook, Slack, and Docker.",
+  "app.pages.Home.Landing.packageTitle": "What components we have ?",
+  "app.pages.Home.Landing.packageContent": "With Electron, creating a desktop application for your company or idea is easy. Initially developed for GitHub's Atom editor, Electron has since been used to create applications by companies like Microsoft, Facebook, Slack, and Docker."
 }

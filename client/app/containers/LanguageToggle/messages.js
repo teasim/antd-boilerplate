@@ -2,11 +2,11 @@ import { defineMessages } from "react-intl";
 
 export default defineMessages({
   en: {
-    id: "app.containers.common.lang.LanguageToggle.en",
-    defaultMessage: "English"
+    id: "app.containers.LanguageToggle.en",
+    defaultMessage: "EN"
   },
   zh: {
-    id: "app.containers.common.lang.LanguageToggle.zh",
-    defaultMessage: "简体中文"
+    id: "app.containers.LanguageToggle.zh",
+    defaultMessage: "中"
   }
 });

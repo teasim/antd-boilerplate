@@ -1,6 +1,20 @@
 {
-  "app.containers.common.lang.LanguageToggle.en": "English",
-  "app.containers.common.lang.LanguageToggle.zh": "简体中文",
-  "app.pages.home.HomePage.hello": "您好, 世界",
-  "app.pages.home.HomePage.name": "我的名字叫茶芯"
+  "app.containers.LanguageToggle.en": "EN",
+  "app.containers.LanguageToggle.zh": "中",
+  "app.components.Brand.name": "茶芯",
+  "app.pages.Notfound.title": "没找到该页面。",
+  "app.pages.Home.Landing.slogan": "基于 React 和 Electron 构建跨平台应用",
+  "app.pages.Home.Landing.introduceTitle": "比你想象中的还要容易",
+  "app.pages.Home.Landing.introduceContent": "If you can build a website, you can build a desktop app. Electron is a framework for creating native applications with web technologies like JavaScript, HTML, and CSS. It takes care of the hard parts so you can focus on the core of your application.",
+  "app.pages.Home.Landing.featureBrowserTitle": "浏览器端",
+  "app.pages.Home.Landing.featureBrowserContent": "Electron uses Chromium and Node.js so you can build your app with HTML, CSS, and JavaScript.",
+  "app.pages.Home.Landing.featureDesktopTitle": "桌面端",
+  "app.pages.Home.Landing.featureDesktopContent": "Electron is an open source project maintained by GitHub and an active community of contributors.",
+  "app.pages.Home.Landing.featureMobileTitle": "移动端",
+  "app.pages.Home.Landing.featureMobileContent": "Compatible with Mac, Windows, and Linux, Electron apps build and run on three platforms.",
+  "app.pages.Home.Landing.hardpardTitle": "好工具让它更简单",
+  "app.pages.Home.Landing.exampleTitle": "有谁在用 Teasim ？",
+  "app.pages.Home.Landing.exampleContent": "With Electron, creating a desktop application for your company or idea is easy. Initially developed for GitHub's Atom editor, Electron has since been used to create applications by companies like Microsoft, Facebook, Slack, and Docker.",
+  "app.pages.Home.Landing.packageTitle": "我们有哪些组件 ？",
+  "app.pages.Home.Landing.packageContent": "With Electron, creating a desktop application for your company or idea is easy. Initially developed for GitHub's Atom editor, Electron has since been used to create applications by companies like Microsoft, Facebook, Slack, and Docker."
 }

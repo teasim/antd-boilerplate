@@ -11,9 +11,11 @@ class LoginButton extends React.Component {
   render() {
     return (
       <Button 
-      	size="tiny" 
+        outline
+      	size="medium" 
+        skin="default"
       	onClick={this.onLoginButtonClick}>
-      	Login with Google
+      	Login
       </Button>
     );
   }

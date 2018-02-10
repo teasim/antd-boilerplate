@@ -35,7 +35,7 @@ import "file-loader?name=[name].[ext]!.htaccess";
 const initialState = {};
 const browserHistory = createHistory();
 const { store, history } = genStore(initialState, browserHistory);
-const mountNode = document.getElementById("application");
+const mountNode = document.getElementById("root");
 
 //  When Open Sans is loaded, add a font-family using Open Sans to the body
 const openSansObserver = new FontFaceObserver("Open Sans", {});

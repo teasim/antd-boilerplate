@@ -1,9 +1,22 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { Row, Column, Layout, LayoutTopper, LayoutBodyer, LayoutHeader, LayoutFooter } from "teasim";
+import { 
+  Layout, 
+  LayoutTopper,
+  LayoutBodyer, 
+  LayoutHeader, 
+  LayoutFooter, 
+  Header, 
+  HeaderLeft, 
+  HeaderRight, 
+  HeaderBrand,
+  Topper,
+} from "teasim";
+import Brand from "app/components/Brand/index";
 import LanguageToggle from "app/containers/LanguageToggle/index";
-import LoginToggle from "app/containers/LoginToggle/index";
+import MainNavigationToggle from "app/containers/MainNavigationToggle/index";
+import UserNavigationToggle from "app/containers/UserNavigationToggle/index";
 
 import Home from "./Home/index";
 import About from "./About/index";
@@ -11,25 +24,28 @@ import Callback from "./Callback/index";
 import Notfound from "./Notfound/index";
 
 const Application = () => (
-  <div>
+  <div className="application">
     <Helmet
-      titleTemplate="%s - Teasim Boilerplate"
-      defaultTitle="Teasim Boilerplate">
-      <meta name="description" content="A Teasim Boilerplate Application" />
+      titleTemplate="%s - Teasim"
+      defaultTitle="Teasim | Build cross platform apps with React and Electron.">
+      <meta name="description" content="Build cross platform apps with React and Electron." />
     </Helmet>
     <Layout>
-      <LayoutTopper childClassName="fluid-xxl px-mini" >
-        <Row>
-          <Column size="12" className="text-left" >
-            <LoginToggle />
-          </Column>
-          <Column size="12" className="text-right">
-            <LanguageToggle />
-          </Column>
-        </Row>
+      <LayoutTopper childClassName="container-xxl py-tiny text-right">
+        <LanguageToggle />
       </LayoutTopper>
-      <LayoutHeader childClassName="fluid-xxl text-center">
-        Logo
+      <LayoutHeader childClassName="container-xxl py-none">
+        <Header>
+          <HeaderLeft className="py-medium text-left">
+            <MainNavigationToggle />
+          </HeaderLeft>
+          <HeaderRight className="py-medium text-right">
+            <UserNavigationToggle/>
+          </HeaderRight>
+          <HeaderBrand className="text-center">
+            <Brand />
+          </HeaderBrand>
+        </Header>
       </LayoutHeader>
       <LayoutBodyer>
         <Switch>
@@ -39,8 +55,8 @@ const Application = () => (
           <Route path="" component={Notfound} />
         </Switch>
       </LayoutBodyer>
-      <LayoutFooter childClassName="fluid-xxl text-center">
-        footer
+      <LayoutFooter childClassName="container-xxl py-wide text-center">
+        YIQILAI.TECH
       </LayoutFooter>
     </Layout>
   </div>

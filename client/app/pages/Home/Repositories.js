@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import { Helmet } from "react-helmet";
-import { Area, Button } from "teasim";
-import { FormattedMessage } from "react-intl";
+import { Area, Button, Searchbox } from "teasim";
 import { createStructuredSelector } from "reselect";
 import {
   loadRepos,
@@ -14,7 +13,6 @@ import {
   makeSelectError,
   makeSelectUsername
 } from "app/actions/home/index";
-import messages from "./messages";
 import ReposList from "app/components/ReposList/index";
 
 class Repositories extends React.PureComponent {
@@ -33,7 +31,7 @@ class Repositories extends React.PureComponent {
     };
 
     return (
-      <article>
+      <div className="container-xxl" >
         <Helmet>
           <title>Home Page</title>
           <meta
@@ -41,22 +39,19 @@ class Repositories extends React.PureComponent {
             content="A React.js Boilerplate application homepage"
           />
         </Helmet>
-        <Area>
-          <FormattedMessage {...messages.hello} />
+        <Area >
           <form onSubmit={this.props.onSubmitForm}>
-            <label htmlFor="username">
-              <input
-                id="username"
-                type="text"
-                placeholder="mxstbr"
-                value={this.props.username}
-                onChange={this.props.onChangeUsername}
-              />
-            </label>
+            <Searchbox
+              id="username"
+              type="text"
+              placeholder="hello"
+              value={this.props.username}
+              onChange={this.props.onChangeUsername}
+            />
           </form>
           <ReposList {...reposListProps} />
         </Area>
-      </article>
+      </div>
     );
   }
 }

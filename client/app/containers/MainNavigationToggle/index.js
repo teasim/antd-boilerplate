@@ -3,13 +3,12 @@ import { connect } from "react-redux";
 import { compose } from "redux";
 import { createStructuredSelector } from "reselect";
 import { makeSelectAuthUser } from "app/actions/auth/selectors";
-import UserNavigator from "app/containers/UserNavigator";
-import LoginButton from "app/components/LoginButton";
+import LaunchButton from "app/components/LaunchButton";
 
-function LoginToggle(props) {
+function MainNavigationToggle(props) {
   const { user } = props;
 
-  return !user || user.expired ? <LoginButton /> : <UserNavigator />;
+  return !user || user.expired ? null : <LaunchButton />;
 }
 
 const mapStateToProps = createStructuredSelector({
@@ -23,4 +22,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
-export default compose(withConnect)(LoginToggle);
+export default compose(withConnect)(MainNavigationToggle);
