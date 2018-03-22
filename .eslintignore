@@ -1,6 +1,6 @@
+# eslintignore
 # Third party
 **/node_modules/*
-**/node_modules_old/*
 
 # Not written by hand
 packages/react-art/npm/lib
