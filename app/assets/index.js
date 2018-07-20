@@ -1,0 +1,31 @@
+/* eslint-disable import/no-webpack-loader-syntax */
+import "!file-loader?name=[name].[ext]!assets/icons/favicon.ico";
+import "!file-loader?name=[name].[ext]!assets/icons/favicon-16x16.png";
+import "!file-loader?name=[name].[ext]!assets/icons/favicon-32x32.png";
+import "!file-loader?name=[name].[ext]!assets/icons/favicon-96x96.png";
+import "!file-loader?name=[name].[ext]!assets/icons/android-icon-36x36.png";
+import "!file-loader?name=[name].[ext]!assets/icons/android-icon-48x48.png";
+import "!file-loader?name=[name].[ext]!assets/icons/android-icon-72x72.png";
+import "!file-loader?name=[name].[ext]!assets/icons/android-icon-96x96.png";
+import "!file-loader?name=[name].[ext]!assets/icons/android-icon-144x144.png";
+import "!file-loader?name=[name].[ext]!assets/icons/android-icon-192x192.png";
+import "!file-loader?name=[name].[ext]!assets/icons/apple-icon-57x57.png";
+import "!file-loader?name=[name].[ext]!assets/icons/apple-icon-60x60.png";
+import "!file-loader?name=[name].[ext]!assets/icons/apple-icon-72x72.png";
+import "!file-loader?name=[name].[ext]!assets/icons/apple-icon-76x76.png";
+import "!file-loader?name=[name].[ext]!assets/icons/apple-icon-114x114.png";
+import "!file-loader?name=[name].[ext]!assets/icons/apple-icon-120x120.png";
+import "!file-loader?name=[name].[ext]!assets/icons/apple-icon-144x144.png";
+import "!file-loader?name=[name].[ext]!assets/icons/apple-icon-152x152.png";
+import "!file-loader?name=[name].[ext]!assets/icons/apple-icon-180x180.png";
+import "!file-loader?name=[name].[ext]!assets/icons/ms-icon-70x70.png";
+import "!file-loader?name=[name].[ext]!assets/icons/ms-icon-144x144.png";
+import "!file-loader?name=[name].[ext]!assets/icons/ms-icon-150x150.png";
+import "!file-loader?name=[name].[ext]!assets/images/default-image.svg";
+import "!file-loader?name=[name].[ext]!assets/images/feature-01.svg";
+import "!file-loader?name=[name].[ext]!assets/images/feature-02.svg";
+import "!file-loader?name=[name].[ext]!assets/images/feature-03.svg";
+import "!file-loader?name=[name].[ext]!assets/images/logo-large.png";
+import "!file-loader?name=[name].[ext]!assets/images/logo-small.png";
+import "!file-loader?name=[name].[ext]!assets/images/logo.svg";
+/* eslint-enable import/no-webpack-loader-syntax */
