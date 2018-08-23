@@ -1,3 +1,4 @@
 # teasim-boilerplate
 
-ant-design && react-boilerplate && teasim, still in alpha.
+ant.design + teasim-boilerplate
+
