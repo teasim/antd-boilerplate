@@ -56,7 +56,7 @@ module.exports = options => ({
         })
       },
       {
-        test: /\.(eot|svg|otf|ttf|woff|woff2)$/,
+        test: /\.(eot|svg|otf|ttf|woff|woff2|node)$/,
         use: "file-loader"
       },
       {
