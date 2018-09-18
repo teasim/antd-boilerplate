@@ -1,6 +1,6 @@
 import "babel-polyfill";
 import teasim from "teasim-core";
-import createLoading from "teasim-plugins/loading";
+import createLoading from "teasim-plugin-loading";
 import "moment/locale/zh-cn";
 import "antd/dist/antd.css";
 import "styles/index.less";
