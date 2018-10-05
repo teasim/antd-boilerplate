@@ -1,12 +1,11 @@
-import fackers from "teasim-fackers";
-import { format } from "teasim-mockers";
-import { getRule, postRule } from "./rule";
-import { getActivities, getNotice, getFakeList } from "./api";
-import { getFakeChartData } from "./chart";
-import { getProfileBasicData, getProfileAdvancedData } from "./profile";
-import { getNotices } from "./notices";
+const fackers = require('teasim-fackers');
+const mockers = require('teasim-mockers');
+const { getRule, postRule } = require('./rule');
+const { getActivities, getNotice, getFakeList } = require('./api');
+const { getFakeChartData } = require('./chart');
+const { getProfileBasicData, getProfileAdvancedData } = require('./profile');
+const { getNotices } = require('./notices');
 
-// 代码中会兼容本地 service mock 以及部署站点的静态数据
 const proxy = {
   // 支持值为 Object 和 Array
   "GET /api/currentUser": {
@@ -133,6 +132,4 @@ const proxy = {
   }
 };
 
-module.exports = format(proxy);
-
-//export default format(proxy);
+module.exports = mockers(proxy);

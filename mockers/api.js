@@ -10,6 +10,7 @@ const titles = [
   'Vue',
   'Webpack',
 ];
+
 const avatars = [
   'https://gw.alipayobjects.com/zos/rmsportal/WdGqmHpayyMjiEhcKoVE.png', // Alipay
   'https://gw.alipayobjects.com/zos/rmsportal/zOsKZmFRdUtvpqCImOVY.png', // Angular
@@ -40,6 +41,7 @@ const covers = [
   'https://gw.alipayobjects.com/zos/rmsportal/uVZonEtjWwmUZPBQfycs.png',
   'https://gw.alipayobjects.com/zos/rmsportal/gLaIAoVWTtLbBWZNYEMg.png',
 ];
+
 const desc = [
   '那是一种内在的东西， 他们到达不了，也无法触及的',
   '希望是一个好东西，也许是最好的，好东西是不会消亡的',
