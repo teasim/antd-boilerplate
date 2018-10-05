@@ -1,5 +1,5 @@
 import React from 'react';
-import dynamic from "teasim-core/lib/dynamic";
+import dynamic from "teasim-helpers/dynamic";
 import { LocaleProvider, Spin} from 'antd';
 import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from "react-router-redux";

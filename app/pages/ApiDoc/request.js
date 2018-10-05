@@ -1,4 +1,4 @@
-import fetch from "teasim/fetch";
+import fetch from "teasim-helpers/fetch";
 import { notification } from 'antd';
 
 function checkStatus(response) {

@@ -1,5 +1,5 @@
 import { push } from "react-router-redux";
-import fetch from "teasim/fetch";
+import fetch from "teasim-helpers/fetch";
 import { notification } from 'antd';
 import store from '../index';
 

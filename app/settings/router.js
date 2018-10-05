@@ -1,5 +1,5 @@
 import { createElement } from 'react';
-import dynamic from 'teasim-core/lib/dynamic';
+import dynamic from 'teasim-helpers/dynamic';
 import pathToRegexp from 'teakit/pathToRegexp';
 import { getMenuData } from './menu';
 
