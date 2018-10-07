@@ -2,7 +2,7 @@ import React from 'react';
 import Document from 'teasim-document';
 import FixtableLayout from 'teasim-layout/lib/FixtableLayout';
 import { Link, Redirect, Switch, Route } from 'react-router-dom';
-import { getRoutes } from 'helpers/utils';
+import { getRoutes } from 'utils/utils';
 
 class UserLayout extends React.PureComponent {
   getPageTitle() {

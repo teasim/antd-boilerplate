@@ -6,7 +6,7 @@ import Button from 'antd/lib/Button';
 import Alert from 'antd/lib/Alert';
 import Divider from 'antd/lib/Divider';
 import { push } from "react-router-redux";
-import { digitUppercase } from 'helpers/utils';
+import { digitUppercase } from 'utils/utils';
 import styles from './style.less';
 
 const formItemLayout = {

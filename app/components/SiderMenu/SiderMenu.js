@@ -3,7 +3,7 @@ import Menu from 'antd/lib/Menu';
 import Icon from 'antd/lib/Icon';
 import Layout from 'antd/lib/Layout';
 import pathToRegexp from 'teakit/pathToRegexp';
-import pathTools from 'helpers/pathTools';
+import pathTools from 'utils/pathTools';
 import { Link } from 'react-router-dom';
 import styles from './index.less';
 

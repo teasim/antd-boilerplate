@@ -9,7 +9,7 @@ import { Pie, WaterWave, Gauge, TagCloud } from 'components/Charts';
 import NumberInfo from 'components/NumberInfo';
 import CountDown from 'components/CountDown';
 import ActiveChart from 'components/ActiveChart';
-import Authorized from 'helpers/Authorized';
+import Authorized from 'utils/Authorized';
 import styles from './Monitor.less';
 
 const { Secured } = Authorized;

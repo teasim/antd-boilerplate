@@ -1,7 +1,7 @@
 import { push } from 'react-router-redux';
 import { fakeAccountLogin } from 'services/api';
-import { setAuthority } from 'helpers/authority';
-import { reloadAuthorized } from 'helpers/Authorized';
+import { setAuthority } from 'utils/authority';
+import { reloadAuthorized } from 'utils/Authorized';
 
 export default {
   namespace: 'login',

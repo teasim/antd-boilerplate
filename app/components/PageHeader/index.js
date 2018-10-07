@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import pathToRegexp from 'teakit/pathToRegexp';
 import Tabs from 'antd/lib/Tabs';
 import Breadcrumb from 'antd/lib/Breadcrumb';
-import pathTools from 'helpers/pathTools';
+import pathTools from 'utils/pathTools';
 import classNames from 'teakit/cssname';
 import styles from './index.less';
 

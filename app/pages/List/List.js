@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Input from 'antd/lib/Input';
 import PageHeaderLayout from 'layouts/PageHeaderLayout';
-import { getRoutes } from 'helpers/utils';
+import { getRoutes } from 'utils/utils';
 
 @connect()
 export default class SearchList extends Component {

@@ -3,7 +3,7 @@ import { Route, Redirect, Switch } from 'react-router-dom';
 import { Card, Steps } from 'antd';
 import PageHeaderLayout from 'layouts/PageHeaderLayout';
 import NotFound from 'pages/Exception/404';
-import { getRoutes } from 'helpers/utils';
+import { getRoutes } from 'utils/utils';
 import styles from '../style.less';
 
 const { Step } = Steps;

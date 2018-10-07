@@ -15,8 +15,8 @@ import GlobalHeader from 'components/GlobalHeader';
 import GlobalFooter from 'components/GlobalFooter';
 import SiderMenu from 'components/SiderMenu';
 import NotFound from 'pages/Exception/404';
-import { getRoutes } from 'helpers/utils';
-import Authorized from 'helpers/Authorized';
+import { getRoutes } from 'utils/utils';
+import Authorized from 'utils/Authorized';
 import { getMenuData } from 'settings/menu';
 import logo from 'assets/images/logo.svg';
 

@@ -4,7 +4,7 @@ import { LocaleProvider, Spin} from 'antd';
 import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from "react-router-redux";
 import { getRouterData } from 'settings/router';
-import Authorized from 'helpers/Authorized';
+import Authorized from 'utils/Authorized';
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import ApiLayout from './ApiDoc';
 
