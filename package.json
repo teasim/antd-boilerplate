@@ -159,10 +159,10 @@
     "rimraf": "^2.6.2",
     "stylelint": "^9.6.0",
     "stylelint-config-prettier": "^4.0.0",
-    "teasim-fackers": "^5.0.5-22",
-    "teasim-mockers": "^5.0.5-22",
-    "teasim-samples": "^5.0.5-22",
-    "teasim-scripts": "^5.0.5-22"
+    "teasim-fackers": "^5.0.5-24",
+    "teasim-mockers": "^5.0.5-24",
+    "teasim-samples": "^5.0.5-24",
+    "teasim-scripts": "^5.0.5-24"
   },
   "dependencies": {
     "@antv/data-set": "^0.9.6",
@@ -193,10 +193,10 @@
     "redux-logger": "^3.0.6",
     "redux-saga": "^0.16.2",
     "reselect": "^4.0.0",
-    "teasim": "^5.0.5-22",
-    "teasim-helpers": "^5.0.5-22",
-    "teasim-plugins": "^5.0.5-22",
-    "teasim-widgets": "^5.0.5-22.1"
+    "teasim": "^5.0.5-24",
+    "teasim-helpers": "^5.0.5-24",
+    "teasim-plugins": "^5.0.5-24",
+    "teasim-widgets": "^5.0.5-24"
   },
   "repository": {
     "type": "git",
