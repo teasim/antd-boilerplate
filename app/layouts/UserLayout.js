@@ -1,5 +1,5 @@
 import React from 'react';
-import Document from 'teasim-document';
+import { Document } from 'teasim';
 import FixtableLayout from 'teasim-layout/lib/FixtableLayout';
 import { Link, Redirect, Switch, Route } from 'react-router-dom';
 import { getRoutes } from 'utils/utils';

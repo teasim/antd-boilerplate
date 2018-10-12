@@ -1,4 +1,4 @@
-import renderAuthorize from 'teasim-widget-authorize';
+import renderAuthorize from 'teasim-widgets/authorize';
 import { getAuthority } from './authority';
 
 let Authorized = renderAuthorize(getAuthority()); // eslint-disable-line
