@@ -141,7 +141,7 @@
     "babel-core": "^7.0.0-bridge",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
-    "babel-preset-habitual": "^0.0.9",
+    "babel-preset-habitual": "^0.0.10",
     "cross-env": "^5.2.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
@@ -159,14 +159,14 @@
     "rimraf": "^2.6.2",
     "stylelint": "^9.6.0",
     "stylelint-config-prettier": "^4.0.0",
-    "teasim-fackers": "^5.0.5-30",
-    "teasim-mockers": "^5.0.5-30",
-    "teasim-samples": "^5.0.5-30",
-    "teasim-scripts": "^5.0.5-30"
+    "teasim-fackers": "^5.0.5-41",
+    "teasim-mockers": "^5.0.5-41",
+    "teasim-samples": "^5.0.5-41",
+    "teasim-scripts": "^5.0.5-41"
   },
   "dependencies": {
     "@antv/data-set": "^0.9.6",
-    "antd": "^3.10.1",
+    "antd": "^3.10.2",
     "bizcharts": "^3.1.10",
     "bizcharts-plugin-slider": "^2.0.1",
     "classnames": "^2.2.6",
@@ -193,10 +193,10 @@
     "redux-logger": "^3.0.6",
     "redux-saga": "^0.16.2",
     "reselect": "^4.0.0",
-    "teasim": "^5.0.5-30",
-    "teasim-helpers": "^5.0.5-30",
-    "teasim-plugins": "^5.0.5-30",
-    "teasim-widgets": "^5.0.5-30"
+    "teasim": "^5.0.5-41",
+    "teasim-helpers": "^5.0.5-41",
+    "teasim-plugins": "^5.0.5-41",
+    "teasim-widgets": "^5.0.5-41"
   },
   "repository": {
     "type": "git",
