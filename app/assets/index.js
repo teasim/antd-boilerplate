@@ -22,10 +22,5 @@ import "!file-loader?name=[name].[ext]!assets/icons/ms-icon-70x70.png";
 import "!file-loader?name=[name].[ext]!assets/icons/ms-icon-144x144.png";
 import "!file-loader?name=[name].[ext]!assets/icons/ms-icon-150x150.png";
 import "!file-loader?name=[name].[ext]!assets/images/default-image.svg";
-import "!file-loader?name=[name].[ext]!assets/images/feature-01.svg";
-import "!file-loader?name=[name].[ext]!assets/images/feature-02.svg";
-import "!file-loader?name=[name].[ext]!assets/images/feature-03.svg";
-import "!file-loader?name=[name].[ext]!assets/images/logo-large.png";
-import "!file-loader?name=[name].[ext]!assets/images/logo-small.png";
 import "!file-loader?name=[name].[ext]!assets/images/logo.svg";
 /* eslint-enable import/no-webpack-loader-syntax */
