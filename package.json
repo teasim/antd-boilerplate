@@ -157,19 +157,19 @@
     "prettier-eslint-cli": "^4.7.1",
     "prettier-stylelint": "^0.4.2",
     "rimraf": "^2.6.2",
-    "stylelint": "^9.6.0",
+    "stylelint": "^9.7.0",
     "stylelint-config-prettier": "^4.0.0",
-    "teasim-fackers": "^5.0.5-49",
-    "teasim-mockers": "^5.0.5-49",
-    "teasim-samples": "^5.0.5-49",
-    "teasim-scripts": "^5.0.5-49"
+    "teasim-fackers": "^5.0.5-50",
+    "teasim-mockers": "^5.0.5-50",
+    "teasim-samples": "^5.0.5-50",
+    "teasim-scripts": "^5.0.5-50"
   },
   "dependencies": {
     "@antv/data-set": "^0.10.0",
-    "antd": "^3.10.3",
+    "@vx/gradient": "^0.0.165",
+    "antd": "^3.5.1",
     "bizcharts": "^3.2.5-beta.4",
-    "bizcharts-plugin-slider": "^2.0.1",
-    "classnames": "^2.2.6",
+    "bizcharts-plugin-slider": "^2.0.3",
     "enquire-js": "^0.2.1",
     "immutable": "^3.8.2",
     "intl": "^1.2.5",
@@ -193,10 +193,10 @@
     "redux-logger": "^3.0.6",
     "redux-saga": "^0.16.2",
     "reselect": "^4.0.0",
-    "teasim": "^5.0.5-49",
-    "teasim-helpers": "^5.0.5-49",
-    "teasim-plugins": "^5.0.5-49",
-    "teasim-widgets": "^5.0.5-49"
+    "teasim": "^5.0.5-50",
+    "teasim-helpers": "^5.0.5-50",
+    "teasim-plugins": "^5.0.5-50",
+    "teasim-widgets": "^5.0.5-50"
   },
   "repository": {
     "type": "git",
