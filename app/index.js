@@ -1,7 +1,6 @@
 import teasim from 'teasim';
 import createLoading from 'teasim-plugins/loading';
 import 'moment/locale/zh-cn';
-import 'antd/dist/antd.less';
 import 'styles/index.less';
 import 'assets/index';
 
